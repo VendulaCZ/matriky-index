@@ -17,18 +17,12 @@ Licence: nástroje MIT ([LICENSE](LICENSE)), data v `knihy/` CC BY 4.0 ([LICENSE
 
 ## Kdo četl
 
-Sloupec `cetl` v `precteno.tsv` uvádí u jazykového modelu jeho identifikátor v hranatých závorkách, aby šlo zápisy
-přečtené slabším modelem najít a přečíst znovu lepším. `agent` je pomocný agent, který četl skeny, `Claude` hlavní
-model, který zápis ověřil nebo četl sám.
+Sloupec `cetl` v `precteno.tsv` uvádí u jazykového modelu jeho identifikátor a nastavení effortu (`claude-sonnet-5-5/xhigh`),
+aby šlo zápisy přečtené slabším modelem nebo s nižším effortem najít a přečíst znovu lepším. Na kvalitu čtení má vliv
+i rozlišení skenu (1600 px vs. výřez 4000 px); to uvádí sloupec `ostatni`, pokud je známé.
 
-Starší řádky model neuvádějí. Podle záznamů sezení četly:
-
-| `cetl` | model |
-|---|---|
-| `agent` do 2026-10-31 | `claude-opus-5-5` |
-| `agent 2026-11-01` | `claude-opus-5-5` nebo `claude-sonnet-5-5` (ten den pracovali oba) |
-| `agent` od 2026-11-02 | `claude-sonnet-5-5` |
-| `Claude …` (i „z rodokmenu“) | `claude-opus-5-5`, jen 2026-10-05 `claude-sonnet-5-5` |
+Řádky z let 2026-10 a 2026-11 dostaly model a effort dodatečně (2026-11-04) podle záznamů sezení Claude Code, kde je
+u každého dotazu uložen model i effort; dřív v nich stálo jen `agent` nebo `Claude`.
 
 ## Přispějte
 
@@ -134,5 +128,5 @@ první řádek hlavička:
 | osoby | hlavní osoby s rolí: `dítě: Ambrož; otec: Matěj Píhr; matka: Ludmila` (u O ženich, nevěsta a jejich rodiče; u P `prodávající: …; kupující: …; výměnkář: …`; u S `hospodář: …; manželka: …; děti: …`) |
 | ostatni | kmotři, svědci, povolání, věk, příčina smrti – stručně; u P cena, splátky, výminek, svědci |
 | jistota | `vysoká`, `střední`, `nízká`; nejisté čtení v textu značit `[?]` |
-| cetl | kdo, kdy a jakým modelem: `agent 2026-11-04 [claude-sonnet-5-5]`, `Claude 2026-11-04 [claude-opus-5-5]`, u člověka jméno a datum; model v hranatých závorkách (viz [Kdo četl](#kdo-četl)) |
+| cetl | kdo a kdy: jazykový model jako `model/effort datum` (`claude-sonnet-5-5/xhigh 2026-11-03`, ověření `…, ověřil claude-opus-5-5/xhigh 2026-11-04`), člověk jménem a datem (viz [Kdo četl](#kdo-četl)) |
 | odkaz | volitelně odkaz na zpracovaný záznam jinde (např. v rodokmenu) |
