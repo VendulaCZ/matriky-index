@@ -2,13 +2,13 @@
 
 Stav k 4. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **146 knih** (matrika 95, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
+- **152 knih** (matrika 101, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
 - **5 341 stran** převedených strojově (PERO OCR), **935 595 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **5 120 zápisů přečtených očima**: narození 1906, sňatky 692, úmrtí 2210, převody gruntů 49, soupisy 29, jiné 205
+- **9 126 zápisů přečtených očima**: narození 5496, sňatky 1106, úmrtí 2210, převody gruntů 49, soupisy 29, jiné 207
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
-## SOA Plzeň – Porta fontium (40)
+## SOA Plzeň – Porta fontium (46)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -21,6 +21,8 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [horazdovice-k1558](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1558) | pozemková kniha |  |  |  | 5 (P 5) |
 | [horazdovice-k1559](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1559) | pozemková kniha |  |  |  | 1 (P 1) |
 | [horazdovice-k1562](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1562) | pozemková kniha |  |  |  | 5 (P 5) |
+| [Kasejovice 03](https://www.portafontium.eu/register/soap-pn/kasejovice-03) | matrika | 1667–1689 |  |  | 1467 (N 1054 O 413) |
+| [Kasejovice 04](https://www.portafontium.eu/register/soap-pn/kasejovice-04) | matrika | 1690–1739 |  |  | 1244 (N 1244) |
 | [Kotouň 02](https://www.portafontium.eu/register/soap-pn/kotoun-02) | matrika | 1681–1734 |  |  | 2115 (N 982 O 296 Z 837) |
 | [Kvasňovice 01](https://www.portafontium.eu/register/soap-pn/kvasnovice-01) | matrika | 1738–1765 | 122 | 16910 | 66 (J 1 N 7 O 51 Z 7) |
 | [Kvasňovice 02](https://www.portafontium.eu/register/soap-pn/kvasnovice-02) | matrika | 1766–1793 | 241 | 60446 | 77 (N 74 Z 3) |
@@ -33,10 +35,14 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Malý Bor 05](https://www.portafontium.eu/register/soap-pn/maly-bor-05) | matrika | 1745–1763 | 174 | 26479 | 266 (J 1 N 258 O 2 Z 5) |
 | [Malý Bor 06](https://www.portafontium.eu/register/soap-pn/maly-bor-06) | matrika | 1764–1784 | 183 | 34691 | 7 (O 5 Z 2) |
 | maly-bor-16 | matrika |  |  |  | 12 (J 12) |
+| [Myslív 02](https://www.portafontium.eu/register/soap-pn/mysliv-02) | matrika | 1685–1727 |  |  | 553 (N 552 O 1) |
+| [Nepomuk 01](https://www.portafontium.eu/register/soap-pn/nepomuk-01) | matrika | 1702–1742 |  |  | 9 (N 9) |
 | [Velký Bor 01](https://www.portafontium.eu/register/soap-pn/velky-bor-01) | matrika | 1707–1754 | 226 | 32078 |  |
 | [Velký Bor 02](https://www.portafontium.eu/register/soap-pn/velky-bor-02) | matrika | 1746–1771 | 159 | 25028 |  |
 | [Velký Bor 08](https://www.portafontium.eu/register/soap-pn/velky-bor-08) | matrika | 1746–1771 | 66 | 5861 |  |
 | [Velký Bor 11](https://www.portafontium.eu/register/soap-pn/velky-bor-11) | matrika | 1746–1771 | 87 | 10754 |  |
+| [Vrčeň 03](https://www.portafontium.eu/register/soap-pn/vrcen-03) | matrika | 1683–1697 |  |  | 248 (N 248) |
+| [Vrčeň 04](https://www.portafontium.eu/register/soap-pn/vrcen-04) | matrika | 1697–1728 |  |  | 485 (J 2 N 483) |
 | [vs-defurovy-lazany-k112](https://www.portafontium.eu/amtsbuch/soap-pn/vs-defurovy-lazany/k112) | soupis poddaných |  |  |  | 1 (S 1) |
 | [vs-defurovy-lazany-k113](https://www.portafontium.eu/amtsbuch/soap-pn/vs-defurovy-lazany/k113) | soupis poddaných |  |  |  | 1 (S 1) |
 | [vs-defurovy-lazany-k128](https://www.portafontium.eu/amtsbuch/soap-pn/vs-defurovy-lazany/k128) | pozemková kniha |  |  |  | 1 (P 1) |
@@ -196,13 +202,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 
-## ndk (2)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
-
 ## zaopava (6)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -213,3 +212,10 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Ruda nad Moravou Z 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 19 (inv. 7923)](https://digi.archives.cz/da/permalink?xid=be930f8c-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 302 | 116893 | 322 (Z 322) |
 | [Ruda nad Moravou N, O, Z 1772–1778, ZA Opava, NAD 165, sign. Šu XIV 4 (inv. 7908)](https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263) | matrika | 1772–1778 | 177 | 33733 | 24 (J 2 N 19 O 1 Z 2) |
 | [Ruda nad Moravou N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)](https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 66 | 32068 | 32 (N 32) |
+
+## ndk (2)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
