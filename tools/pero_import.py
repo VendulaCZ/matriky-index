@@ -53,6 +53,20 @@ BOOKS = {
     "horazdovice-05-zo": dict(archiv="portafontium", nazev="Horažďovice 05 – zemřelí a oddaní", farnost="Horažďovice",
                               roky="1699–1747", obsah="Z (snímky 185–252) a O (269–322); oddíl N je v horazdovice-05",
                               url=PF + "horazdovice-05", prefix="horazdovice-05"),
+    "kasejovice-03": dict(archiv="portafontium", nazev="Kasejovice 03",
+                          farnost="Kasejovice (Kasejovice, Hradiště, Řesanice, Předmíř, Mětly, Újezd, Chlumek …)",
+                          roky="1667–1689",
+                          obsah="N 1667–1676 (snímky 3–44), O 1667–1676 (45–57), N 1677–1689 (58–108), O 1677–1689 (109–126), "
+                                "Z 1677–1689 (128–142); OCR jen N 1667–1676 a Z 1677–1689",
+                          url=PF + "kasejovice-03", prefix="kasejovice-03",
+                          poznamka="zápisy přečtené očima: N 0580–1080 (1677–1689), O 0450–0570 a 1090–1260 (1667–1689); "
+                                   "příjmení většinou čtena ze snímků 1600 px, proto nízká jistota"),
+    "kasejovice-05": dict(archiv="portafontium", nazev="Kasejovice 05", farnost="Kasejovice", roky="1690–1747",
+                          obsah="O 1690–1747 (snímky 3–210); snímek 3 = str. 54–55 (1704–1705)",
+                          url=PF + "kasejovice-05", prefix="kasejovice-05"),
+    "kasejovice-07": dict(archiv="portafontium", nazev="Kasejovice 07", farnost="Kasejovice", roky="1690–1744",
+                          obsah="Z 1690–1744 (snímky 3–219); snímek 3 = str. 52–53",
+                          url=PF + "kasejovice-07", prefix="kasejovice-07"),
     "horazdovice-05-kurrent": dict(archiv="portafontium", nazev="Horažďovice 05 (druhé OCR modelem Kurrent)",
                                    farnost="Horažďovice", roky="1737–1747",
                                    obsah="N 1737–1747 (snímky 133–184 a 254–267) znovu modelem Kurrent – česká kurzíva; "
@@ -255,6 +269,12 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "ruda-1701-1757": (["be9318d8"], "59dc2bb6-c7b9-4457-a9a1-4dd2d84eba46, 6e04fb07-1adc-4450-ac97-c3c0d7f458c1, "
                                      "5b1e5314-fc04-48ac-a7d5-fe111c9e8cef, 6323e93c-6924-47eb-9a8a-7ec850109f68",
                        "Czech Handwritten", "2026-11-03"),
+    "kasejovice-03-n1667-z1677": (["kasejovice-03"], "9345001a-cea4-433e-a3c7-4e68d4313678", "Kurrent (German, Czech)",
+                                  "2026-11-04"),
+    "kasejovice-05-o1690-1747": (["kasejovice-05"], "bf7b354b-05a6-45de-b54a-a033d5b780c0", "Kurrent (German, Czech)",
+                                 "2026-11-04"),
+    "kasejovice-07-z1690-1744": (["kasejovice-07"], "36f52f6b-4218-4534-bc8e-81fd5f392349", "Kurrent (German, Czech)",
+                                 "2026-11-04"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
                             "Czech Fraktur Printed", "2026-11-02"),
     "ruda-su-xiv-19": (["su-xiv-19"], "1a7cf0e9-622f-4314-8b7a-2a4027591f52", "Czech Handwritten", "2026-11-02"),
@@ -346,8 +366,10 @@ def write_book(key, export_stem, rows, page_rows, pero_doc, model, date):
     q = lambda value: json.dumps(value, ensure_ascii=False)  # a JSON string is a valid YAML scalar, colons included
     yaml = [f"archiv: {q(meta['archiv'])}", f"kniha: {q(key)}", f"nazev: {q(meta['nazev'])}",
             f"druh: {q(meta.get('druh', 'matrika'))}", f"farnost: {q(meta['farnost'])}",
-            f"roky: {q(meta['roky'])}", f"obsah: {q(meta['obsah'])}", f"url: {q(meta['url'])}",
-            "ocr:", f"- nastroj: {q('PERO OCR (pero-ocr.fit.vutbr.cz)')}", f"  dokument: {q(pero_doc)}", f"  model: {q(model)}",
+            f"roky: {q(meta['roky'])}", f"obsah: {q(meta['obsah'])}", f"url: {q(meta['url'])}"]
+    if meta.get("poznamka"):
+        yaml.append(f"poznamka: {q(meta['poznamka'])}")
+    yaml += ["ocr:", f"- nastroj: {q('PERO OCR (pero-ocr.fit.vutbr.cz)')}", f"  dokument: {q(pero_doc)}", f"  model: {q(model)}",
             f"  datum: {q(date)}",
             f"  export: {q(export_stem)}",
             f"  stranek: {len(page_rows)}", f"  radku: {len(rows)}",
