@@ -59,7 +59,8 @@ BOOKS = {
                           obsah="N 1667–1676 (snímky 3–44), O 1667–1676 (45–57), N 1677–1689 (58–108), O 1677–1689 (109–126), "
                                 "Z 1677–1689 (128–142); OCR jen N 1667–1676 a Z 1677–1689",
                           url=PF + "kasejovice-03", prefix="kasejovice-03",
-                          poznamka="zápisy přečtené očima: N 0580–1080 (1677–1689), O 0450–0570 a 1090–1260 (1667–1689); "
+                          poznamka="zápisy přečtené očima: N 0030–0440 (1667–1676) a 0580–1080 (1677–1689), O 0450–0570 a 1090–1260 "
+                                   "(1667–1689); "
                                    "příjmení většinou čtena ze snímků 1600 px, proto nízká jistota"),
     "kasejovice-05": dict(archiv="portafontium", nazev="Kasejovice 05", farnost="Kasejovice", roky="1690–1747",
                           obsah="O 1690–1747 (snímky 3–210); snímek 3 = str. 54–55 (1704–1705)",
