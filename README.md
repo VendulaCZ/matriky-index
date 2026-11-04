@@ -15,6 +15,21 @@ Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](
 
 Licence: nástroje MIT ([LICENSE](LICENSE)), data v `knihy/` CC BY 4.0 ([LICENSE-DATA.md](LICENSE-DATA.md)).
 
+## Kdo četl
+
+Sloupec `cetl` v `precteno.tsv` uvádí u jazykového modelu jeho identifikátor v hranatých závorkách, aby šlo zápisy
+přečtené slabším modelem najít a přečíst znovu lepším. `agent` je pomocný agent, který četl skeny, `Claude` hlavní
+model, který zápis ověřil nebo četl sám.
+
+Starší řádky model neuvádějí. Podle záznamů sezení četly:
+
+| `cetl` | model |
+|---|---|
+| `agent` do 2026-10-31 | `claude-opus-5-5` |
+| `agent 2026-11-01` | `claude-opus-5-5` nebo `claude-sonnet-5-5` (ten den pracovali oba) |
+| `agent` od 2026-11-02 | `claude-sonnet-5-5` |
+| `Claude …` (i „z rodokmenu“) | `claude-opus-5-5`, jen 2026-10-05 `claude-sonnet-5-5` |
+
 ## Přispějte
 
 Přečetli jste si matriku nebo jiný pramen – očima, přes PERO OCR nebo s Claudem? Pošlete to sem, ať to nemusí číst
@@ -119,5 +134,5 @@ první řádek hlavička:
 | osoby | hlavní osoby s rolí: `dítě: Ambrož; otec: Matěj Píhr; matka: Ludmila` (u O ženich, nevěsta a jejich rodiče; u P `prodávající: …; kupující: …; výměnkář: …`; u S `hospodář: …; manželka: …; děti: …`) |
 | ostatni | kmotři, svědci, povolání, věk, příčina smrti – stručně; u P cena, splátky, výminek, svědci |
 | jistota | `vysoká`, `střední`, `nízká`; nejisté čtení v textu značit `[?]` |
-| cetl | kdo a kdy (`agent 2026-10-21`) |
+| cetl | kdo, kdy a jakým modelem: `agent 2026-11-04 [claude-sonnet-5-5]`, `Claude 2026-11-04 [claude-opus-5-5]`, u člověka jméno a datum; model v hranatých závorkách (viz [Kdo četl](#kdo-četl)) |
 | odkaz | volitelně odkaz na zpracovaný záznam jinde (např. v rodokmenu) |
