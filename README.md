@@ -24,6 +24,9 @@ i rozlišení skenu (1600 px vs. výřez 4000 px); to uvádí sloupec `ostatni`,
 Řádky z let 2026-10 a 2026-11 dostaly model a effort dodatečně (2026-11-04) podle záznamů sezení Claude Code, kde je
 u každého dotazu uložen model i effort; dřív v nich stálo jen `agent` nebo `Claude`.
 
+Kontrola (`tools/kontrola.py`) odmítne řádek, v jehož `cetl` je jazykový model bez id a effortu (samotné „Claude“
+nebo „agent“).
+
 ## Přispějte
 
 Přečetli jste si matriku nebo jiný pramen – očima, přes PERO OCR nebo s Claudem? Pošlete to sem, ať to nemusí číst
