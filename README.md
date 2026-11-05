@@ -24,10 +24,14 @@ i rozlišení skenu (1600 px vs. výřez 4000 px); to uvádí sloupec `ostatni`,
 Řádky z let 2026-10 a 2026-11 dostaly model a effort dodatečně (2026-11-04) podle záznamů sezení Claude Code, kde je
 u každého dotazu uložen model i effort; dřív v nich stálo jen `agent` nebo `Claude`.
 
-Effort je jeden z `low`, `medium`, `high`, `xhigh`, `max`; v Claude Code je v záznamu sezení
-(`~/.claude/projects/<projekt>/<sezení>.jsonl`, pole `effort`). Kde ho nástroj neukazuje (např. claude.ai), patří tam
-`neuvedeno` (`claude-opus-5-5/neuvedeno`). Kontrola (`tools/kontrola.py`) odmítne řádek, v jehož `cetl` je jazykový
-model bez id a effortu (samotné „Claude“ nebo „agent“) nebo s jiným effortem.
+Id modelu se píše, jak ho uvádí API (`claude-opus-5-5`, `gpt-5.2`, `o3`, `gemini-2.5-pro`, `grok-4`). Effort je
+hodnota, jak ji nástroj nastavuje: `none`, `minimal`, `low`, `medium`, `high`, `xhigh`, `max` (Anthropic, OpenAI,
+Google a xAI používají různé podmnožiny), u starších modelů Gemini rozpočet na přemýšlení v tokenech
+(`gemini-2.5-pro/8192`). V Claude Code je effort v záznamu sezení (`~/.claude/projects/<projekt>/<sezení>.jsonl`, pole
+`effort`), v Codex CLI v nastavení `model_reasoning_effort`. Aplikace jako claude.ai, ChatGPT, Gemini nebo Copilot
+obvykle ukazují jen model nebo režim: tam patří `neuvedeno` a u produktu model, který v něm četl
+(`Copilot gpt-4.1/neuvedeno`). Kontrola (`tools/kontrola.py`) odmítne řádek, v jehož `cetl` je jazykový model bez id
+a effortu (samotné „Claude“, „ChatGPT“ nebo „agent“) nebo s jinou hodnotou effortu.
 
 ## Přispějte
 

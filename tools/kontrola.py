@@ -26,10 +26,15 @@ HLAVICKY = {
 TYPY = {"N", "O", "Z", "P", "S", "K", "J"}
 JISTOTA = ("vysoká", "střední", "nízká")
 # Jazykový model se v cetl píše jako id/effort (claude-sonnet-5-5/xhigh), aby šlo zápisy přečtené slabším modelem
-# najít a přečíst znovu; samotné „Claude“ nebo „agent“ nestačí. „neuvedeno“ je pro nástroje, které effort neukazují.
-EFFORT = ("low", "medium", "high", "xhigh", "max", "neuvedeno")
-MODEL_EFFORT = re.compile(r"\b[a-z][a-z0-9.]*(?:-[a-z0-9.]+)+/([a-z]+)\b")
-JAZYKOVY_MODEL = re.compile(r"\b(claude|agent|opus|sonnet|haiku|gpt|chatgpt|gemini|llm|copilot)\b", re.I)
+# najít a přečíst znovu; samotné „Claude“ nebo „agent“ nestačí. Effort je sjednocení hodnot API Anthropicu, OpenAI,
+# Googlu a xAI, číslo je rozpočet na přemýšlení v tokenech (Gemini 2.5); „neuvedeno“ je pro nástroje, které effort
+# neukazují. Id modelu obsahuje číslici nebo pomlčku (o3, gpt-5.2, deepseek-reasoner), aby se nespletlo s jiným textem.
+EFFORT = ("none", "minimal", "low", "medium", "high", "xhigh", "max", "neuvedeno")
+MODEL_EFFORT = re.compile(r"\b(?=[a-z0-9.-]*[0-9-])[a-z][a-z0-9.]*(?:-[a-z0-9.]+)*/([a-z]+|[0-9]+)\b", re.I)
+JAZYKOVY_MODEL = re.compile(r"\b(claude|agent|opus|sonnet|haiku|gpt|chatgpt|codex|o[1-9]|gemini|grok|copilot|deepseek|"
+                            r"mistral|llama|qwen|kimi|perplexity|llm)\b", re.I)
+# Produkt smí stát vedle id modelu, který v něm četl („Copilot gpt-4.1/neuvedeno“).
+PRODUKT = re.compile(r"\b(chatgpt|copilot|perplexity)\b", re.I)
 # Matriky narozených jsou veřejně přístupné po 100 letech, oddaných a zemřelých po 75 letech (zákon o matrikách
 # 301/2000 Sb., § 5a); soupisy obyvatel držíme stejně jako narozené. Mladší zápisy mohou týkat žijících lidí.
 LHUTA = {"N": 100, "S": 100, "O": 75, "Z": 75}
@@ -82,6 +87,13 @@ def rok_udalosti(datum):
     return max(roky) if roky else None
 
 
+def model_bez_id(cetl):
+    zbytek = MODEL_EFFORT.sub("", cetl)
+    if zbytek != cetl:
+        zbytek = PRODUKT.sub("", zbytek)
+    return JAZYKOVY_MODEL.search(zbytek)
+
+
 def kontrola_tsv(p, hlavicka, h):
     with open(p, encoding="utf-8", newline="") as f:
         radky = list(csv.reader(f, delimiter="\t"))
@@ -109,9 +121,9 @@ def kontrola_tsv(p, hlavicka, h):
             h.chyba(kde, f"typ „{typ}“ není z {', '.join(sorted(TYPY))}")
         if not cetl.strip():
             h.chyba(kde, "chybí cetl (kdo a kdy četl)")
-        elif spatne := [e for e in MODEL_EFFORT.findall(cetl) if e not in EFFORT]:
-            h.chyba(kde, f"cetl „{cetl}“: effort „{spatne[0]}“ není z {', '.join(EFFORT)}")
-        elif JAZYKOVY_MODEL.search(MODEL_EFFORT.sub("", cetl)):
+        elif spatne := [e for e in MODEL_EFFORT.findall(cetl) if e.lower() not in EFFORT and not e.isdigit()]:
+            h.chyba(kde, f"cetl „{cetl}“: effort „{spatne[0]}“ není z {', '.join(EFFORT)} ani počet tokenů")
+        elif model_bez_id(cetl):
             h.chyba(kde, f"cetl „{cetl}“: u jazykového modelu uveďte jeho id a effort, např. claude-sonnet-5-5/xhigh")
         if not osoby.strip():
             h.varuj(kde, "prázdné osoby")
