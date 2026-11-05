@@ -158,7 +158,7 @@ dokáže jinými zápisy, zapíše to do `vyklad.tsv` téže knihy. Sloupce odd�
 |---|---|
 | snimek, datum | vykládaný zápis, přesně jako v `precteno.tsv` téže knihy |
 | udaj | který údaj je chybný: `věk zemřelého`, `jméno matky`, `jméno babičky (matky matky)`, … |
-| napsano | co je v zápisu napsáno (`67`, `Anna`) |
+| napsano | co je v zápisu čitelně napsáno (`67`, `Anna`), bez `[?]` |
 | spravne | co je správně (`63`, `Rozina`) |
 | doklady | zápisy v indexu, které to dokazují: `<archiv>/<kniha>/<snimek> <datum> (popis)`, víc dokladů oddělených `; ` |
 | kdo | kdo a kdy, stejně jako `cetl` (u jazykového modelu id a effort) |
@@ -172,6 +172,8 @@ Pravidla:
 
 - **Doklady jsou zápisy v indexu.** Vykládaný zápis i každý doklad musí být v `precteno.tsv`, aby šel kdokoli ověřit
   na skenu; kontrola jinak řádek odmítne. Rodinná tradice nebo vlastní rodokmen doklad nejsou.
+- **Jen čitelně napsaný údaj.** Je-li zapsaná hodnota nejistá (`24 [?]`), může jít o chybu čtení, ne písaře; pak
+  patří do `precteno.tsv` nové, lepší čtení zápisu, ne výklad.
 - **Původní čtení se nemění.** Kdo s výkladem nesouhlasí, přidá vlastní řádek.
 - Přidává se nástrojem, který řádek před zápisem zkontroluje:
 

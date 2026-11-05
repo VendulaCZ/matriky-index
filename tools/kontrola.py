@@ -45,6 +45,8 @@ NEPREPISOVAT = ("precteno.tsv", "opravy.tsv", "vyklad.tsv")
 DOKLAD = re.compile(r"^([^/\s]+)/([^/\s]+)/([^/\s]+) (\S+)(?: \((.+)\))?$")
 # Výklad s nízkou jistotou je domněnka, ne doložená chyba písaře.
 JISTOTA_VYKLADU = ("vysoká", "střední")
+# Nejistě přečtená hodnota může být chyba čtení, ne písaře; výklad potřebuje čitelný údaj.
+NEJISTE = re.compile(r"\[(\?|…|\.\.\.)\]")
 
 
 class Hlaseni:
@@ -145,6 +147,9 @@ def kontrola_vykladu(p, r, kde, h):
         h.chyba(kde, "udaj, napsano i spravne musí být vyplněné")
     elif napsano.strip() == spravne.strip():
         h.chyba(kde, "napsano a spravne jsou stejné")
+    elif NEJISTE.search(napsano):
+        h.chyba(kde, f"napsano „{napsano}“ je nejisté čtení – výklad jen u čitelně napsaného údaje, jiné čtení patří "
+                     f"do precteno.tsv")
     if not doklady.strip():
         h.chyba(kde, "chybí doklady (zápisy v indexu, které chybu dokazují)")
     else:
