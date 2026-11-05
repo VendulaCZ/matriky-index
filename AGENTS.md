@@ -23,7 +23,10 @@ skončilo i v původním repozitáři, ne jen v tomto klonu. Postupuj takto.
 - Strojový text z PERO importuj nástrojem `tools/pero_import.py` (doplň `BOOKS` a `EXPORTS`).
 - Cizí řádky nikdy neměň ani nemaž. Jiné čtení = nový řádek nebo oprava přes `tools/opravy.py`.
 - Nezapisuj nic mladšího než 100 let (narození, sčítání) nebo 75 let (sňatky, úmrtí) – může jít o žijící lidi.
-- Výklad (kdo osoba ve skutečnosti je, rodokmen uživatele) do indexu nepatří; skeny ani celé exporty PERO necommituj.
+- Chybu písaře, kterou dokazují jiné zápisy (matka zapsaná jménem babičky, věk o několik let vedle), zapiš nástrojem
+  `tools/vyklad.py` do `vyklad.tsv`; vykládaný zápis i doklady musí být v `precteno.tsv`. Jiný výklad (kdo osoba ve
+  skutečnosti je, rodokmen uživatele) do indexu nepatří, ani do `osoby` a `ostatni`; skeny ani celé exporty PERO
+  necommituj.
 
 ## Odeslání
 

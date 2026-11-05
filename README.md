@@ -50,11 +50,14 @@ knihy/<archiv>/<kniha>/
   ocr-pero.tsv    strojový text: snímek, soubor, strana (L/R), řádek, obdélník x/y/šířka/výška v pixelech obrázku,
                   jistota (0–1), text – nekontrolovaný, s chybami
   precteno.tsv    zápisy přečtené očima (formát níže)
+  opravy.tsv      opravy strojového čtení (viz Vrstvy a opravy)
+  vyklad.tsv      chyby písaře doložené jinými zápisy (formát níže)
 knihy/testy/      pokusná OCR (výřezy)
 tools/
-  kontrola.py     kontrola dat (formát, povinná pole, lhůty pro žijící lidi); běží u každého pull requestu
-  hledej.py       volné hledání slova ve všech knihách (precteno, OCR s opravami; Levenshtein na začátku slova)
+  kontrola.py     kontrola dat (formát, povinná pole, lhůty pro žijící lidi, doklady výkladů); běží u každého pull requestu
+  hledej.py       volné hledání slova ve všech knihách (precteno, výklady, OCR s opravami; Levenshtein na začátku slova)
   opravy.py       přidání opravy strojového čtení do opravy.tsv
+  vyklad.py       přidání výkladu (chyby písaře) do vyklad.tsv
   pero_import.py  převod exportu z PERO do knihy/…
   prehled.py      vygeneruje PREHLED.md
   pero/           balik.py (skeny do balíků ≤ 9,4 MB), pero.js (nahrávání a export ve stránce PERO) – viz PERO.md
@@ -112,16 +115,21 @@ Původní data se nepřepisují, opravy a výklady se přidávají zvlášť:
 2. `opravy.tsv` – opravy strojového čtení: co je na skenu opravdu napsáno (PERO „Plohar“, napsáno „Ploczar“). Oprava je
    ukotvená obdélníkem řádku na skenu, ne jeho číslem, takže přežije nové OCR. Přidává se nástrojem:
 
-       python tools/opravy.py <kniha> <snímek+strana> <řádek> "<jak četl PERO>" "<co je napsáno>" --kdo "agent 2026-10-21"
+       python tools/opravy.py <kniha> <snímek+strana> <řádek> "<jak četl PERO>" "<co je napsáno>" --kdo "claude-opus-5-5/xhigh 2026-10-21"
 
    Sloupce: snimek, soubor, strana, x, y, sirka, vyska (obdélník řádku), puvodne (prázdné = celý řádek), spravne, kdo,
    jistota.
 3. `precteno.tsv` – celé zápisy přečtené očima, doslovně, i s chybami písaře.
-4. Výklad (kdo osoba ve skutečnosti je, např. v zápisu „Františka Červená“, ve skutečnosti Barbora Jímalová) do indexu
-   nepatří – index drží, co je napsáno; výklad je v rodokmenu (ve sloupci `odkaz` se na něj dá odkázat).
+4. `vyklad.tsv` – chyby písaře: na skenu je čitelně napsáno něco, co jiné zápisy vyvracejí (jméno, věk, vztah). Zápis
+   v `precteno.tsv` zůstává, jak je napsaný; výklad vedle něj říká, co je správně, a čím je to doložené (viz
+   [vyklad.tsv](#vykladtsv--chyby-písaře)).
 
-`tools/hledej.py` prohledává `precteno.tsv` (zásah označen „[očima]“) a strojový text s použitými opravami („[opraveno]“;
-hledá se i v původním znění).
+Jiný výklad (kdo osoba ve skutečnosti je, čí je sourozenec, ke které rodině patří) do indexu nepatří, ten je v rodokmenu
+(ve sloupci `odkaz` se na něj dá odkázat).
+
+`tools/hledej.py` prohledává `precteno.tsv` (zásah označen „[očima]“, s výkladem k zápisu „[výklad: …]“), správné hodnoty
+z `vyklad.tsv` („[výklad]“ – hledání „Rozina“ najde i zápis, kde písař napsal Anna) a strojový text
+s použitými opravami („[opraveno]“; hledá se i v původním znění).
 
 ## precteno.tsv – zápisy přečtené očima
 
@@ -133,9 +141,38 @@ první řádek hlavička:
 | snimek | číslo snímku na portálu a strana, např. `124R` |
 | datum | datum události, jak je čitelné (`1756-01-14`, `1757-04`, `~1723`) |
 | typ | `N` narození/křest, `O` sňatek, `Z` úmrtí/pohřeb, `P` převod gruntu v pozemkové knize (koupě, dědictví, přiženění, odhad), `S` řádek soupisu poddaných nebo sčítání lidu, `K` katastrální mapa (indikační skica: číslo domu, majitel), `J` jiné (ohlášky, atestát, rejstřík, familiant, prázdná strana) |
-| obec | obec a číslo domu (`Jetenovice 7`); u pozemkové knihy i jméno gruntu (`Velké Hydčice 3, grunt Němcovský`) |
-| osoby | hlavní osoby s rolí: `dítě: Ambrož; otec: Matěj Píhr; matka: Ludmila` (u O ženich, nevěsta a jejich rodiče; u P `prodávající: …; kupující: …; výměnkář: …`; u S `hospodář: …; manželka: …; děti: …`) |
+| obec | obec a číslo domu (`Lhota 7`); u pozemkové knihy i jméno gruntu (`Nová Ves 3, grunt Horákovský`) |
+| osoby | hlavní osoby s rolí: `dítě: Jan; otec: Václav Novák; matka: Ludmila` (u O ženich, nevěsta a jejich rodiče; u P `prodávající: …; kupující: …; výměnkář: …`; u S `hospodář: …; manželka: …; děti: …`) |
 | ostatni | kmotři, svědci, povolání, věk, příčina smrti – stručně; u P cena, splátky, výminek, svědci |
 | jistota | `vysoká`, `střední`, `nízká`; nejisté čtení v textu značit `[?]` |
 | cetl | kdo a kdy: jazykový model jako `model/effort datum` (`claude-sonnet-5-5/xhigh 2026-11-03`, ověření `…, ověřil claude-opus-5-5/xhigh 2026-11-04`), člověk jménem a datem (viz [Kdo četl](#kdo-četl)) |
 | odkaz | volitelně odkaz na zpracovaný záznam jinde (např. v rodokmenu) |
+
+## vyklad.tsv – chyby písaře
+
+Farář se občas spletl: zapsal matku jménem babičky, věk zemřelého odhadl o několik let vedle, popletl jméno. Kdo to
+dokáže jinými zápisy, zapíše to do `vyklad.tsv` téže knihy. Sloupce oddělené tabulátorem, první řádek hlavička:
+
+| sloupec | obsah |
+|---|---|
+| snimek, datum | vykládaný zápis, přesně jako v `precteno.tsv` téže knihy |
+| udaj | který údaj je chybný: `věk zemřelého`, `jméno matky`, `jméno babičky (matky matky)`, … |
+| napsano | co je v zápisu napsáno (`67`, `Anna`) |
+| spravne | co je správně (`63`, `Rozina`) |
+| doklady | zápisy v indexu, které to dokazují: `<archiv>/<kniha>/<snimek> <datum> (popis)`, víc dokladů oddělených `; ` |
+| kdo | kdo a kdy, stejně jako `cetl` (u jazykového modelu id a effort) |
+| jistota | `vysoká` nebo `střední`; domněnka s nízkou jistotou sem nepatří |
+
+Příklad (smyšlený):
+
+    124R	1768-03-12	jméno matky	Anna	Rozina	portafontium/lhota-03/88L 1762-02-04 (sňatek rodičů); portafontium/lhota-03/131R 1770-05-02 (křest sourozence)	Jan Novák 2026-11-05	vysoká
+
+Pravidla:
+
+- **Doklady jsou zápisy v indexu.** Vykládaný zápis i každý doklad musí být v `precteno.tsv`, aby šel kdokoli ověřit
+  na skenu; kontrola jinak řádek odmítne. Rodinná tradice nebo vlastní rodokmen doklad nejsou.
+- **Původní čtení se nemění.** Kdo s výkladem nesouhlasí, přidá vlastní řádek.
+- Přidává se nástrojem, který řádek před zápisem zkontroluje:
+
+      python tools/vyklad.py <archiv>/<kniha> <snimek> <datum> "<udaj>" "<napsano>" "<spravne>" \
+          --doklad "<archiv>/<kniha>/<snimek> <datum> (popis)" --kdo "Jan Novák 2026-11-05" [--jistota střední]

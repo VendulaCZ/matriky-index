@@ -25,11 +25,14 @@ není, a založte Issue „Čtu: <archiv>/<kniha>“ (formulář „Čtu knihu�
   `Jan Novák + claude-opus-5-5/xhigh 2026-11-05` (viz [Kdo četl](README.md#kdo-četl)).
 - `ocr-pero.tsv`, `stranky.tsv` – strojový text z PERO; postup v [PERO.md](PERO.md).
 - `opravy.tsv` – opravy strojového čtení, nástrojem `tools/opravy.py`.
+- `vyklad.tsv` – chyby písaře (špatné jméno, věk, vztah), které dokazují jiné zápisy v indexu, nástrojem
+  `tools/vyklad.py`; formát a pravidla v [README](README.md#vykladtsv--chyby-písaře).
 - Nová kniha potřebuje `kniha.yaml` aspoň s poli `archiv`, `kniha`, `nazev`, `url` (odkaz na knihu na portálu archivu),
   ideálně i `roky`, `farnost`, `obsah`.
 
-Nepatří sem: skeny a celé exporty z PERO (dají se kdykoli stáhnout znovu), výklad (kdo osoba ve skutečnosti je – to
-patří do vašeho rodokmenu, ve sloupci `odkaz` se na něj dá odkázat) a nic o žijících lidech.
+Nepatří sem: skeny a celé exporty z PERO (dají se kdykoli stáhnout znovu), jiný výklad než doložená chyba písaře (kdo
+osoba ve skutečnosti je, čí je sourozenec – to patří do vašeho rodokmenu, ve sloupci `odkaz` se na něj dá odkázat), a to
+ani do sloupců `osoby` a `ostatni`, a nic o žijících lidech.
 
 ## Pravidla
 

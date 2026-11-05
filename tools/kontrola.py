@@ -22,6 +22,7 @@ HLAVICKY = {
     "ocr-pero.tsv": ["snimek", "soubor", "strana", "radek", "x", "y", "sirka", "vyska", "jistota", "text"],
     "stranky.tsv": ["snimek", "soubor", "sirka_obrazku", "vyska_obrazku", "radku"],
     "opravy.tsv": ["snimek", "soubor", "strana", "x", "y", "sirka", "vyska", "puvodne", "spravne", "kdo", "jistota"],
+    "vyklad.tsv": ["snimek", "datum", "udaj", "napsano", "spravne", "doklady", "kdo", "jistota"],
 }
 TYPY = {"N", "O", "Z", "P", "S", "K", "J"}
 JISTOTA = ("vysoká", "střední", "nízká")
@@ -39,7 +40,11 @@ PRODUKT = re.compile(r"\b(chatgpt|copilot|perplexity)\b", re.I)
 # 301/2000 Sb., § 5a); soupisy obyvatel držíme stejně jako narozené. Mladší zápisy mohou týkat žijících lidí.
 LHUTA = {"N": 100, "S": 100, "O": 75, "Z": 75}
 # Soubory, ve kterých se cizí řádky nesmí mazat ani měnit (ocr-pero.tsv se při lepším OCR vyměňuje celý).
-NEPREPISOVAT = ("precteno.tsv", "opravy.tsv")
+NEPREPISOVAT = ("precteno.tsv", "opravy.tsv", "vyklad.tsv")
+# Doklad výkladu: zápis v precteno.tsv, „<archiv>/<kniha>/<snimek> <datum> (popis)“; víc dokladů oddělených „; “.
+DOKLAD = re.compile(r"^([^/\s]+)/([^/\s]+)/([^/\s]+) (\S+)(?: \((.+)\))?$")
+# Výklad s nízkou jistotou je domněnka, ne doložená chyba písaře.
+JISTOTA_VYKLADU = ("vysoká", "střední")
 
 
 class Hlaseni:
@@ -94,6 +99,68 @@ def model_bez_id(cetl):
     return JAZYKOVY_MODEL.search(zbytek)
 
 
+def kontrola_kdo(kde, kdo, h, pole):
+    if not kdo.strip():
+        h.chyba(kde, f"chybí {pole} (kdo a kdy)")
+    elif spatne := [e for e in MODEL_EFFORT.findall(kdo) if e.lower() not in EFFORT and not e.isdigit()]:
+        h.chyba(kde, f"{pole} „{kdo}“: effort „{spatne[0]}“ není z {', '.join(EFFORT)} ani počet tokenů")
+    elif model_bez_id(kdo):
+        h.chyba(kde, f"{pole} „{kdo}“: u jazykového modelu uveďte jeho id a effort, např. claude-sonnet-5-5/xhigh")
+
+
+_ZAPISY = None
+
+
+def zapisy():
+    """Klíče (archiv, kniha, snimek, datum) všech řádků precteno.tsv v indexu."""
+    global _ZAPISY
+    if _ZAPISY is None:
+        _ZAPISY = set()
+        for p in KNIHY.glob("*/*/precteno.tsv"):
+            with open(p, encoding="utf-8", newline="") as f:
+                for r in list(csv.reader(f, delimiter="\t"))[1:]:
+                    if len(r) >= 2:
+                        _ZAPISY.add((p.parent.parent.name, p.parent.name, r[0], r[1]))
+    return _ZAPISY
+
+
+def rozeber_doklady(text):
+    """Seznam (archiv, kniha, snimek, datum, popis); ValueError u položky, která neodpovídá formátu."""
+    out = []
+    for polozka in (x.strip() for x in text.split(";")):
+        m = DOKLAD.match(polozka)
+        if not m:
+            raise ValueError(f"doklad „{polozka}“ není ve tvaru <archiv>/<kniha>/<snimek> <datum> (popis)")
+        out.append(m.groups())
+    return out
+
+
+def kontrola_vykladu(p, r, kde, h):
+    archiv, kniha = p.parent.parent.name, p.parent.name
+    snimek, datum, udaj, napsano, spravne, doklady, kdo = r[:7]
+    jistota = r[7] if len(r) > 7 else ""
+    if (archiv, kniha, snimek, datum) not in zapisy():
+        h.chyba(kde, f"zápis {snimek} {datum} není v precteno.tsv této knihy – vykládaný zápis se přidá nejdřív tam")
+    if not (udaj.strip() and napsano.strip() and spravne.strip()):
+        h.chyba(kde, "udaj, napsano i spravne musí být vyplněné")
+    elif napsano.strip() == spravne.strip():
+        h.chyba(kde, "napsano a spravne jsou stejné")
+    if not doklady.strip():
+        h.chyba(kde, "chybí doklady (zápisy v indexu, které chybu dokazují)")
+    else:
+        try:
+            for d in rozeber_doklady(doklady):
+                if d[:2] == (archiv, kniha) and d[2:4] == (snimek, datum):
+                    h.chyba(kde, "doklad nemůže být vykládaný zápis sám")
+                elif d[:4] not in zapisy():
+                    h.chyba(kde, f"doklad {'/'.join(d[:3])} {d[3]} není v precteno.tsv – přidejte ho tam")
+        except ValueError as e:
+            h.chyba(kde, str(e))
+    kontrola_kdo(kde, kdo, h, "kdo")
+    if jistota not in JISTOTA_VYKLADU:
+        h.chyba(kde, f"jistota „{jistota}“: výklad jen s jistotou {' nebo '.join(JISTOTA_VYKLADU)}")
+
+
 def kontrola_tsv(p, hlavicka, h):
     with open(p, encoding="utf-8", newline="") as f:
         radky = list(csv.reader(f, delimiter="\t"))
@@ -112,6 +179,9 @@ def kontrola_tsv(p, hlavicka, h):
         if len(r) not in (len(hlavicka), len(hlavicka) - 1):
             h.chyba(kde, f"{len(r)} sloupců místo {len(hlavicka)} (oddělovač je tabulátor)")
             continue
+        if p.name == "vyklad.tsv":
+            kontrola_vykladu(p, r, kde, h)
+            continue
         if p.name != "precteno.tsv":
             continue
         snimek, datum, typ, _, osoby, _, jistota, cetl = r[:8]
@@ -119,12 +189,7 @@ def kontrola_tsv(p, hlavicka, h):
             h.chyba(kde, "chybí snímek")
         if typ not in TYPY:
             h.chyba(kde, f"typ „{typ}“ není z {', '.join(sorted(TYPY))}")
-        if not cetl.strip():
-            h.chyba(kde, "chybí cetl (kdo a kdy četl)")
-        elif spatne := [e for e in MODEL_EFFORT.findall(cetl) if e.lower() not in EFFORT and not e.isdigit()]:
-            h.chyba(kde, f"cetl „{cetl}“: effort „{spatne[0]}“ není z {', '.join(EFFORT)} ani počet tokenů")
-        elif model_bez_id(cetl):
-            h.chyba(kde, f"cetl „{cetl}“: u jazykového modelu uveďte jeho id a effort, např. claude-sonnet-5-5/xhigh")
+        kontrola_kdo(kde, cetl, h, "cetl")
         if not osoby.strip():
             h.varuj(kde, "prázdné osoby")
         if jistota and not jistota.startswith(JISTOTA):
@@ -149,7 +214,7 @@ def zmenene_knihy(zaklad):
 
 
 def smazane_radky(zaklad, h):
-    """Odebrané nebo přepsané řádky v precteno.tsv a opravy.tsv (změna se v diffu ukáže jako - a +)."""
+    """Odebrané nebo přepsané řádky v NEPREPISOVAT (změna se v diffu ukáže jako - a +)."""
     diff = subprocess.run(["git", "diff", "--unified=0", f"{zaklad}...HEAD", "--", "knihy"], cwd=ROOT,
                           capture_output=True, text=True, encoding="utf-8", check=True).stdout
     soubor = None

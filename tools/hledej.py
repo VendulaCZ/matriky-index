@@ -1,5 +1,6 @@
-"""Searches all indexed books for a word, tolerating OCR errors: entries read by eye (precteno.tsv) and the machine OCR
-text (ocr-pero.tsv) with corrections from opravy.tsv applied (the original OCR text is searched too).
+"""Searches all indexed books for a word, tolerating OCR errors: entries read by eye (precteno.tsv), the scribe's errors
+corrected in vyklad.tsv (a hit on the corrected value shows the entry as written) and the machine OCR text
+(ocr-pero.tsv) with corrections from opravy.tsv applied (the original OCR text is searched too).
 
     python tools/hledej.py <slovo> [--maxd 2] [--kniha KNIHA] [--kontext 1] [--skip REGEX]
 
@@ -57,12 +58,26 @@ def main():
         if args.kniha and book != args.kniha:
             continue
         where = f"{folder.parent.name}/{book}"
+        vyklady = {}
+        for v in read_tsv(folder / "vyklad.tsv"):
+            vyklady.setdefault((v["snimek"], v["datum"]), []).append(v)
+        entries = {}
         for row in read_tsv(folder / "precteno.tsv"):
             text = " | ".join(row.get(k, "") for k in ("datum", "typ", "obec", "osoby", "ostatni"))
+            entries.setdefault((row["snimek"], row["datum"]), text)
+            note = "".join(f" [výklad: {v['udaj']} „{v['napsano']}“ → „{v['spravne']}“]"
+                           for v in vyklady.get((row["snimek"], row["datum"]), []))
             match = found(text)
             if match:
                 hits += 1
-                print(f"{where} snímek {row['snimek']} [očima] [{match}] {text}")
+                print(f"{where} snímek {row['snimek']} [očima]{note} [{match}] {text}")
+        for (snimek, datum), rows in vyklady.items():
+            for v in rows:
+                match = found(v["spravne"])
+                if match:
+                    hits += 1
+                    print(f"{where} snímek {snimek} [výklad] [{match}] {v['udaj']}: napsáno „{v['napsano']}“, správně "
+                          f"„{v['spravne']}“ (doklady: {v['doklady']}) | {entries.get((snimek, datum), datum)}")
         rows = read_tsv(folder / "ocr-pero.tsv")
         for row in rows:  # the test crops (knihy/testy) have "vyrez" instead of "soubor" and no "strana"
             row.setdefault("soubor", row.get("vyrez", ""))
