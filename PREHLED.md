@@ -1,14 +1,14 @@
 # Přehled indexu
 
-Stav k 4. 11. 2026 (generuje `python tools/prehled.py`).
+Stav k 5. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **158 knih** (matrika 107, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
+- **165 knih** (matrika 114, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
 - **5 823 stran** převedených strojově (PERO OCR), **979 649 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **12 238 zápisů přečtených očima**: narození 8052, sňatky 1425, úmrtí 2432, převody gruntů 49, soupisy 29, jiné 222
+- **12 251 zápisů přečtených očima**: narození 8059, sňatky 1427, úmrtí 2436, převody gruntů 49, soupisy 29, jiné 222
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
-## SOA Plzeň – Porta fontium (48)
+## SOA Plzeň – Porta fontium (55)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -30,18 +30,25 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Kvasňovice 02](https://www.portafontium.eu/register/soap-pn/kvasnovice-02) | matrika | 1766–1793 | 241 | 60446 | 77 (N 74 Z 3) |
 | kvasnovice-04 | matrika |  |  |  | 9 (O 9) |
 | [Kvasňovice 05](https://www.portafontium.eu/register/soap-pn/kvasnovice-05) | matrika | 1784– | 124 | 18589 | 158 (Z 158) |
-| kvasnovice-06 | matrika |  |  |  | 2 (J 1 N 1) |
+| [Kvášňovice 06](https://www.portafontium.eu/register/soap-pn/kvasnovice-06) | matrika |  |  |  | 4 (J 1 N 3) |
+| [Kvášňovice 10](https://www.portafontium.eu/register/soap-pn/kvasnovice-10) | matrika |  |  |  | 1 (O 1) |
 | kvasnovice-13 | matrika |  |  |  | 9 (J 9) |
 | [Malý Bor 03](https://www.portafontium.eu/register/soap-pn/maly-bor-03) | matrika | 1704–1726 | 98 | 8664 | 65 (N 20 O 30 Z 15) |
 | [Malý Bor 04](https://www.portafontium.eu/register/soap-pn/maly-bor-04) | matrika | 1727–1744 | 116 | 12230 | 294 (J 2 N 267 O 21 Z 4) |
-| [Malý Bor 05](https://www.portafontium.eu/register/soap-pn/maly-bor-05) | matrika | 1745–1763 | 174 | 26479 | 266 (J 1 N 258 O 2 Z 5) |
+| [Malý Bor 05](https://www.portafontium.eu/register/soap-pn/maly-bor-05) | matrika | 1745–1763 | 174 | 26479 | 267 (J 1 N 259 O 2 Z 5) |
 | [Malý Bor 06](https://www.portafontium.eu/register/soap-pn/maly-bor-06) | matrika | 1764–1784 | 183 | 34691 | 7 (O 5 Z 2) |
+| [Malý Bor 12](https://www.portafontium.eu/register/soap-pn/maly-bor-12) | matrika |  |  |  | 1 (Z 1) |
+| [Malý Bor 14](https://www.portafontium.eu/register/soap-pn/maly-bor-14) | matrika |  |  |  | 1 (Z 1) |
+| [Malý Bor 15](https://www.portafontium.eu/register/soap-pn/maly-bor-15) | matrika |  |  |  | 2 (N 2) |
 | maly-bor-16 | matrika |  |  |  | 12 (J 12) |
+| [Malý Bor 23](https://www.portafontium.eu/register/soap-pn/maly-bor-23) | matrika |  |  |  | 2 (Z 2) |
 | [Myslív 02](https://www.portafontium.eu/register/soap-pn/mysliv-02) | matrika | 1685–1727 |  |  | 553 (N 552 O 1) |
 | [Nepomuk 01](https://www.portafontium.eu/register/soap-pn/nepomuk-01) | matrika | 1702–1742 |  |  | 9 (N 9) |
 | [Velký Bor 01](https://www.portafontium.eu/register/soap-pn/velky-bor-01) | matrika | 1707–1754 | 226 | 32078 |  |
-| [Velký Bor 02](https://www.portafontium.eu/register/soap-pn/velky-bor-02) | matrika | 1746–1771 | 159 | 25028 |  |
+| [Velký Bor 02](https://www.portafontium.eu/register/soap-pn/velky-bor-02) | matrika | 1746–1771 | 159 | 25028 | 1 (N 1) |
+| [Velký Bor 03](https://www.portafontium.eu/register/soap-pn/velky-bor-03) | matrika |  |  |  | 1 (N 1) |
 | [Velký Bor 08](https://www.portafontium.eu/register/soap-pn/velky-bor-08) | matrika | 1746–1771 | 66 | 5861 |  |
+| [Velký Bor 09](https://www.portafontium.eu/register/soap-pn/velky-bor-09) | matrika |  |  |  | 1 (O 1) |
 | [Velký Bor 11](https://www.portafontium.eu/register/soap-pn/velky-bor-11) | matrika | 1746–1771 | 87 | 10754 |  |
 | [Vrčeň 03](https://www.portafontium.eu/register/soap-pn/vrcen-03) | matrika | 1683–1697 |  |  | 248 (N 248) |
 | [Vrčeň 04](https://www.portafontium.eu/register/soap-pn/vrcen-04) | matrika | 1697–1728 |  |  | 485 (J 2 N 483) |
@@ -195,6 +202,13 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
+## ndk (2)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
+
 ## zaopava (6)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -218,10 +232,3 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-
-## ndk (2)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
