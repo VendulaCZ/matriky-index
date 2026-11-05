@@ -24,6 +24,7 @@ body:
     id: cetl
     attributes:
       label: Kdo a čím četl
+      description: U jazykového modelu jeho id a effort, např. claude-opus-5-5/xhigh.
       placeholder: Jan Novák, očima + PERO OCR, 2026-11-05
     validations:
       required: true

@@ -21,7 +21,8 @@ není, a založte Issue „Čtu: <archiv>/<kniha>“ (formulář „Čtu knihu�
 
 - `precteno.tsv` – zápisy přečtené očima, jeden řádek na zápis, doslovně, nejistá místa s `[?]`; formát v
   [README](README.md#precteno-tsv--zápisy-přečtené-očima). Do `cetl` napište, kdo četl a kdy, např.
-  `Jan Novák 2026-11-05` nebo `Jan Novák + Claude 2026-11-05`.
+  `Jan Novák 2026-11-05`; s jazykovým modelem i jeho id a effort, např.
+  `Jan Novák + claude-opus-5-5/xhigh 2026-11-05` (viz [Kdo četl](README.md#kdo-četl)).
 - `ocr-pero.tsv`, `stranky.tsv` – strojový text z PERO; postup v [PERO.md](PERO.md).
 - `opravy.tsv` – opravy strojového čtení, nástrojem `tools/opravy.py`.
 - Nová kniha potřebuje `kniha.yaml` aspoň s poli `archiv`, `kniha`, `nazev`, `url` (odkaz na knihu na portálu archivu),
