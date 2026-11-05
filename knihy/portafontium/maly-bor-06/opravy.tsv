@@ -1,11 +1,11 @@
 snimek	soubor	strana	x	y	sirka	vyska	puvodne	spravne	kdo	jistota
-96	maly-bor-06_0960-o	R	2120	155	1659	124	Katiſike	Katiſche [?]	agent 2026-10-22	vysoká
-96	maly-bor-06_0960-o	R	2118	282	1673	120	Magaun	Máczaun	agent 2026-10-22	vysoká
-96	maly-bor-06_0960-o	R	2123	499	1632	139	Velleſihitz	Velleſchitz	agent 2026-10-22	vysoká
-96	maly-bor-06_0960-o	R	2110	573	1645	128	Klitſihia	Kletſchka [?]	agent 2026-10-22	vysoká
-96	maly-bor-06_0960-o	R	2106	975	1635	108	Magaun	Maʒaun	agent 2026-10-22	vysoká
-132	maly-bor-06_1320-z	L	240	126	1623	78	annorum Bo ex qnq a Magauniana	annorum 3 [?] ex gaza Maʒauniana	agent 2026-10-22	vysoká
-132	maly-bor-06_1320-z	L	250	1674	1604	162	Mayaun	Maʒaun	agent 2026-10-22	vysoká
-132	maly-bor-06_1320-z	L	251	1743	1603	143	anſ: 2/4 ex gaza Mogauniona	anſ: 4 ex gaza Maʒauniana	agent 2026-10-22	vysoká
-97	maly-bor-06_0970-o	L	434	793	1532	98	Kvcženy	Koženy	agent 2026-10-22	vysoká
-97	maly-bor-06_0970-o	L	422	1140	1527	105	Kletſihra	Kletſchka	agent 2026-10-22	vysoká
+96	maly-bor-06_0960-o	R	2120	155	1659	124	Katiſike	Katiſche [?]	claude-opus-5-5/xhigh 2026-10-22	vysoká
+96	maly-bor-06_0960-o	R	2118	282	1673	120	Magaun	Máczaun	claude-opus-5-5/xhigh 2026-10-22	vysoká
+96	maly-bor-06_0960-o	R	2123	499	1632	139	Velleſihitz	Velleſchitz	claude-opus-5-5/xhigh 2026-10-22	vysoká
+96	maly-bor-06_0960-o	R	2110	573	1645	128	Klitſihia	Kletſchka [?]	claude-opus-5-5/xhigh 2026-10-22	vysoká
+96	maly-bor-06_0960-o	R	2106	975	1635	108	Magaun	Maʒaun	claude-opus-5-5/xhigh 2026-10-22	vysoká
+132	maly-bor-06_1320-z	L	240	126	1623	78	annorum Bo ex qnq a Magauniana	annorum 3 [?] ex gaza Maʒauniana	claude-opus-5-5/xhigh 2026-10-22	vysoká
+132	maly-bor-06_1320-z	L	250	1674	1604	162	Mayaun	Maʒaun	claude-opus-5-5/xhigh 2026-10-22	vysoká
+132	maly-bor-06_1320-z	L	251	1743	1603	143	anſ: 2/4 ex gaza Mogauniona	anſ: 4 ex gaza Maʒauniana	claude-opus-5-5/xhigh 2026-10-22	vysoká
+97	maly-bor-06_0970-o	L	434	793	1532	98	Kvcženy	Koženy	claude-opus-5-5/xhigh 2026-10-22	vysoká
+97	maly-bor-06_0970-o	L	422	1140	1527	105	Kletſihra	Kletſchka	claude-opus-5-5/xhigh 2026-10-22	vysoká

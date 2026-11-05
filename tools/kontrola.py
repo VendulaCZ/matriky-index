@@ -182,6 +182,9 @@ def kontrola_tsv(p, hlavicka, h):
         if p.name == "vyklad.tsv":
             kontrola_vykladu(p, r, kde, h)
             continue
+        if p.name == "opravy.tsv":
+            kontrola_kdo(kde, r[9], h, "kdo")
+            continue
         if p.name != "precteno.tsv":
             continue
         snimek, datum, typ, _, osoby, _, jistota, cetl = r[:8]

@@ -1,10 +1,10 @@
 snimek	soubor	strana	x	y	sirka	vyska	puvodne	spravne	kdo	jistota
-277	horazdovice-05_2770-o	R	2113	546	1576	146	Jukub Lo-	Jakub Ko-	agent 2026-10-22	vysoká
-277	horazdovice-05_2770-o	R	2158	176	1495	116	Kotryynni Prichowen	Katerzynau Prichowau[?]	agent 2026-10-22	vysoká
-278	horazdovice-05_2780-o	L	528	2471	1456	99	Jakube Rotolu z Lozlowa	Jakuba Kotrla z Kozlowa	agent 2026-10-22	vysoká
-281	horazdovice-05_2810-o	R	2243	2852	1468	109	Jerübe Lotrly	Jakuba Kotrly	agent 2026-10-22	vysoká
-282	horazdovice-05_2820-o	L	472	229	1534	181	Kotlebe zbabie	Kotlaba z Babin	agent 2026-10-22	vysoká
-278	horazdovice-05_2780-o	L	515	1734	1452	144	oresPotežnik zbebin	Tomass Potužnjk z Babin	agent 2026-10-22	vysoká
-281	horazdovice-05_2810-o	L	486	1583	1460	129	Mutrig lebsten	Matiej Labsky	agent 2026-10-22	vysoká
-278	horazdovice-05_2780-o	L	510	1301	1442	124	Janowy Lobscyen	Janowj Labskym[?]	agent 2026-10-22	vysoká
-277	horazdovice-05_2770-o	L	488	1667	1413	138	Matějo Labſkýh	Matiege Labskyh	agent 2026-10-22	vysoká
+277	horazdovice-05_2770-o	R	2113	546	1576	146	Jukub Lo-	Jakub Ko-	claude-opus-5-5/xhigh 2026-10-22	vysoká
+277	horazdovice-05_2770-o	R	2158	176	1495	116	Kotryynni Prichowen	Katerzynau Prichowau[?]	claude-opus-5-5/xhigh 2026-10-22	vysoká
+278	horazdovice-05_2780-o	L	528	2471	1456	99	Jakube Rotolu z Lozlowa	Jakuba Kotrla z Kozlowa	claude-opus-5-5/xhigh 2026-10-22	vysoká
+281	horazdovice-05_2810-o	R	2243	2852	1468	109	Jerübe Lotrly	Jakuba Kotrly	claude-opus-5-5/xhigh 2026-10-22	vysoká
+282	horazdovice-05_2820-o	L	472	229	1534	181	Kotlebe zbabie	Kotlaba z Babin	claude-opus-5-5/xhigh 2026-10-22	vysoká
+278	horazdovice-05_2780-o	L	515	1734	1452	144	oresPotežnik zbebin	Tomass Potužnjk z Babin	claude-opus-5-5/xhigh 2026-10-22	vysoká
+281	horazdovice-05_2810-o	L	486	1583	1460	129	Mutrig lebsten	Matiej Labsky	claude-opus-5-5/xhigh 2026-10-22	vysoká
+278	horazdovice-05_2780-o	L	510	1301	1442	124	Janowy Lobscyen	Janowj Labskym[?]	claude-opus-5-5/xhigh 2026-10-22	vysoká
+277	horazdovice-05_2770-o	L	488	1667	1413	138	Matějo Labſkýh	Matiege Labskyh	claude-opus-5-5/xhigh 2026-10-22	vysoká

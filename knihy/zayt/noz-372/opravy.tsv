@@ -1,11 +1,11 @@
 snimek	soubor	strana	x	y	sirka	vyska	puvodne	spravne	kdo	jistota
-25	noz372_0025	R	2469	862	485	47	Krans Isad, getraut 19 Juli 849	Kraus Isak, getraut 19 Juli 849	agent 2026-10-21	vysoká
-25	noz372_0025	R	2469	985	443	48	Kreis Jtas getr. au. dezb 1852	Kraus Isak getr. 1[?] Septbr[?] 1852	agent 2026-10-21	střední
-25	noz372_0025	R	2469	1057	469	49	Fraus Rathorine gest. 5. Juli 1860	Kraus Katharina gest. 5. Juli 1860	agent 2026-10-21	vysoká
-25	noz372_0025	R	2469	1094	505	49	Kraus Elisabeth ges. 29 Novb. ob1	Kraus Elisabeth gest. 29 Novb. 861	agent 2026-10-21	vysoká
-27	noz372_0027	L	242	953	353	52	Lolla Anna geb. 1859.	Pollak Anna geb. 1859.	agent 2026-10-21	vysoká
-21	noz372_0021	L	998	2104	289	47	weib der Phak Krau	weib des Isak Krau	agent 2026-10-21	vysoká
-21	noz372_0021	L	992	2336	311	36	Krans Elisabeth, Witte	Kraus Elisabeth, Witwe	agent 2026-10-21	vysoká
-21	noz372_0021	L	995	2356	280	40	nach Jak Kraus aus	nach Isak Kraus aus	agent 2026-10-21	vysoká
-21	noz372_0021	L	692	2065	600	58	Kathami na Kram she-	Katharina Kraus Ehe-	agent 2026-10-21	vysoká
-25	noz372_0025	R	2469	899	507	55	Katz Zosesch getraut. 27 Fbr 851.	Katz Josef getraut 27 Febr 851.	agent 2026-10-21	vysoká
+25	noz372_0025	R	2469	862	485	47	Krans Isad, getraut 19 Juli 849	Kraus Isak, getraut 19 Juli 849	claude-opus-5-5/xhigh 2026-10-21	vysoká
+25	noz372_0025	R	2469	985	443	48	Kreis Jtas getr. au. dezb 1852	Kraus Isak getr. 1[?] Septbr[?] 1852	claude-opus-5-5/xhigh 2026-10-21	střední
+25	noz372_0025	R	2469	1057	469	49	Fraus Rathorine gest. 5. Juli 1860	Kraus Katharina gest. 5. Juli 1860	claude-opus-5-5/xhigh 2026-10-21	vysoká
+25	noz372_0025	R	2469	1094	505	49	Kraus Elisabeth ges. 29 Novb. ob1	Kraus Elisabeth gest. 29 Novb. 861	claude-opus-5-5/xhigh 2026-10-21	vysoká
+27	noz372_0027	L	242	953	353	52	Lolla Anna geb. 1859.	Pollak Anna geb. 1859.	claude-opus-5-5/xhigh 2026-10-21	vysoká
+21	noz372_0021	L	998	2104	289	47	weib der Phak Krau	weib des Isak Krau	claude-opus-5-5/xhigh 2026-10-21	vysoká
+21	noz372_0021	L	992	2336	311	36	Krans Elisabeth, Witte	Kraus Elisabeth, Witwe	claude-opus-5-5/xhigh 2026-10-21	vysoká
+21	noz372_0021	L	995	2356	280	40	nach Jak Kraus aus	nach Isak Kraus aus	claude-opus-5-5/xhigh 2026-10-21	vysoká
+21	noz372_0021	L	692	2065	600	58	Kathami na Kram she-	Katharina Kraus Ehe-	claude-opus-5-5/xhigh 2026-10-21	vysoká
+25	noz372_0025	R	2469	899	507	55	Katz Zosesch getraut. 27 Fbr 851.	Katz Josef getraut 27 Febr 851.	claude-opus-5-5/xhigh 2026-10-21	vysoká

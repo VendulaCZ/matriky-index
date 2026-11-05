@@ -1,35 +1,35 @@
 snimek	soubor	strana	x	y	sirka	vyska	puvodne	spravne	kdo	jistota
-8	noz727_0008	L	159	956	280	52	Kraus Mani	Kraus Maria	agent 2026-10-21	vysoká
-12	noz727_0012	R	2094	2005	220	51	Kraus-Mois.	Kraus Alois	agent 2026-10-21	vysoká
-12	noz727_0012	R	2094	2254	405	63	Kraus Tfergia	Kraus Theresia	agent 2026-10-21	vysoká
-12	noz727_0012	R	2097	2355	421	64	Krans Kopph	Kraus Joseph	agent 2026-10-21	vysoká
-12	noz727_0012	R	2105	2409	374	64	Krans Toph	Kraus Joseph	agent 2026-10-21	vysoká
-12	noz727_0012	R	2086	1909	245	49	Krans Julia.	Kraus Julia.	agent 2026-10-21	vysoká
-5	noz727_0005	L	250	2239	494	58	15 Juli, 45	15 Juli 848	agent 2026-10-21	vysoká
-5	noz727_0005	L	249	2270	222	50	6 Augest N845.	6 August 1848.	agent 2026-10-21	vysoká
-5	noz727_0005	L	1525	2262	114	42	Karie	Maria	agent 2026-10-21	vysoká
-5	noz727_0005	R	2099	2269	320	46	Gsak Krans Frischhaum	Isak Kraus Fleischhauer	agent 2026-10-21	vysoká
-5	noz727_0005	R	2431	2270	344	46	(hneesen Tochber des Zstak	Theresia Tochter des Isak	agent 2026-10-21	vysoká
-5	noz727_0005	R	2101	2305	299	43	in Luchoraz V4 sein	in Tuchoraz N. 4 sein	agent 2026-10-21	vysoká
-5	noz727_0005	R	2102	2337	313	43	Gekonsens vom 25 Juli	Ehekonsens vom 25 Juli	agent 2026-10-21	vysoká
-5	noz727_0005	R	2103	2367	202	40	558 Nlr 2e959.	838 Z. 28959.	agent 2026-10-21	vysoká
-6	noz727_0006	L	1533	2127	158	68	Tosef	Josef	agent 2026-10-21	vysoká
-6	noz727_0006	L	1527	2525	102	56	osf	Josef	agent 2026-10-21	vysoká
-6	noz727_0006	R	2113	2123	296	63	Tpat Kraus	Isak Kraus	agent 2026-10-21	vysoká
-6	noz727_0006	R	2122	2185	279	55	in Tihoraz	in Tuchoraz	agent 2026-10-21	vysoká
-6	noz727_0006	R	2429	2131	343	56	Theroia Tochter	Theresia Tochter	agent 2026-10-21	vysoká
-6	noz727_0006	R	2427	2177	346	53	des Gat u. de Ban	des Isak u. der Bar-	agent 2026-10-21	vysoká
-6	noz727_0006	R	2424	2218	348	54	Eura Grimfeld	bara Grünfeld	agent 2026-10-21	vysoká
-6	noz727_0006	R	2426	2259	301	53	aus Bolegesetz	aus Woleschetz	agent 2026-10-21	vysoká
-6	noz727_0006	R	2113	2517	307	46	Krans Tpak Handls.	Kraus Isak Handels-	agent 2026-10-21	vysoká
-6	noz727_0006	R	2109	2548	311	54	mann aus Tuhorag	mann aus Tuchoraz	agent 2026-10-21	vysoká
-6	noz727_0006	R	2785	2526	316	52	Landet Herrman	Sandek Hermann	agent 2026-10-21	vysoká
-6	noz727_0006	R	2427	2561	342	50	des Herrnann Marti	des Hermann Marti-	agent 2026-10-21	vysoká
-6	noz727_0006	R	2783	2569	324	53	Markinawes aus Schwaz	Martinowes aus Schwarz-	agent 2026-10-21	vysoká
-11	noz727_0011	L	1141	1768	380	54	Pherr, ia Kraus des	Theresia Kraus des	agent 2026-10-21	vysoká
-11	noz727_0011	L	1143	1807	373	56	Jab Kraus Handels-	Isak Kraus Handels-	agent 2026-10-21	vysoká
-11	noz727_0011	L	1133	1850	386	53	manns zu Tuchoratz	mann zu Tuchoraz	agent 2026-10-21	vysoká
-11	noz727_0011	L	1138	2053	333	68	Tosef Söhn des	Josef Sohn des	agent 2026-10-21	vysoká
-11	noz727_0011	L	1122	2117	389	61	Tn S. Kraus aus	Isak Kraus aus	agent 2026-10-21	vysoká
-11	noz727_0011	L	1120	2174	333	53	Tüchornz u. seine	Tuchoraz u. seiner	agent 2026-10-21	vysoká
-11	noz727_0011	L	1123	2216	325	58	Gottin Tergia	Gattin Theresia	agent 2026-10-21	vysoká
+8	noz727_0008	L	159	956	280	52	Kraus Mani	Kraus Maria	claude-opus-5-5/xhigh 2026-10-21	vysoká
+12	noz727_0012	R	2094	2005	220	51	Kraus-Mois.	Kraus Alois	claude-opus-5-5/xhigh 2026-10-21	vysoká
+12	noz727_0012	R	2094	2254	405	63	Kraus Tfergia	Kraus Theresia	claude-opus-5-5/xhigh 2026-10-21	vysoká
+12	noz727_0012	R	2097	2355	421	64	Krans Kopph	Kraus Joseph	claude-opus-5-5/xhigh 2026-10-21	vysoká
+12	noz727_0012	R	2105	2409	374	64	Krans Toph	Kraus Joseph	claude-opus-5-5/xhigh 2026-10-21	vysoká
+12	noz727_0012	R	2086	1909	245	49	Krans Julia.	Kraus Julia.	claude-opus-5-5/xhigh 2026-10-21	vysoká
+5	noz727_0005	L	250	2239	494	58	15 Juli, 45	15 Juli 848	claude-opus-5-5/xhigh 2026-10-21	vysoká
+5	noz727_0005	L	249	2270	222	50	6 Augest N845.	6 August 1848.	claude-opus-5-5/xhigh 2026-10-21	vysoká
+5	noz727_0005	L	1525	2262	114	42	Karie	Maria	claude-opus-5-5/xhigh 2026-10-21	vysoká
+5	noz727_0005	R	2099	2269	320	46	Gsak Krans Frischhaum	Isak Kraus Fleischhauer	claude-opus-5-5/xhigh 2026-10-21	vysoká
+5	noz727_0005	R	2431	2270	344	46	(hneesen Tochber des Zstak	Theresia Tochter des Isak	claude-opus-5-5/xhigh 2026-10-21	vysoká
+5	noz727_0005	R	2101	2305	299	43	in Luchoraz V4 sein	in Tuchoraz N. 4 sein	claude-opus-5-5/xhigh 2026-10-21	vysoká
+5	noz727_0005	R	2102	2337	313	43	Gekonsens vom 25 Juli	Ehekonsens vom 25 Juli	claude-opus-5-5/xhigh 2026-10-21	vysoká
+5	noz727_0005	R	2103	2367	202	40	558 Nlr 2e959.	838 Z. 28959.	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	L	1533	2127	158	68	Tosef	Josef	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	L	1527	2525	102	56	osf	Josef	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2113	2123	296	63	Tpat Kraus	Isak Kraus	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2122	2185	279	55	in Tihoraz	in Tuchoraz	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2429	2131	343	56	Theroia Tochter	Theresia Tochter	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2427	2177	346	53	des Gat u. de Ban	des Isak u. der Bar-	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2424	2218	348	54	Eura Grimfeld	bara Grünfeld	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2426	2259	301	53	aus Bolegesetz	aus Woleschetz	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2113	2517	307	46	Krans Tpak Handls.	Kraus Isak Handels-	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2109	2548	311	54	mann aus Tuhorag	mann aus Tuchoraz	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2785	2526	316	52	Landet Herrman	Sandek Hermann	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2427	2561	342	50	des Herrnann Marti	des Hermann Marti-	claude-opus-5-5/xhigh 2026-10-21	vysoká
+6	noz727_0006	R	2783	2569	324	53	Markinawes aus Schwaz	Martinowes aus Schwarz-	claude-opus-5-5/xhigh 2026-10-21	vysoká
+11	noz727_0011	L	1141	1768	380	54	Pherr, ia Kraus des	Theresia Kraus des	claude-opus-5-5/xhigh 2026-10-21	vysoká
+11	noz727_0011	L	1143	1807	373	56	Jab Kraus Handels-	Isak Kraus Handels-	claude-opus-5-5/xhigh 2026-10-21	vysoká
+11	noz727_0011	L	1133	1850	386	53	manns zu Tuchoratz	mann zu Tuchoraz	claude-opus-5-5/xhigh 2026-10-21	vysoká
+11	noz727_0011	L	1138	2053	333	68	Tosef Söhn des	Josef Sohn des	claude-opus-5-5/xhigh 2026-10-21	vysoká
+11	noz727_0011	L	1122	2117	389	61	Tn S. Kraus aus	Isak Kraus aus	claude-opus-5-5/xhigh 2026-10-21	vysoká
+11	noz727_0011	L	1120	2174	333	53	Tüchornz u. seine	Tuchoraz u. seiner	claude-opus-5-5/xhigh 2026-10-21	vysoká
+11	noz727_0011	L	1123	2216	325	58	Gottin Tergia	Gattin Theresia	claude-opus-5-5/xhigh 2026-10-21	vysoká

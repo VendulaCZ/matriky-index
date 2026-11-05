@@ -1,16 +1,16 @@
 snimek	soubor	strana	x	y	sirka	vyska	puvodne	spravne	kdo	jistota
-27	o2434_0027-r	R	1408	1078	460	63	Put	Pick	agent 2026-10-22	vysoká
-27	o2434_0027-r	R	1422	1122	414	47	Pirk	Pick	agent 2026-10-22	vysoká
-27	o2434_0027-r	R	1408	1222	377	52	keit aus Kleinzbozi.	Pick aus Kleinzboži.	agent 2026-10-22	vysoká
-27	o2434_0027-r	R	1395	2386	486	63	Wohnizek	Wohřizek	agent 2026-10-22	vysoká
-32	o2434_0032-r	R	1397	1030	340	53	Aben hamr Pit recte	Abraham Pick recte	agent 2026-10-22	vysoká
-32	o2434_0032-r	R	1404	1074	323	54	Der fler aus Pres-	Dörfler aus Přes-	agent 2026-10-22	vysoká
-32	o2434_0032-r	R	1413	1111	281	56	tawlk. N E 69.	tawlk No C 69.	agent 2026-10-22	vysoká
-32	o2434_0032-r	R	1341	1388	436	47	Polaiek	Polaček	agent 2026-10-22	vysoká
-32	o2434_0032-r	R	1342	1419	386	43	sabes gebornen Sommen	sabeth gebornen Sommer[?]	agent 2026-10-22	vysoká
-32	o2434_0032-r	R	1374	2219	426	56	Abeasamn Eischel	Abraham Fischel	agent 2026-10-22	vysoká
-32	o2434_0032-r	L	820	1024	482	52	Frant Mint,	Israel Munk,	agent 2026-10-22	vysoká
-32	o2434_0032-r	L	815	1362	514	59	fetti, Tochter des Iatob derfler	Jetti, Tochter des Jakob Dörfler	agent 2026-10-22	vysoká
-32	o2434_0032-r	L	824	1427	504	58	Lodmilla gebornen P.t ausPreste	Ludmilla gebornen Pick aus Přest	agent 2026-10-22	vysoká
-32	o2434_0032-r	L	880	2337	469	69	Meit Munt in Prospnlb	Veit Munk in Přestawlk	agent 2026-10-22	vysoká
-32	o2434_0032-r	L	885	2417	431	63	Derfler	Dörfler	agent 2026-10-22	vysoká
+27	o2434_0027-r	R	1408	1078	460	63	Put	Pick	claude-opus-5-5/xhigh 2026-10-22	vysoká
+27	o2434_0027-r	R	1422	1122	414	47	Pirk	Pick	claude-opus-5-5/xhigh 2026-10-22	vysoká
+27	o2434_0027-r	R	1408	1222	377	52	keit aus Kleinzbozi.	Pick aus Kleinzboži.	claude-opus-5-5/xhigh 2026-10-22	vysoká
+27	o2434_0027-r	R	1395	2386	486	63	Wohnizek	Wohřizek	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	R	1397	1030	340	53	Aben hamr Pit recte	Abraham Pick recte	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	R	1404	1074	323	54	Der fler aus Pres-	Dörfler aus Přes-	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	R	1413	1111	281	56	tawlk. N E 69.	tawlk No C 69.	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	R	1341	1388	436	47	Polaiek	Polaček	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	R	1342	1419	386	43	sabes gebornen Sommen	sabeth gebornen Sommer[?]	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	R	1374	2219	426	56	Abeasamn Eischel	Abraham Fischel	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	L	820	1024	482	52	Frant Mint,	Israel Munk,	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	L	815	1362	514	59	fetti, Tochter des Iatob derfler	Jetti, Tochter des Jakob Dörfler	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	L	824	1427	504	58	Lodmilla gebornen P.t ausPreste	Ludmilla gebornen Pick aus Přest	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	L	880	2337	469	69	Meit Munt in Prospnlb	Veit Munk in Přestawlk	claude-opus-5-5/xhigh 2026-10-22	vysoká
+32	o2434_0032-r	L	885	2417	431	63	Derfler	Dörfler	claude-opus-5-5/xhigh 2026-10-22	vysoká

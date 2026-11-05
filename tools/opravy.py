@@ -1,10 +1,12 @@
 """Corrections of OCR readings (knihy/<archiv>/<kniha>/opravy.tsv) and applying them to the OCR lines.
 
-    python tools/opravy.py <kniha> <snímek+strana> <řádek> <puvodne> <spravne> --kdo "agent 2026-10-21" [--jistota vysoká]
+    python tools/opravy.py <kniha> <snímek+strana> <řádek> <puvodne> <spravne> --kdo "Jan Novák 2026-10-21" [--jistota vysoká]
 
-Example: python tools/opravy.py dnesice-01 24L 3 Plozene Plozara --kdo "Claude 2026-10-21"
+Example: python tools/opravy.py dnesice-01 24L 3 Plozene Plozara --kdo "claude-opus-5-5/xhigh 2026-10-21"
 `puvodne` is the text as PERO read it (a word or a part of the line; empty string = the whole line), `spravne` what is
-really written on the scan – a reading, not an interpretation (who the person really was belongs elsewhere). A correction
+really written on the scan – a reading, not an interpretation (a scribe's error proven by other entries goes to
+vyklad.tsv, who the person really was belongs to a family tree). `kdo` follows the same rule as `cetl` in precteno.tsv:
+a language model is named by its id and effort. A correction
 is anchored by the line's box on the scan, not by its number, so it survives a new OCR of the page.
 """
 import argparse
