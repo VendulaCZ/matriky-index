@@ -26,8 +26,9 @@ HLAVICKY = {
 TYPY = {"N", "O", "Z", "P", "S", "K", "J"}
 JISTOTA = ("vysoká", "střední", "nízká")
 # Jazykový model se v cetl píše jako id/effort (claude-sonnet-5-5/xhigh), aby šlo zápisy přečtené slabším modelem
-# najít a přečíst znovu; samotné „Claude“ nebo „agent“ nestačí.
-MODEL_EFFORT = re.compile(r"\b[a-z][a-z0-9.]*(?:-[a-z0-9.]+)+/[a-z]+\b")
+# najít a přečíst znovu; samotné „Claude“ nebo „agent“ nestačí. „neuvedeno“ je pro nástroje, které effort neukazují.
+EFFORT = ("low", "medium", "high", "xhigh", "max", "neuvedeno")
+MODEL_EFFORT = re.compile(r"\b[a-z][a-z0-9.]*(?:-[a-z0-9.]+)+/([a-z]+)\b")
 JAZYKOVY_MODEL = re.compile(r"\b(claude|agent|opus|sonnet|haiku|gpt|chatgpt|gemini|llm|copilot)\b", re.I)
 # Matriky narozených jsou veřejně přístupné po 100 letech, oddaných a zemřelých po 75 letech (zákon o matrikách
 # 301/2000 Sb., § 5a); soupisy obyvatel držíme stejně jako narozené. Mladší zápisy mohou týkat žijících lidí.
@@ -108,6 +109,8 @@ def kontrola_tsv(p, hlavicka, h):
             h.chyba(kde, f"typ „{typ}“ není z {', '.join(sorted(TYPY))}")
         if not cetl.strip():
             h.chyba(kde, "chybí cetl (kdo a kdy četl)")
+        elif spatne := [e for e in MODEL_EFFORT.findall(cetl) if e not in EFFORT]:
+            h.chyba(kde, f"cetl „{cetl}“: effort „{spatne[0]}“ není z {', '.join(EFFORT)}")
         elif JAZYKOVY_MODEL.search(MODEL_EFFORT.sub("", cetl)):
             h.chyba(kde, f"cetl „{cetl}“: u jazykového modelu uveďte jeho id a effort, např. claude-sonnet-5-5/xhigh")
         if not osoby.strip():

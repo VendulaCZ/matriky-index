@@ -24,8 +24,10 @@ i rozlišení skenu (1600 px vs. výřez 4000 px); to uvádí sloupec `ostatni`,
 Řádky z let 2026-10 a 2026-11 dostaly model a effort dodatečně (2026-11-04) podle záznamů sezení Claude Code, kde je
 u každého dotazu uložen model i effort; dřív v nich stálo jen `agent` nebo `Claude`.
 
-Kontrola (`tools/kontrola.py`) odmítne řádek, v jehož `cetl` je jazykový model bez id a effortu (samotné „Claude“
-nebo „agent“).
+Effort je jeden z `low`, `medium`, `high`, `xhigh`, `max`; v Claude Code je v záznamu sezení
+(`~/.claude/projects/<projekt>/<sezení>.jsonl`, pole `effort`). Kde ho nástroj neukazuje (např. claude.ai), patří tam
+`neuvedeno` (`claude-opus-5-5/neuvedeno`). Kontrola (`tools/kontrola.py`) odmítne řádek, v jehož `cetl` je jazykový
+model bez id a effortu (samotné „Claude“ nebo „agent“) nebo s jiným effortem.
 
 ## Přispějte
 
