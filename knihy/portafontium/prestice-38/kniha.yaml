@@ -1,0 +1,17 @@
+archiv: "portafontium"
+kniha: "prestice-38"
+nazev: "Přeštice 38"
+druh: "matrika"
+farnost: "Přeštice"
+roky: ""
+obsah: "rejstřík (index); OCR téměř prázdné (modré sloupce); snímek = číslo souboru // 10"
+url: "https://www.portafontium.eu/register/soap-pn/prestice-38"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "b27e5513-73dd-4f80-87d3-4f36dd2f8102"
+  model: "Czech Handwritten"
+  datum: "2026-11-06"
+  export: "indexy-prestice38-merklin30-chotesov29-P8.pagexml.zip"
+  stranek: 83
+  radku: 19866
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
