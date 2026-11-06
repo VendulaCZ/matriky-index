@@ -2,9 +2,9 @@
 
 Stav k 6. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **558 knih** (matrika 503, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **562 knih** (matrika 507, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
 - **6 718 stran** převedených strojově (PERO OCR), **1 137 391 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **13 377 zápisů přečtených očima**: narození 8514, sňatky 1711, úmrtí 2658, převody gruntů 49, soupisy 168, jiné 248
+- **13 383 zápisů přečtených očima**: narození 8516, sňatky 1713, úmrtí 2658, převody gruntů 49, soupisy 168, jiné 250
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -360,7 +360,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Nezabudice 16 – rejstříky N 1784–1938, O 1784–1946, Z 1784–1939, písmena P–Z (eBadatelna 9774)](https://ebadatelna.soapraha.cz/d/9774/) | matrika | 1784–1946 |  |  | 2 (J 2) |
 | [Nezabudice 17 (9775, Z Nezabudice a Malá Buková 1784–1934)](https://ebadatelna.soapraha.cz/d/9775/) | matrika |  |  |  | 1 (Z 1) |
 
-## SOA Třeboň – DigiArchiv (112)
+## SOA Třeboň – DigiArchiv (116)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -436,6 +436,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Milevsko 8 1803-1809](https://digi.ceskearchivy.cz/5540) | matrika | 1803–1809 |  |  | 1 (N 1) |
 | [Milevsko 20 1784-1801](https://digi.ceskearchivy.cz/5552) | matrika | 1784–1801 |  |  | 1 (O 1) |
 | [Milevsko 22 1810-1839](https://digi.ceskearchivy.cz/5554) | matrika | 1810–1839 |  |  | 1 (O 1) |
+| [Mirovice, rejstřík (DigiArchiv 5625)](https://digi.ceskearchivy.cz/5625) | matrika |  |  |  | 1 (J 1) |
 | [Mladošovice 12 1784-1828](https://digi.ceskearchivy.cz/5681) | matrika |  |  |  | 1 (N 1) |
 | [Nadějkov 19 1869-1891](https://digi.ceskearchivy.cz/5752) | matrika |  |  |  | 1 (N 1) |
 | [Nadějkov 25 1853-1886](https://digi.ceskearchivy.cz/5758) | matrika |  |  |  | 2 (Z 2) |
@@ -453,9 +454,11 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Radobytce O 1863–1914 (DigiArchiv id 6850)](https://digi.ceskearchivy.cz/6850) | matrika |  |  |  | 1 (O 1) |
 | [Radobytce Z 1868–1925 (DigiArchiv id 6855)](https://digi.ceskearchivy.cz/6855) | matrika |  |  |  | 4 (Z 4) |
 | [Radomyšl NOZ 1733–1768 (kniha 3, DigiArchiv 6861)](https://digi.ceskearchivy.cz/6861) | matrika |  |  |  | 5 (N 4 O 1) |
-| [Radomyšl N 1824–1841 (kniha 7, DigiArchiv 6865)](https://digi.ceskearchivy.cz/6865) | matrika |  |  |  | 1 (N 1) |
+| [Radomyšl N 1806–1823 (kniha 6, DigiArchiv 6864)](https://digi.ceskearchivy.cz/6864) | matrika |  |  |  | 1 (N 1) |
+| [Radomyšl N 1824–1841 (kniha 7, DigiArchiv 6865)](https://digi.ceskearchivy.cz/6865) | matrika |  |  |  | 2 (N 2) |
 | [Radomyšl O 1784–1805 (kniha 15, DigiArchiv 6873)](https://digi.ceskearchivy.cz/6873) | matrika |  |  |  | 1 (O 1) |
-| [Radomyšl O 1862–1894 (DigiArchiv 6876)](https://digi.ceskearchivy.cz/6876) | matrika |  |  |  | 2 (O 2) |
+| [Radomyšl O 1837–1861 (kniha 17, DigiArchiv 6875)](https://digi.ceskearchivy.cz/6875) | matrika |  |  |  | 1 (O 1) |
+| [Radomyšl O 1862–1894 (DigiArchiv 6876)](https://digi.ceskearchivy.cz/6876) | matrika |  |  |  | 3 (O 3) |
 | [Radomyšl Z 1806–1838 (kniha 22, DigiArchiv 6880)](https://digi.ceskearchivy.cz/6880) | matrika |  |  |  | 1 (Z 1) |
 | [Radomyšl, zemřelí 1867–1899 (DigiArchiv 6882)](https://digi.ceskearchivy.cz/6882) | matrika |  |  |  | 1 (Z 1) |
 | [720008](https://digi.ceskearchivy.cz/DA?lang=cs&menu=3&id=720008&page=203) | pozemková kniha |  |  |  | 1 (P 1) |
@@ -463,6 +466,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [720016](https://digi.ceskearchivy.cz/DA?lang=cs&menu=3&id=720016&page=145) | pozemková kniha |  |  |  | 3 (P 3) |
 | [720018](https://digi.ceskearchivy.cz/DA?lang=cs&menu=3&id=720018&page=4) | pozemková kniha |  |  |  | 1 (P 1) |
 | [SOkA České Budějovice, evidence obyvatel města, kniha F IX](https://digi.ceskearchivy.cz/737380) | policejní přihlášky |  |  |  | 1 (J 1) |
+| [Staré Sedlo, rejstřík NOZ (DigiArchiv 7415)](https://digi.ceskearchivy.cz/7415) | matrika |  |  |  | 1 (J 1) |
 | [Sudoměřice u Bechyně 7 1784-1823](https://digi.ceskearchivy.cz/7666) | matrika | 1784–1823 |  |  | 1 (O 1) |
 | [Ševětín 16 1797-1835](https://digi.ceskearchivy.cz/7799) | matrika |  |  |  | 1 (O 1) |
 | [Třeboň 8 1825-1836](https://digi.ceskearchivy.cz/8022) | matrika |  |  |  | 1 (N 1) |
@@ -567,6 +571,27 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
+## ndk (4)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
+
+## nacr (7)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
+| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
+| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
+
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -609,24 +634,3 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Lužná, N+Z+O s indexy 1811–1845, sign. VK VII 5, inv. č. 2535](https://digi.archives.cz/da/permalink/be88248c-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 2 (N 1 O 1) |
 | [Lužná N+Z+O s indexy 1846–1871 (VK VII 6, inv. č. 2536)](https://digi.archives.cz/da/entityDetail/be882504-f13c-102f-8255-0050568c0263?actualDetailTab=attachmentsImg) | matrika |  |  |  | 1 (N 1) |
 | [Halenkov, Hovězí, Zděchov, O 1784–1823, sign. Vs IV 5, inv. č. 2416](https://digi.archives.cz/da/permalink/be87e9ea-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 1 (O 1) |
-
-## nacr (7)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
-| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
-| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
-
-## ndk (4)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
