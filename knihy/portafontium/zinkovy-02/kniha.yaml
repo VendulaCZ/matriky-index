@@ -1,0 +1,17 @@
+archiv: "portafontium"
+kniha: "zinkovy-02"
+nazev: "Žinkovy 02"
+druh: "matrika"
+farnost: "Žinkovy"
+roky: "1683–1715"
+obsah: "N (snímky 4–128), O (129–155), Z (156–167); OCR jen N a O"
+url: "https://www.portafontium.eu/register/soap-pn/zinkovy-02"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "ee840a16-1ae5-4bb0-ac76-5a9217a1edbd"
+  model: "Czech Handwritten"
+  datum: "2026-11-06"
+  export: "zinkovy-02-czh.pagexml.zip"
+  stranek: 152
+  radku: 13262
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
