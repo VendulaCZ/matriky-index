@@ -160,6 +160,12 @@ BOOKS = {
                   farnost="Heřmanův Městec (rabinát; Hroubovice, Chrast …)", roky="1875–1944",
                   obsah="Z 1875–1944; OCR snímky 45–95 (asi 1892–1914), skeny poloviční rozlišení, otočené (přípona -r); soubor = snímek",
                   url="https://zayt.org/collections/jewish-registers-1784-1949/z-409", prefix="z409", delitel=1),
+    "n-822": dict(archiv="zayt", nazev="Kolín, židovská matrika N 1822–1839 (NA inv. 822)", farnost="Kolín", roky="1822–1839",
+                  obsah="N 1822–1839 bez rejstříku (sn. 3 = 1822, 7 = 1823, 10 = 1824, 17 = 1825, 18–21 = 1826, 24 = 1827); OCR snímky 3–24 "
+                        "z polovičního rozlišení; soubor = snímek", url="https://zayt.org/collections/jewish-registers-1784-1949/n-822", prefix="n822", delitel=1),
+    "n-821": dict(archiv="zayt", nazev="Kolín, židovská matrika N 1788–1821 (NA inv. 821)", farnost="Kolín", roky="1788–1821",
+                  obsah="N 1788–1821 (sn. 82 = 1818, 91 = 1819, 93 = 1820, 96–101 = 1821); OCR snímky 68–101 z polovičního rozlišení; "
+                        "soubor = snímek", url="https://zayt.org/collections/jewish-registers-1784-1949/n-821", prefix="n821", delitel=1),
     "o-406": dict(archiv="zayt", nazev="Heřmanův Městec, židovská matrika O (NA inv. 406), duplikát 1839–1850",
                   farnost="Heřmanův Městec", roky="1839–1850",
                   obsah="OCR snímky 4–34 (O 1839–1850; snímek 11 se nestáhl); soubor = snímek; zápisy svisle, OCR z obrázků "
@@ -334,6 +340,10 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "indexy-prestice38-merklin30-chotesov29-P8": (["prestice-38", "merklin-30", "chotesov-29"],
                                                    "b27e5513-73dd-4f80-87d3-4f36dd2f8102", "Czech Handwritten", "2026-11-06"),
     "h4-z409": (["z-409"], "27a909e4-8cae-417d-ba8b-079219f6d007 (sn. 45–72) + 2e1eda7f-ac6b-42e7-b22b-558556d2e302 (sn. 73–95)",
+                "Kurrent (German, Czech)", "2026-11-06"),
+    "z10-822": (["n-822"], "8ae74665-b573-4324-97ed-3d47d157f312 (sn. 3–10) + 3df067ca-c307-4e70-ba49-6dc97a957640 (sn. 11–24)",
+                "Kurrent (German, Czech)", "2026-11-06"),
+    "z10-821": (["n-821"], "66a2140f-552f-4972-b395-4d1101451016 (sn. 68–77) + e23ff42b-1cfd-46b9-84f1-3e5a41cb58a7 (sn. 78–101)",
                 "Kurrent (German, Czech)", "2026-11-06"),
     "zinkovy-02-czh": (["zinkovy-02"], "ee840a16-1ae5-4bb0-ac76-5a9217a1edbd", "Czech Handwritten", "2026-11-06"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
