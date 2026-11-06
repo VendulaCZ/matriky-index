@@ -2,9 +2,9 @@
 
 Stav k 6. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **545 knih** (matrika 490, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **546 knih** (matrika 491, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
 - **6 250 stran** převedených strojově (PERO OCR), **1 026 896 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **13 316 zápisů přečtených očima**: narození 8496, sňatky 1699, úmrtí 2641, převody gruntů 49, soupisy 168, jiné 234
+- **13 317 zápisů přečtených očima**: narození 8496, sňatky 1699, úmrtí 2641, převody gruntů 49, soupisy 168, jiné 235
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -501,11 +501,12 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Smíchov – sv. Filip a Jakub, SM N21 (1879–1882)](https://katalog.ahmp.cz/pragapublica/permalink?xid=F4C9890E8A954B20B26FD49C2562CCB0) | matrika |  |  |  | 1 (N 1) |
 | [Žižkov, sv. Prokop, ŽKP Z4 (1906–1915)](https://katalog.ahmp.cz/pragapublica/permalink?xid=F88B2F66CDCE438E9CBB66DA29BBF7CC) | matrika |  |  |  | 4 (J 2 Z 2) |
 
-## Moravský zemský archiv – Acta Publica (28)
+## Moravský zemský archiv – Acta Publica (29)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
 | [Prace, kn. 1598, N 1852–1914 (s indexem)](https://www.mza.cz/actapublica/matrika/detail/10034) | matrika | 1852–1914 |  |  | 1 (N 1) |
+| [Hostim, rejstřík narozených 1821–1918 (Acta Publica id 10226, č. knihy 13796)](https://www.mza.cz/actapublica/matrika/detail/10226) | matrika |  |  |  | 1 (J 1) |
 | [Bítov N 1831–1875, kniha 13402, Acta Publica id 1060 (Bítov sn. 2–52, Korolupy 52–85, Oslnovice 85–99, Vysočany 99–134, Zblovice od 134)](https://www.mza.cz/actapublica/matrika/detail/1060) | matrika |  |  |  | 4 (J 3 N 1) |
 | [Bítov O 1874–1949, kniha 13407, Acta Publica id 12350 (část Vysočany 1878–1900 = sn. 54–67)](https://www.mza.cz/actapublica/matrika/detail/12350) | matrika |  |  |  | 2 (O 2) |
 | [Hostim (Hösting) N 1821–1885, Acta Publica id 1384 (jen obec Hostim)](https://www.mza.cz/actapublica/matrika/detail/1384) | matrika |  |  |  | 3 (J 1 N 2) |
@@ -554,6 +555,27 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
+## ndk (4)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
+
+## nacr (7)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
+| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
+| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
+
 ## zaopava (25)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -583,27 +605,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Lužná, N+Z+O s indexy 1811–1845, sign. VK VII 5, inv. č. 2535](https://digi.archives.cz/da/permalink/be88248c-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 2 (N 1 O 1) |
 | [Lužná N+Z+O s indexy 1846–1871 (VK VII 6, inv. č. 2536)](https://digi.archives.cz/da/entityDetail/be882504-f13c-102f-8255-0050568c0263?actualDetailTab=attachmentsImg) | matrika |  |  |  | 1 (N 1) |
 | [Halenkov, Hovězí, Zděchov, O 1784–1823, sign. Vs IV 5, inv. č. 2416](https://digi.archives.cz/da/permalink/be87e9ea-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 1 (O 1) |
-
-## nacr (7)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
-| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
-| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
-
-## ndk (4)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
 
 ## cuzk (8)
 
