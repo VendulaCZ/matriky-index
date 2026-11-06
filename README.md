@@ -6,7 +6,7 @@ nového přečte, pošle to sem (viz [Přispějte](#přispějte)).
 
 Kromě matrik sem patří i další knihy se jmény: pozemkové (gruntovní) knihy, soupisy poddaných, familiantské knihy. Mají
 stejnou strukturu; druh knihy říká pole `druh` v `kniha.yaml` (`matrika`, `pozemková kniha`, `urbář`,
-`soupis poddaných`, `sčítání lidu`, `policejní přihlášky`, `familianti`; chybí-li, jde o matriku). Zápisy přečtené dřív
+`soupis poddaných`, `berní rula`, `sčítání lidu`, `policejní přihlášky`, `familianti`, `noviny`; chybí-li, jde o matriku). Zápisy přečtené dřív
 při práci na rodokmenu mají ve sloupci `cetl` poznámku „(z rodokmenu …)“.
 
 Skeny se neukládají (lze je kdykoli stáhnout z archivu). Plné exporty z PERO (PAGE XML s obrysy řádků) jsou mimo git.
