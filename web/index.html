@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Index matrik</title>
+<style>
+:root {
+  --bg: #fbfaf7; --panel: #ffffff; --text: #1f2328; --muted: #646d76; --line: #e3e0d8; --accent: #8a4b16;
+  --accent-bg: #f6ede3; --mark: #fff1a8; --fix: #e6f4ea; --fix-line: #2f7d46; --warn: #a3471f;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17191c; --panel: #1f2226; --text: #e6e3dd; --muted: #9aa1a8; --line: #33373c; --accent: #e3a066;
+    --accent-bg: #2c241d; --mark: #5b4d12; --fix: #1d3325; --fix-line: #7ccf95; --warn: #f0a37b;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--accent); }
+header { padding: 18px 16px 6px; max-width: 1200px; margin: 0 auto; }
+header h1 { margin: 0; font-size: 24px; }
+header h1 a { color: inherit; text-decoration: none; }
+header p { margin: 4px 0 0; color: var(--muted); }
+main { max-width: 1200px; margin: 0 auto; padding: 8px 16px 40px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+.stats { display: flex; flex-wrap: wrap; gap: 10px; }
+.stat { background: var(--accent-bg); border-radius: 8px; padding: 8px 12px; min-width: 140px; }
+.stat b { display: block; font-size: 20px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+input[type=search], input[type=number], select { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--panel); color: var(--text); }
+input[type=search] { flex: 1 1 260px; min-width: 0; }
+input[type=number] { width: 90px; }
+button { font: inherit; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+button.ghost { background: transparent; color: var(--accent); }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+details.region > summary, details.archiv > summary { cursor: pointer; padding: 6px 0; font-weight: 600; }
+details.archiv { margin-left: 14px; }
+details.archiv > summary { font-weight: 500; }
+ul.books { list-style: none; margin: 0 0 8px 14px; padding: 0; }
+ul.books li { padding: 3px 0; border-bottom: 1px dotted var(--line); }
+.badge { display: inline-block; font-size: 12px; padding: 0 6px; border-radius: 10px; background: var(--accent-bg); color: var(--accent); margin-left: 4px; white-space: nowrap; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+th { position: sticky; top: 0; background: var(--panel); font-weight: 600; }
+td.osoby { min-width: 220px; }
+td.ostatni { min-width: 220px; color: var(--muted); }
+.typ { font-weight: 700; }
+.vyklad { margin-top: 4px; padding: 4px 8px; border-left: 3px solid var(--warn); background: var(--accent-bg); font-size: 13px; }
+details.verze { margin-top: 4px; font-size: 13px; }
+details.verze summary { cursor: pointer; color: var(--accent); }
+details.verze .old { border-left: 3px solid var(--line); padding-left: 8px; margin: 4px 0; color: var(--muted); }
+.tabs { display: flex; gap: 4px; flex-wrap: wrap; margin: 10px 0 0; }
+.tabs button { background: transparent; color: var(--accent); }
+.tabs button.on { background: var(--accent); color: #fff; }
+.ocr { font-family: ui-monospace, Consolas, monospace; font-size: 13px; white-space: pre-wrap; }
+.ocr .ln { display: grid; grid-template-columns: 3.5em 1fr; gap: 6px; padding: 1px 0; }
+.ocr .no { color: var(--muted); text-align: right; }
+.ocr .fixed { background: var(--fix); border-left: 3px solid var(--fix-line); padding-left: 4px; }
+mark { background: var(--mark); color: inherit; }
+.pager { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.note { font-size: 13px; color: var(--muted); }
+@media (max-width: 640px) { th, td { padding: 5px 4px; } td.osoby, td.ostatni { min-width: 160px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1><a href="#">Index matrik</a></h1>
+  <p>Co už někdo z matrik a dalších archivních knih přečetl – přepsané zápisy, strojový text a opravy na jednom místě.</p>
+</header>
+<main id="app"><div class="panel">Načítám data…</div></main>
+<script>
+"use strict";
+const TYP = { N: "narození", O: "sňatek", Z: "úmrtí", P: "převod gruntu", S: "soupis", K: "katastr", J: "jiné" };
+const REPO = "https://github.com/pe-pan/matriky-index";
+let KNIHY = [], PRECTENO = [], VYKLAD = [], BYID = new Map();
+const app = document.getElementById("app");
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const norm = s => String(s ?? "").replace(/[ſʃ]/g, "s").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const num = n => Number(n).toLocaleString("cs-CZ");
+const cetlDatum = c => (String(c).match(/\d{4}-\d{2}-\d{2}/) || [""])[0];
+const rok = d => { const m = String(d).match(/(?<!\d)(1[4-9]\d\d)(?!\d)/); return m ? +m[1] : null; };
+
+function lev(a, b, max) {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    let best = i;
+    for (let j = 1; j <= b.length; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      best = Math.min(best, cur[j]);
+    }
+    if (best > max) return max + 1;
+    prev = cur;
+  }
+  return prev[b.length];
+}
+
+// A matcher over normalized text: every word of the query must occur (exactly, or within an edit distance when fuzzy).
+function matcher(query, fuzzy) {
+  const words = norm(query).split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+  if (!words.length) return null;
+  return text => {
+    const t = norm(text);
+    return words.every(w => {
+      if (t.includes(w)) return true;
+      if (!fuzzy || w.length < 4) return false;
+      const max = w.length < 9 ? 1 : 2;
+      return t.split(/[^\p{L}\p{N}]+/u).some(x => lev(x, w, max) <= max);
+    });
+  };
+}
+
+function highlight(text, query) {
+  const words = norm(query).split(/[^\p{L}\p{N}]+/u).filter(w => w.length > 1);
+  if (!words.length) return esc(text);
+  const n = norm(text);
+  const marks = [];
+  for (const w of words) { let i = -1; while ((i = n.indexOf(w, i + 1)) >= 0) marks.push([i, i + w.length]); }
+  if (!marks.length) return esc(text);
+  marks.sort((a, b) => a[0] - b[0]);
+  // NFD normalization of composed Czech letters keeps the length, so positions map back to the original text
+  let out = "", pos = 0;
+  for (const [a, b] of marks) { if (a < pos) continue; out += esc(text.slice(pos, a)) + "<mark>" + esc(text.slice(a, b)) + "</mark>"; pos = b; }
+  return out + esc(text.slice(pos));
+}
+
+function linkSnimek(kniha, snimek) {
+  const s = String(snimek).match(/^\d+/);
+  if (!kniha.url_snimku || !s) return esc(snimek);
+  return `<a href="${esc(kniha.url_snimku.replace("{snimek}", s[0]))}" target="_blank" rel="noopener" title="Otevřít snímek v archivu">${esc(snimek)}</a>`;
+}
+
+// Rows of one entry: the same scan, date and type. The newest reading (date in `cetl`, then order in the file) is shown,
+// the older ones on request. Two different entries with the same scan, date and type (e.g. twins) also end up together.
+function groupEntries(rows) {
+  const groups = new Map();
+  rows.forEach((r, order) => {
+    const key = `${r[0]}|${r[1]}|${r[2]}|${r[3]}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push({ r, order });
+  });
+  return [...groups.values()].map(g => g.sort((a, b) => cetlDatum(b.r[8]).localeCompare(cetlDatum(a.r[8])) || b.order - a.order).map(x => x.r));
+}
+
+function vykladyFor(bookIdx, snimek, datum) {
+  return VYKLAD.filter(v => v[0] === bookIdx && v[1] === snimek && v[2] === datum);
+}
+
+function entryRows(rows, query, showBook) {
+  const groups = groupEntries(rows);
+  const head = `<tr>${showBook ? "<th>kniha</th>" : ""}<th>snímek</th><th>datum</th><th>typ</th><th>obec</th><th>osoby</th><th>ostatní</th><th>jistota, četl</th></tr>`;
+  const body = groups.map(g => {
+    const [b, snimek, datum, typ, obec, osoby, ostatni, jistota, cetl, odkaz] = g[0];
+    const kniha = KNIHY[b];
+    const vyk = vykladyFor(b, snimek, datum).map(v =>
+      `<div class="vyklad">Výklad: <b>${esc(v[3])}</b> – zapsáno „${esc(v[4])}“, správně <b>${esc(v[5])}</b> (${esc(v[8])}; ${esc(v[7])})<br><span class="muted">doklady: ${esc(v[6])}</span></div>`).join("");
+    const older = g.slice(1).map(o => `<div class="old">${esc(o[4])} · ${highlight(o[5], query)}<br>${highlight(o[6], query)}<br><i>${esc(o[7])}, ${esc(o[8])}</i></div>`).join("");
+    const verze = older ? `<details class="verze"><summary>další čtení téhož zápisu (${g.length - 1})</summary>${older}</details>` : "";
+    return `<tr>${showBook ? `<td><a href="#kniha/${esc(kniha.id)}">${esc(kniha.nazev)}</a><div class="small muted">${esc(kniha.archiv_nazev)}</div></td>` : ""}
+      <td>${linkSnimek(kniha, snimek)}</td><td>${esc(datum)}</td><td class="typ" title="${esc(TYP[typ] || typ)}">${esc(typ)}</td>
+      <td>${highlight(obec, query)}</td><td class="osoby">${highlight(osoby, query)}${vyk}</td>
+      <td class="ostatni">${highlight(ostatni, query)}${verze}</td><td class="small">${esc(jistota)}<br><span class="muted">${esc(cetl)}</span></td></tr>`;
+  }).join("");
+  return `<div class="tablewrap"><table>${head}${body}</table></div>`;
+}
+
+function home() {
+  const ocrStran = KNIHY.reduce((s, k) => s + k.ocr_stran, 0), ocrRadku = KNIHY.reduce((s, k) => s + k.ocr_radku, 0);
+  const posledni = [...PRECTENO].map((r, i) => ({ r, i })).sort((a, b) => cetlDatum(b.r[8]).localeCompare(cetlDatum(a.r[8])) || b.i - a.i).slice(0, 12).map(x => x.r);
+  const regions = new Map();
+  KNIHY.forEach((k, i) => {
+    if (!regions.has(k.oblast)) regions.set(k.oblast, new Map());
+    const a = regions.get(k.oblast);
+    if (!a.has(k.archiv_nazev)) a.set(k.archiv_nazev, []);
+    a.get(k.archiv_nazev).push(i);
+  });
+  const tree = [...regions.entries()].sort((a, b) => a[0].localeCompare(b[0], "cs")).map(([oblast, archivy]) => {
+    const all = [...archivy.values()].flat();
+    const inner = [...archivy.entries()].map(([archiv, idx]) => {
+      const items = idx.sort((a, b) => KNIHY[a].nazev.localeCompare(KNIHY[b].nazev, "cs")).map(i => {
+        const k = KNIHY[i];
+        const meta = [k.farnost && k.farnost !== k.nazev ? k.farnost : "", k.roky].filter(Boolean).join(", ");
+        return `<li data-k="${i}"><a href="#kniha/${esc(k.id)}">${esc(k.nazev)}</a> ${meta ? `<span class="small muted">${esc(meta)}</span>` : ""}
+          ${k.precteno ? `<span class="badge">${num(k.precteno)} přečteno</span>` : ""}${k.ocr_stran ? `<span class="badge">OCR ${num(k.ocr_stran)} str.</span>` : ""}${k.vyklad ? `<span class="badge">výklady ${k.vyklad}</span>` : ""}</li>`;
+      }).join("");
+      return `<details class="archiv"><summary>${esc(archiv)} <span class="muted small">(${idx.length})</span></summary><ul class="books">${items}</ul></details>`;
+    }).join("");
+    return `<details class="region"><summary>${esc(oblast)} <span class="muted small">(${all.length} knih)</span></summary>${inner}</details>`;
+  }).join("");
+  app.innerHTML = `
+    <div class="panel">
+      <p>Při stavbě rodokmenu se čte spousta rukou psaných zápisů a stejné knihy často luští různí lidé znovu a znovu. Tento rejstřík
+      ukládá, co už někdo přečetl: <b>zápisy přečtené očima</b> (s odkazem na knihu a snímek), <b>strojový text</b> stránek (PERO OCR,
+      nekontrolovaný, slouží k hledání) a <b>opravy a výklady</b>. Skeny tu nejsou – zůstávají v archivech.
+      Přispět může kdokoli: <a href="${REPO}">${REPO.replace("https://", "")}</a> (i formulářem bez znalosti gitu).</p>
+      <div class="stats">
+        <div class="stat"><b>${num(KNIHY.length)}</b>knih</div>
+        <div class="stat"><b>${num(PRECTENO.length)}</b>přečtených zápisů</div>
+        <div class="stat"><b>${num(ocrStran)}</b>stran strojového textu</div>
+        <div class="stat"><b>${num(ocrRadku)}</b>řádků strojového textu</div>
+      </div>
+    </div>
+    <div class="panel">
+      <form id="hledej" class="row">
+        <input type="search" id="q" placeholder="Hledat v přečtených zápisech – jméno, obec, povolání…" autocomplete="off">
+        <button>Hledat</button>
+      </form>
+      <p class="note">Hledá bez ohledu na diakritiku a velikost písmen; „přibližně“ (na stránce výsledků) toleruje odchylky v pravopisu.
+      Ve strojovém textu se hledá uvnitř knihy.</p>
+    </div>
+    <div class="panel">
+      <div class="row"><h2 style="margin:0;font-size:18px">Knihy podle oblasti a archivu</h2>
+        <input type="search" id="fk" placeholder="Filtrovat knihy (název, farnost)…"></div>
+      <div id="tree">${tree}</div>
+    </div>
+    <div class="panel"><h2 style="margin:0 0 6px;font-size:18px">Naposledy přečteno</h2>${entryRows(posledni, "", true)}</div>`;
+  document.getElementById("hledej").onsubmit = e => { e.preventDefault(); location.hash = "hledat/" + encodeURIComponent(document.getElementById("q").value); };
+  document.getElementById("fk").oninput = e => {
+    const m = matcher(e.target.value, false);
+    document.querySelectorAll("#tree li").forEach(li => {
+      const k = KNIHY[+li.dataset.k];
+      li.hidden = m ? !m(`${k.nazev} ${k.farnost} ${k.kniha} ${k.obsah}`) : false;
+    });
+    document.querySelectorAll("#tree details").forEach(d => {
+      const visible = [...d.querySelectorAll("li")].some(li => !li.hidden);
+      d.hidden = !visible;
+      d.open = !!m && visible;
+    });
+  };
+}
+
+function search(query, opts) {
+  const m = matcher(query, opts.fuzzy);
+  const od = opts.od ? +opts.od : null, doo = opts.do ? +opts.do : null;
+  const rows = !m ? [] : PRECTENO.filter(r => {
+    if (opts.typ && r[3] !== opts.typ) return false;
+    if (opts.oblast && KNIHY[r[0]].oblast !== opts.oblast) return false;
+    const y = rok(r[2]);
+    if ((od && (!y || y < od)) || (doo && (!y || y > doo))) return false;
+    return m(`${r[4]} ${r[5]} ${r[6]} ${KNIHY[r[0]].nazev} ${KNIHY[r[0]].farnost}`);
+  });
+  const oblasti = [...new Set(KNIHY.map(k => k.oblast))].sort((a, b) => a.localeCompare(b, "cs"));
+  const limit = 500;
+  app.innerHTML = `
+    <div class="panel">
+      <form id="f" class="row">
+        <input type="search" id="q" value="${esc(query)}" placeholder="Hledat v přečtených zápisech…">
+        <select id="typ"><option value="">všechny typy</option>${Object.entries(TYP).map(([k, v]) => `<option value="${k}" ${opts.typ === k ? "selected" : ""}>${v}</option>`).join("")}</select>
+        <select id="oblast"><option value="">celá republika</option>${oblasti.map(o => `<option ${opts.oblast === o ? "selected" : ""}>${esc(o)}</option>`).join("")}</select>
+        <input type="number" id="od" placeholder="od roku" value="${esc(opts.od || "")}"><input type="number" id="do" placeholder="do roku" value="${esc(opts.do || "")}">
+        <label class="small"><input type="checkbox" id="fuzzy" ${opts.fuzzy ? "checked" : ""}> přibližně</label>
+        <button>Hledat</button>
+      </form>
+    </div>
+    <div class="panel"><p>${m ? `Nalezeno <b>${num(rows.length)}</b> zápisů${rows.length > limit ? ` (zobrazeno prvních ${limit})` : ""}.` : "Zadejte hledaný výraz."}</p>
+    ${rows.length ? entryRows(rows.slice(0, limit), query, true) : ""}</div>`;
+  document.getElementById("f").onsubmit = e => {
+    e.preventDefault();
+    const p = new URLSearchParams();
+    for (const id of ["typ", "oblast", "od", "do"]) { const v = document.getElementById(id).value; if (v) p.set(id, v); }
+    if (document.getElementById("fuzzy").checked) p.set("fuzzy", "1");
+    location.hash = "hledat/" + encodeURIComponent(document.getElementById("q").value) + (p.toString() ? "?" + p : "");
+  };
+}
+
+async function tsv(path) {
+  const r = await fetch(path);
+  if (!r.ok) return [];
+  const lines = (await r.text()).split(/\r?\n/).filter(Boolean);
+  const head = lines.shift().split("\t");
+  return lines.map(l => { const c = l.split("\t"); return Object.fromEntries(head.map((h, i) => [h, c[i] ?? ""])); });
+}
+
+function overlap(a, b) {
+  const [ax, ay, aw, ah] = [a.x, a.y, a.sirka, a.vyska].map(Number), [bx, by, bw, bh] = [b.x, b.y, b.sirka, b.vyska].map(Number);
+  const w = Math.min(ax + aw, bx + bw) - Math.max(ax, bx), h = Math.min(ay + ah, by + bh) - Math.max(ay, by);
+  return w <= 0 || h <= 0 ? 0 : w * h / Math.min(aw * ah, bw * bh);
+}
+
+async function book(id, tab, param) {
+  const i = BYID.get(id);
+  if (i === undefined) { app.innerHTML = `<div class="panel">Kniha ${esc(id)} v indexu není.</div>`; return; }
+  const k = KNIHY[i];
+  const tabs = [["precteno", `Přečtené zápisy (${num(k.precteno)})`], ["ocr", `Strojový text (${num(k.ocr_stran)} str.)`]];
+  tab = tab || (k.precteno ? "precteno" : "ocr");
+  app.innerHTML = `
+    <div class="panel">
+      <div class="small muted">${esc(k.oblast)} · ${esc(k.archiv_nazev)} · ${esc(k.druh)}</div>
+      <h2 style="margin:2px 0 4px">${esc(k.nazev)}</h2>
+      <div>${[k.farnost, k.roky].filter(Boolean).map(esc).join(" · ")}</div>
+      ${k.obsah ? `<p class="small">${esc(k.obsah)}</p>` : ""}${k.poznamka ? `<p class="small muted">${esc(k.poznamka)}</p>` : ""}
+      <div class="row small">
+        ${k.url ? `<a href="${esc(k.url)}" target="_blank" rel="noopener">Kniha v archivu ↗</a>` : ""}
+        <a href="${REPO}/tree/main/knihy/${esc(k.id)}" target="_blank" rel="noopener">Data na GitHubu ↗</a>
+        ${k.ocr_model ? `<span class="muted">OCR: ${esc(k.ocr_model)}</span>` : ""}
+        ${k.precteno_od ? `<span class="muted">přečteno ${k.precteno_od}–${k.precteno_do}</span>` : ""}
+      </div>
+      <div class="tabs">${tabs.map(([t, l]) => `<button class="${t === tab ? "on" : ""}" onclick="location.hash='kniha/${esc(k.id)}/${t}'">${l}</button>`).join("")}</div>
+    </div><div id="obsah" class="panel">Načítám…</div>`;
+  const box = document.getElementById("obsah");
+  if (tab === "precteno") {
+    const rows = PRECTENO.filter(r => r[0] === i);
+    box.innerHTML = rows.length
+      ? `<div class="row"><input type="search" id="fq" placeholder="Filtrovat zápisy této knihy…"></div><div id="tab">${entryRows(rows, "", false)}</div>`
+      : `<p class="muted">Z této knihy zatím nikdo nepřepsal žádný zápis.${k.ocr_stran ? " Je tu ale strojový text – viz druhá záložka." : ""}</p>`;
+    const fq = document.getElementById("fq");
+    if (fq) fq.oninput = () => { const m = matcher(fq.value, false); document.getElementById("tab").innerHTML = entryRows(m ? rows.filter(r => m(r.slice(4, 7).join(" "))) : rows, fq.value, false); };
+    return;
+  }
+  if (!k.ocr_stran) { box.innerHTML = `<p class="muted">Tato kniha strojový text (OCR) nemá.</p>`; return; }
+  const base = `knihy/${k.id}/`;
+  const [stranky, ocr, opravy] = await Promise.all([tsv(base + "stranky.tsv"), tsv(base + "ocr-pero.tsv"), tsv(base + "opravy.tsv")]);
+  const byPage = new Map();
+  for (const r of ocr) {
+    for (const c of opravy) {
+      if (c.soubor !== r.soubor || overlap(r, c) < 0.5) continue;
+      r.text_ocr ??= r.text;
+      if (c.puvodne && r.text.includes(c.puvodne)) r.text = r.text.replace(c.puvodne, c.spravne);
+      else if (!c.puvodne) r.text = c.spravne;
+      r.oprava = `${c.kdo}${c.jistota ? ", " + c.jistota : ""}`;
+    }
+    if (!byPage.has(r.soubor)) byPage.set(r.soubor, []);
+    byPage.get(r.soubor).push(r);
+  }
+  const pages = stranky.map(s => s.soubor);
+  const render = (soubor, query, fuzzy) => {
+    let html;
+    if (query) {
+      const m = matcher(query, fuzzy);
+      const hits = m ? ocr.filter(r => m(r.text)) : [];
+      html = `<p>Ve strojovém textu knihy nalezeno <b>${num(hits.length)}</b> řádků${hits.length > 400 ? " (zobrazeno 400)" : ""}.</p><div class="ocr">` +
+        hits.slice(0, 400).map(r => `<div class="ln${r.text_ocr ? " fixed" : ""}"><span class="no"><a href="#kniha/${esc(k.id)}/ocr/${encodeURIComponent(r.soubor)}">${esc(r.snimek)}${esc(r.strana)}</a></span><span>${highlight(r.text, query)}</span></div>`).join("") + "</div>";
+    } else {
+      const lines = byPage.get(soubor) || [];
+      const s = stranky.find(x => x.soubor === soubor);
+      html = `<p class="small">Snímek ${linkSnimek(k, s ? s.snimek : "")} · soubor ${esc(soubor)} · ${lines.length} řádků. Text je strojový a nekontrolovaný;
+        <span class="fixed" style="padding:0 4px">zeleně</span> řádky opravené člověkem (najetím myší se ukáže původní čtení).</p><div class="ocr">` +
+        lines.map(r => `<div class="ln${r.text_ocr ? " fixed" : ""}" ${r.text_ocr ? `title="OCR: ${esc(r.text_ocr)} – opravil ${esc(r.oprava)}"` : ""}><span class="no">${esc(r.strana)}${esc(r.radek)}</span><span>${esc(r.text)}</span></div>`).join("") + "</div>";
+    }
+    document.getElementById("ocrview").innerHTML = html;
+  };
+  let current = pages.includes(param) ? param : pages[0];
+  box.innerHTML = `
+    <div class="pager">
+      <button class="ghost" id="prev">←</button>
+      <select id="page">${stranky.map(s => `<option value="${esc(s.soubor)}" ${s.soubor === current ? "selected" : ""}>snímek ${esc(s.snimek)} (${esc(s.soubor)})</option>`).join("")}</select>
+      <button class="ghost" id="next">→</button>
+      <input type="search" id="oq" placeholder="Hledat ve strojovém textu knihy…">
+      <label class="small"><input type="checkbox" id="ofz"> přibližně</label>
+    </div><div id="ocrview"></div>`;
+  const go = s => { current = s; document.getElementById("page").value = s; history.replaceState(null, "", `#kniha/${k.id}/ocr/${encodeURIComponent(s)}`); render(s); };
+  document.getElementById("page").onchange = e => go(e.target.value);
+  document.getElementById("prev").onclick = () => { const p = pages.indexOf(current); if (p > 0) go(pages[p - 1]); };
+  document.getElementById("next").onclick = () => { const p = pages.indexOf(current); if (p < pages.length - 1) go(pages[p + 1]); };
+  let t;
+  const oq = document.getElementById("oq"), ofz = document.getElementById("ofz");
+  const run = () => { clearTimeout(t); t = setTimeout(() => oq.value.trim() ? render(null, oq.value, ofz.checked) : render(current), 250); };
+  oq.oninput = run; ofz.onchange = run;
+  render(current);
+}
+
+function route() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  window.scrollTo(0, 0);
+  if (h.startsWith("kniha/")) {
+    const parts = h.slice(6).split("/");
+    return book(parts.slice(0, 2).join("/"), parts[2], parts.slice(3).join("/"));
+  }
+  if (h.startsWith("hledat/")) {
+    const [q, p] = h.slice(7).split("?");
+    const o = Object.fromEntries(new URLSearchParams(p || ""));
+    return search(q, { ...o, fuzzy: o.fuzzy === "1" });
+  }
+  home();
+}
+
+(async () => {
+  try {
+    [KNIHY, PRECTENO, VYKLAD] = await Promise.all(["knihy", "precteno", "vyklad"].map(n => fetch(`data/${n}.json`).then(r => r.json())));
+    KNIHY.forEach((k, i) => BYID.set(k.id, i));
+    window.onhashchange = route;
+    route();
+  } catch (e) {
+    app.innerHTML = `<div class="panel">Data se nepodařilo načíst (${esc(e.message)}). Stránka potřebuje soubory data/*.json, které vyrábí tools/web.py.</div>`;
+  }
+})();
+</script>
+</body>
+</html>

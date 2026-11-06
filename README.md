@@ -11,6 +11,12 @@ při práci na rodokmenu mají ve sloupci `cetl` poznámku „(z rodokmenu …)�
 
 Skeny se neukládají (lze je kdykoli stáhnout z archivu). Plné exporty z PERO (PAGE XML s obrysy řádků) jsou mimo git.
 
+**Prohlížení bez gitu: [pe-pan.github.io/matriky-index](https://pe-pan.github.io/matriky-index/)** – knihy podle oblasti a
+archivu, hledání v přečtených zápisech, strojový text stránek s opravami a výklady. Stránku (`web/index.html`) i její data
+vyrábí `python tools/web.py` (GitHub Action `pages.yml` po každém pushi do `main`; lokálně `python tools/web.py` a
+`python -m http.server -d _site`). U zápisu přečteného víckrát (stejný snímek, datum, typ a obec) ukazuje nejnovější čtení
+a starší na rozkliknutí.
+
 Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), generuje `python tools/prehled.py`.
 
 Licence: nástroje MIT ([LICENSE](LICENSE)), data v `knihy/` CC BY 4.0 ([LICENSE-DATA.md](LICENSE-DATA.md)).
@@ -61,6 +67,7 @@ tools/
   vyklad.py       přidání výkladu (chyby písaře) do vyklad.tsv
   pero_import.py  převod exportu z PERO do knihy/…
   prehled.py      vygeneruje PREHLED.md
+  web.py          vyrobí webovou stránku indexu do _site/ (GitHub Pages)
   pero/           balik.py (skeny do balíků ≤ 9,4 MB), pero.js (nahrávání a export ve stránce PERO) – viz PERO.md
   scan/           stahování skenů: pfl.py, pf64.py (Porta fontium), ebget.py (eBadatelna SOA Praha), da2.py,
                   dasearch.py (DigiArchiv SOA Třeboň), zget.py + rzip.py (VČA Zámrsk; vcakniha.py = celá kniha pro PERO),
