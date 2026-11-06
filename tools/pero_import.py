@@ -156,6 +156,10 @@ BOOKS = {
                     obsah="N 1788–1860, O 1824–1857, Z 1829–1863 (31 snímků); OCR snímky 4–12, 14–15, 17–29 z polovičního rozlišení; "
                           "soubor = snímek",
                     url="https://zayt.org/collections/jewish-control-registers-1780-1911/noz-535", prefix="noz535", delitel=1),
+    "z-409": dict(archiv="zayt", nazev="Heřmanův Městec, židovská matrika Z 1875–1944, duplikát (NA inv. 409)",
+                  farnost="Heřmanův Městec (rabinát; Hroubovice, Chrast …)", roky="1875–1944",
+                  obsah="Z 1875–1944; OCR snímky 45–95 (asi 1892–1914), skeny poloviční rozlišení, otočené (přípona -r); soubor = snímek",
+                  url="https://zayt.org/collections/jewish-registers-1784-1949/z-409", prefix="z409", delitel=1),
     "o-406": dict(archiv="zayt", nazev="Heřmanův Městec, židovská matrika O (NA inv. 406), duplikát 1839–1850",
                   farnost="Heřmanův Městec", roky="1839–1850",
                   obsah="OCR snímky 4–34 (O 1839–1850; snímek 11 se nestáhl); soubor = snímek; zápisy svisle, OCR z obrázků "
@@ -329,6 +333,8 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "prestice-02-P8": (["prestice-02"], "e0391f6c-46fc-4e7f-b7fa-7ca74f79baa5", "Czech Handwritten", "2026-11-06"),
     "indexy-prestice38-merklin30-chotesov29-P8": (["prestice-38", "merklin-30", "chotesov-29"],
                                                    "b27e5513-73dd-4f80-87d3-4f36dd2f8102", "Czech Handwritten", "2026-11-06"),
+    "h4-z409": (["z-409"], "27a909e4-8cae-417d-ba8b-079219f6d007 (sn. 45–72) + 2e1eda7f-ac6b-42e7-b22b-558556d2e302 (sn. 73–95)",
+                "Kurrent (German, Czech)", "2026-11-06"),
     "zinkovy-02-czh": (["zinkovy-02"], "ee840a16-1ae5-4bb0-ac76-5a9217a1edbd", "Czech Handwritten", "2026-11-06"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
                             "Czech Fraktur Printed", "2026-11-02"),
