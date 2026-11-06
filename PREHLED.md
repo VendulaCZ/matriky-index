@@ -1,10 +1,10 @@
 # Přehled indexu
 
-Stav k 5. 11. 2026 (generuje `python tools/prehled.py`).
+Stav k 6. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **218 knih** (matrika 167, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
+- **220 knih** (matrika 169, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
 - **5 823 stran** převedených strojově (PERO OCR), **979 649 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **12 507 zápisů přečtených očima**: narození 8190, sňatky 1498, úmrtí 2489, převody gruntů 49, soupisy 29, jiné 223
+- **12 513 zápisů přečtených očima**: narození 8193, sňatky 1501, úmrtí 2489, převody gruntů 49, soupisy 29, jiné 223
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -153,23 +153,25 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Kněževes 03 (eBadatelna 6568)](https://ebadatelna.soapraha.cz/d/6568/) | matrika | 1735–1810 | 42 | 9474 |  |
 | [Nezabudice 16 – rejstříky N 1784–1938, O 1784–1946, Z 1784–1939, písmena P–Z (eBadatelna 9774)](https://ebadatelna.soapraha.cz/d/9774/) | matrika | 1784–1946 |  |  | 2 (J 2) |
 
-## SOA Třeboň – DigiArchiv (33)
+## SOA Třeboň – DigiArchiv (35)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
 | [Listiny k matrikám, farnost Albrechtice nad Vltavou, O 1821 (snubní protokoly, sňatkové spisy)](https://digi.ceskearchivy.cz/126678) | matrika | 1801–1856 |  |  | 1 (O 1) |
-| [Albrechtice nad Vltavou 4 1788-1801](https://digi.ceskearchivy.cz/2005) | matrika | 1788–1801 |  |  | 1 (O 1) |
+| [Albrechtice nad Vltavou 4 1788-1801](https://digi.ceskearchivy.cz/2005) | matrika | 1788–1801 |  |  | 2 (O 2) |
 | [Albrechtice nad Vltavou 5 1801-1839](https://digi.ceskearchivy.cz/2007) | matrika | 1801–1839 |  |  | 1 (N 1) |
+| [Bechyně 3 1738-1784](https://digi.ceskearchivy.cz/2057) | matrika | 1738–1784 |  |  | 1 (O 1) |
+| [Bechyně 6 1752-1784](https://digi.ceskearchivy.cz/2060) | matrika | 1752–1784 |  |  | 1 (N 1) |
 | [Bernartice 3 1732-1752](https://digi.ceskearchivy.cz/2167) | matrika | 1732–1752 |  |  | 1 (N 1) |
-| [Bernartice 4 1751-1784](https://digi.ceskearchivy.cz/2168) | matrika | 1751–1784 |  |  | 2 (O 2) |
-| [Bernartice 5 1765-1804](https://digi.ceskearchivy.cz/2169) | matrika | 1765–1804 |  |  | 2 (N 2) |
+| [Bernartice 4 1751-1784](https://digi.ceskearchivy.cz/2168) | matrika | 1751–1784 |  |  | 3 (O 3) |
+| [Bernartice 5 1765-1804](https://digi.ceskearchivy.cz/2169) | matrika | 1765–1804 |  |  | 3 (N 3) |
 | [Bernartice 6 1804-1825](https://digi.ceskearchivy.cz/2170) | matrika | 1804–1825 |  |  | 1 (N 1) |
 | [Bernartice 9 1848-1852](https://digi.ceskearchivy.cz/2173) | matrika | 1848–1852 |  |  | 1 (N 1) |
 | [Bernartice 10 1852-1862](https://digi.ceskearchivy.cz/2174) | matrika | 1852–1862 |  |  | 1 (N 1) |
 | [Bernartice 12 1874-1892](https://digi.ceskearchivy.cz/2176) | matrika | 1874–1892 |  |  | 1 (N 1) |
 | [Bernartice 15 1835-1847](https://digi.ceskearchivy.cz/2179) | matrika | 1835–1847 |  |  | 1 (O 1) |
 | [Bernartice 18 1866-1898](https://digi.ceskearchivy.cz/2182) | matrika | 1866–1898 |  |  | 1 (O 1) |
-| [Chřešťovice 3 1751-1777](https://digi.ceskearchivy.cz/4165) | matrika | 1751–1777 |  |  | 2 (N 2) |
+| [Chřešťovice 3 1751-1777](https://digi.ceskearchivy.cz/4165) | matrika | 1751–1777 |  |  | 3 (N 3) |
 | [Chřešťovice 11 1784-1818](https://digi.ceskearchivy.cz/4173) | matrika | 1784–1818 |  |  | 1 (O 1) |
 | [Kadov 1](https://digi.ceskearchivy.cz/DA?lang=cs&menu=3&id=4543&page=1) | matrika | 1659–1703 |  |  | 2040 (J 12 N 1528 O 283 Z 217) |
 | [Kamenice nad Lipou 10 1824-1852](https://digi.ceskearchivy.cz/4609) | matrika | 1824–1852 |  |  | 1 (O 1) |
@@ -253,17 +255,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## zaopava (6)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Ruda nad Moravou N, Z, O 1701–1757, ZA Opava, NAD 165, sign. Šu XIV 2 (inv. 7906)](https://digi.archives.cz/da/permalink?xid=be9318d8-f13c-102f-8255-0050568c0263) | matrika | 1701–1757 | 440 | 59884 | 762 (N 119 O 2 Z 641) |
-| [Ruda nad Moravou N, O, Z 1757–1771 s rejstříky N a O (1757–1792), ZA Opava, NAD 165](https://digi.archives.cz/da/permalink?xid=be97d562-f13c-102f-8255-0050568c0263) | matrika | 1757–1771 | 130 | 40412 | 55 (N 37 O 12 Z 6) |
-| [Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)](https://digi.archives.cz/da/permalink?xid=be9312c0-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 35 | 13361 | 7 (J 1 O 6) |
-| [Ruda nad Moravou Z 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 19 (inv. 7923)](https://digi.archives.cz/da/permalink?xid=be930f8c-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 302 | 116893 | 322 (Z 322) |
-| [Ruda nad Moravou N, O, Z 1772–1778, ZA Opava, NAD 165, sign. Šu XIV 4 (inv. 7908)](https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263) | matrika | 1772–1778 | 177 | 33733 | 24 (J 2 N 19 O 1 Z 2) |
-| [Ruda nad Moravou N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)](https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 66 | 32068 | 32 (N 32) |
-
 ## ndk (2)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -283,6 +274,17 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## zaopava (6)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Ruda nad Moravou N, Z, O 1701–1757, ZA Opava, NAD 165, sign. Šu XIV 2 (inv. 7906)](https://digi.archives.cz/da/permalink?xid=be9318d8-f13c-102f-8255-0050568c0263) | matrika | 1701–1757 | 440 | 59884 | 762 (N 119 O 2 Z 641) |
+| [Ruda nad Moravou N, O, Z 1757–1771 s rejstříky N a O (1757–1792), ZA Opava, NAD 165](https://digi.archives.cz/da/permalink?xid=be97d562-f13c-102f-8255-0050568c0263) | matrika | 1757–1771 | 130 | 40412 | 55 (N 37 O 12 Z 6) |
+| [Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)](https://digi.archives.cz/da/permalink?xid=be9312c0-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 35 | 13361 | 7 (J 1 O 6) |
+| [Ruda nad Moravou Z 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 19 (inv. 7923)](https://digi.archives.cz/da/permalink?xid=be930f8c-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 302 | 116893 | 322 (Z 322) |
+| [Ruda nad Moravou N, O, Z 1772–1778, ZA Opava, NAD 165, sign. Šu XIV 4 (inv. 7908)](https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263) | matrika | 1772–1778 | 177 | 33733 | 24 (J 2 N 19 O 1 Z 2) |
+| [Ruda nad Moravou N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)](https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 66 | 32068 | 32 (N 32) |
 
 ## nacr (2)
 
