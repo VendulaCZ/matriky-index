@@ -2,9 +2,9 @@
 
 Stav k 7. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **564 knih** (matrika 509, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **566 knih** (matrika 511, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
 - **6 718 stran** převedených strojově (PERO OCR), **1 137 391 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **13 398 zápisů přečtených očima**: narození 8521, sňatky 1715, úmrtí 2665, převody gruntů 49, soupisy 168, jiné 251
+- **13 402 zápisů přečtených očima**: narození 8521, sňatky 1715, úmrtí 2665, převody gruntů 49, soupisy 168, jiné 255
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -519,7 +519,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Smíchov – sv. Filip a Jakub, SM N21 (1879–1882)](https://katalog.ahmp.cz/pragapublica/permalink?xid=F4C9890E8A954B20B26FD49C2562CCB0) | matrika |  |  |  | 1 (N 1) |
 | [Žižkov, sv. Prokop, ŽKP Z4 (1906–1915)](https://katalog.ahmp.cz/pragapublica/permalink?xid=F88B2F66CDCE438E9CBB66DA29BBF7CC) | matrika |  |  |  | 4 (J 2 Z 2) |
 
-## Moravský zemský archiv – Acta Publica (29)
+## Moravský zemský archiv – Acta Publica (31)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -528,6 +528,8 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Bítov N 1831–1875, kniha 13402, Acta Publica id 1060 (Bítov sn. 2–52, Korolupy 52–85, Oslnovice 85–99, Vysočany 99–134, Zblovice od 134)](https://www.mza.cz/actapublica/matrika/detail/1060) | matrika |  |  |  | 4 (J 3 N 1) |
 | [Bítov O 1874–1949, kniha 13407, Acta Publica id 12350 (část Vysočany 1878–1900 = sn. 54–67)](https://www.mza.cz/actapublica/matrika/detail/12350) | matrika |  |  |  | 2 (O 2) |
 | [Hostim (Hösting) N 1821–1885, Acta Publica id 1384 (jen obec Hostim)](https://www.mza.cz/actapublica/matrika/detail/1384) | matrika |  |  |  | 3 (J 1 N 2) |
+| [Křetín, rejstřík narozených 1694–1783 (Acta Publica id 3217, č. knihy 406)](https://www.mza.cz/actapublica/matrika/detail/3217) | matrika |  |  |  | 2 (J 2) |
+| [Křetín, rejstřík oddaných 1695–1844 (Acta Publica id 3220, č. knihy 409)](https://www.mza.cz/actapublica/matrika/detail/3220) | matrika |  |  |  | 2 (J 2) |
 | [Pozořice, kn. 1562, N+O+Z 1666–1695 (narození obce společně 1679–1695 sn. 93–169, oddaní 1679–1695 sn. 169–190, zemřelí 191–222)](https://www.mza.cz/actapublica/matrika/detail/4194) | matrika | 1666–1695 |  |  | 1 (O 1) |
 | [Pozořice, kn. 1563, N+O+Z 1695–1749 (narození sn. 2–232, oddaní 232–305, zemřelí 307–393)](https://www.mza.cz/actapublica/matrika/detail/4195) | matrika | 1695–1749 |  |  | 10 (N 7 O 3) |
 | [Pozořice, kn. 1564, N+O+Z 1750–1784 (narození sn. 1–204)](https://www.mza.cz/actapublica/matrika/detail/4196) | matrika | 1750–1784 |  |  | 2 (N 1 O 1) |
