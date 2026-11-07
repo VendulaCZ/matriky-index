@@ -1,10 +1,10 @@
 # Přehled indexu
 
-Stav k 6. 11. 2026 (generuje `python tools/prehled.py`).
+Stav k 7. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **562 knih** (matrika 507, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **564 knih** (matrika 509, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
 - **6 718 stran** převedených strojově (PERO OCR), **1 137 391 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **13 383 zápisů přečtených očima**: narození 8516, sňatky 1713, úmrtí 2658, převody gruntů 49, soupisy 168, jiné 250
+- **13 398 zápisů přečtených očima**: narození 8521, sňatky 1715, úmrtí 2665, převody gruntů 49, soupisy 168, jiné 251
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -360,7 +360,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Nezabudice 16 – rejstříky N 1784–1938, O 1784–1946, Z 1784–1939, písmena P–Z (eBadatelna 9774)](https://ebadatelna.soapraha.cz/d/9774/) | matrika | 1784–1946 |  |  | 2 (J 2) |
 | [Nezabudice 17 (9775, Z Nezabudice a Malá Buková 1784–1934)](https://ebadatelna.soapraha.cz/d/9775/) | matrika |  |  |  | 1 (Z 1) |
 
-## SOA Třeboň – DigiArchiv (116)
+## SOA Třeboň – DigiArchiv (118)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -436,7 +436,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Milevsko 8 1803-1809](https://digi.ceskearchivy.cz/5540) | matrika | 1803–1809 |  |  | 1 (N 1) |
 | [Milevsko 20 1784-1801](https://digi.ceskearchivy.cz/5552) | matrika | 1784–1801 |  |  | 1 (O 1) |
 | [Milevsko 22 1810-1839](https://digi.ceskearchivy.cz/5554) | matrika | 1810–1839 |  |  | 1 (O 1) |
-| [Mirovice, rejstřík (DigiArchiv 5625)](https://digi.ceskearchivy.cz/5625) | matrika |  |  |  | 1 (J 1) |
+| [Mirovice, rejstřík (DigiArchiv 5625)](https://digi.ceskearchivy.cz/5625) | matrika |  |  |  | 2 (J 2) |
 | [Mladošovice 12 1784-1828](https://digi.ceskearchivy.cz/5681) | matrika |  |  |  | 1 (N 1) |
 | [Nadějkov 19 1869-1891](https://digi.ceskearchivy.cz/5752) | matrika |  |  |  | 1 (N 1) |
 | [Nadějkov 25 1853-1886](https://digi.ceskearchivy.cz/5758) | matrika |  |  |  | 2 (Z 2) |
@@ -453,13 +453,15 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Radobytce N 1873–1893 (DigiArchiv id 6845)](https://digi.ceskearchivy.cz/6845) | matrika |  |  |  | 2 (N 2) |
 | [Radobytce O 1863–1914 (DigiArchiv id 6850)](https://digi.ceskearchivy.cz/6850) | matrika |  |  |  | 1 (O 1) |
 | [Radobytce Z 1868–1925 (DigiArchiv id 6855)](https://digi.ceskearchivy.cz/6855) | matrika |  |  |  | 4 (Z 4) |
-| [Radomyšl NOZ 1733–1768 (kniha 3, DigiArchiv 6861)](https://digi.ceskearchivy.cz/6861) | matrika |  |  |  | 5 (N 4 O 1) |
+| [Radomyšl NO 1692–1732 (kniha 2, DigiArchiv 6860)](https://digi.ceskearchivy.cz/6860) | matrika |  |  |  | 7 (N 5 O 2) |
+| [Radomyšl NOZ 1733–1768 (kniha 3, DigiArchiv 6861)](https://digi.ceskearchivy.cz/6861) | matrika |  |  |  | 7 (N 4 O 1 Z 2) |
 | [Radomyšl N 1806–1823 (kniha 6, DigiArchiv 6864)](https://digi.ceskearchivy.cz/6864) | matrika |  |  |  | 1 (N 1) |
 | [Radomyšl N 1824–1841 (kniha 7, DigiArchiv 6865)](https://digi.ceskearchivy.cz/6865) | matrika |  |  |  | 2 (N 2) |
 | [Radomyšl O 1784–1805 (kniha 15, DigiArchiv 6873)](https://digi.ceskearchivy.cz/6873) | matrika |  |  |  | 1 (O 1) |
 | [Radomyšl O 1837–1861 (kniha 17, DigiArchiv 6875)](https://digi.ceskearchivy.cz/6875) | matrika |  |  |  | 1 (O 1) |
 | [Radomyšl O 1862–1894 (DigiArchiv 6876)](https://digi.ceskearchivy.cz/6876) | matrika |  |  |  | 3 (O 3) |
-| [Radomyšl Z 1806–1838 (kniha 22, DigiArchiv 6880)](https://digi.ceskearchivy.cz/6880) | matrika |  |  |  | 1 (Z 1) |
+| [Radomyšl Z 1769–1784 (kniha 20, DigiArchiv 6878)](https://digi.ceskearchivy.cz/6878) | matrika |  |  |  | 4 (Z 4) |
+| [Radomyšl Z 1806–1838 (kniha 22, DigiArchiv 6880)](https://digi.ceskearchivy.cz/6880) | matrika |  |  |  | 2 (Z 2) |
 | [Radomyšl, zemřelí 1867–1899 (DigiArchiv 6882)](https://digi.ceskearchivy.cz/6882) | matrika |  |  |  | 1 (Z 1) |
 | [720008](https://digi.ceskearchivy.cz/DA?lang=cs&menu=3&id=720008&page=203) | pozemková kniha |  |  |  | 1 (P 1) |
 | [720011](https://digi.ceskearchivy.cz/DA?lang=cs&menu=3&id=720011&page=48) | pozemková kniha |  |  |  | 1 (P 1) |
@@ -571,15 +573,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## ndk (4)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
-
 ## nacr (7)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -604,6 +597,15 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## ndk (4)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
 
 ## zaopava (25)
 
