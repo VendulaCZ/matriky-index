@@ -2,9 +2,9 @@
 
 Stav k 8. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **578 knih** (matrika 523, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **579 knih** (matrika 524, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 2, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
 - **6 718 stran** převedených strojově (PERO OCR), **1 137 391 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **13 486 zápisů přečtených očima**: narození 8539, sňatky 1759, úmrtí 2684, převody gruntů 49, soupisy 168, jiné 258
+- **13 495 zápisů přečtených očima**: narození 8546, sňatky 1759, úmrtí 2686, převody gruntů 49, soupisy 168, jiné 258
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -361,7 +361,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Nezabudice 16 – rejstříky N 1784–1938, O 1784–1946, Z 1784–1939, písmena P–Z (eBadatelna 9774)](https://ebadatelna.soapraha.cz/d/9774/) | matrika | 1784–1946 |  |  | 2 (J 2) |
 | [Nezabudice 17 (9775, Z Nezabudice a Malá Buková 1784–1934)](https://ebadatelna.soapraha.cz/d/9775/) | matrika |  |  |  | 1 (Z 1) |
 
-## SOA Třeboň – DigiArchiv (129)
+## SOA Třeboň – DigiArchiv (130)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -424,12 +424,13 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Kamenice nad Lipou 8 1799-1820](https://digi.ceskearchivy.cz/4607) | matrika |  |  |  | 1 (O 1) |
 | [Kamenice nad Lipou 10 1824-1852](https://digi.ceskearchivy.cz/4609) | matrika | 1824–1852 |  |  | 1 (O 1) |
 | [Kamenice nad Lipou 14 1824-1855](https://digi.ceskearchivy.cz/4613) | matrika |  |  |  | 4 (Z 4) |
-| [Kostelec nad Vltavou N 1785–1815 (kniha 1, DigiArchiv 4843)](https://digi.ceskearchivy.cz/4843) | matrika |  |  |  | 2 (N 2) |
+| [Kostelec nad Vltavou N 1785–1815 (kniha 1, DigiArchiv 4843)](https://digi.ceskearchivy.cz/4843) | matrika |  |  |  | 8 (N 8) |
 | [Kostelec nad Vltavou O 1785–1828 (kniha 5, DigiArchiv 4847)](https://digi.ceskearchivy.cz/4847) | matrika |  |  |  | 7 (O 7) |
 | [Košetice 6 1784-1821](https://digi.ceskearchivy.cz/4892) | matrika |  |  |  | 1 (N 1) |
 | [Košetice 7 1822-1842](https://digi.ceskearchivy.cz/4893) | matrika |  |  |  | 1 (N 1) |
 | [Košetice 8 1843-1860](https://digi.ceskearchivy.cz/4894) | matrika |  |  |  | 1 (N 1) |
 | [Košetice 13 1785-1840](https://digi.ceskearchivy.cz/4899) | matrika |  |  |  | 2 (O 2) |
+| [Kovářov NOZ 1769–1785 (kniha 7, DigiArchiv 4912)](https://digi.ceskearchivy.cz/4912) | matrika |  |  |  | 1 (N 1) |
 | [51393](https://digi.ceskearchivy.cz/DA?lang=cs&menu=3&id=51393&page=36) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Lišov 5 1784-1825](https://digi.ceskearchivy.cz/5256) | matrika |  |  |  | 2 (N 2) |
 | [Lišov 12 1784-1843](https://digi.ceskearchivy.cz/5263) | matrika |  |  |  | 1 (O 1) |
@@ -479,7 +480,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [SOkA České Budějovice, evidence obyvatel města, kniha F IX](https://digi.ceskearchivy.cz/737380) | policejní přihlášky |  |  |  | 1 (J 1) |
 | [Staré Sedlo N 1794–1810 (kniha 7, DigiArchiv 7400)](https://digi.ceskearchivy.cz/7400) | matrika |  |  |  | 2 (N 2) |
 | [Staré Sedlo O 1784–1816 (kniha 12, DigiArchiv 7405)](https://digi.ceskearchivy.cz/7405) | matrika |  |  |  | 5 (O 5) |
-| [Staré Sedlo Z 1794–1854 (kniha 17, DigiArchiv 7410)](https://digi.ceskearchivy.cz/7410) | matrika |  |  |  | 3 (Z 3) |
+| [Staré Sedlo Z 1794–1854 (kniha 17, DigiArchiv 7410)](https://digi.ceskearchivy.cz/7410) | matrika |  |  |  | 5 (Z 5) |
 | [Staré Sedlo, rejstřík NOZ (DigiArchiv 7415)](https://digi.ceskearchivy.cz/7415) | matrika |  |  |  | 1 (J 1) |
 | [Sudoměřice u Bechyně 7 1784-1823](https://digi.ceskearchivy.cz/7666) | matrika | 1784–1823 |  |  | 1 (O 1) |
 | [Ševětín 16 1797-1835](https://digi.ceskearchivy.cz/7799) | matrika |  |  |  | 1 (O 1) |
@@ -587,18 +588,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## nacr (7)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
-| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
-| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
-
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -611,6 +600,18 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## nacr (7)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
+| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
+| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
 
 ## zaopava (25)
 
