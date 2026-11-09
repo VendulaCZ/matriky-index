@@ -2,9 +2,9 @@
 
 Stav k 9. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **597 knih** (matrika 541, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
-- **7 508 stran** převedených strojově (PERO OCR), **1 290 868 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **13 590 zápisů přečtených očima**: narození 8589, sňatky 1778, úmrtí 2687, převody gruntů 49, soupisy 173, jiné 285
+- **598 knih** (matrika 542, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **7 884 stran** převedených strojově (PERO OCR), **1 401 952 řádků** strojového textu – nekontrolovaný, slouží k hledání
+- **13 593 zápisů přečtených očima**: narození 8589, sňatky 1781, úmrtí 2687, převody gruntů 49, soupisy 173, jiné 285
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -98,7 +98,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [vs-horazdovice-k1594](https://www.portafontium.eu/amtsbuch/soap-pn/vs-horazdovice/k1594) | pozemková kniha |  |  |  | 1 (P 1) |
 | [Žinkovy 02](https://www.portafontium.eu/register/soap-pn/zinkovy-02) | matrika | 1683–1715 | 152 | 13262 | 1 (N 1) |
 
-## SOA Zámrsk – Východočeské archivy (ARON) (124)
+## SOA Zámrsk – Východočeské archivy (ARON) (125)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -120,7 +120,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 25-2 (poř.č. 1681), 6.1808-4.1839](https://aron.vychodoceskearchivy.cz/apu/1697219c-42e0-497c-b459-055488bb208e) | matrika |  |  |  | 4 (N 4) |
 | [Sbírka matrik Východočeského kraje, sign.: 2119, 1750-1810 – index NAROZENÝCH fary Choceň](https://aron.vychodoceskearchivy.cz/apu/16a8d512-c944-432b-892c-e9e052070427) | matrika |  |  |  | 6 (J 6) |
 | [Sbírka matrik Východočeského kraje, sign.: 136-2 (poř.č. 9200), 1663-1706 – Přepychy N (oddíly Opočno, Semechnice, Pohoří, Trnov), O](https://aron.vychodoceskearchivy.cz/apu/18df5472-68cb-4552-ae90-e750907c8781) | matrika |  |  |  | 11 (N 5 O 6) |
-| [Sbírka matrik Východočeského kraje, sign.: 2095, 1725-1785 – Choceň NAROZENÝCH](https://aron.vychodoceskearchivy.cz/apu/1a6d0b5c-5f05-41fe-8bc6-27540ddbae5c) | matrika |  |  |  | 2 (N 2) |
+| [Sbírka matrik Východočeského kraje, sign.: 2095, 1725-1785 – Choceň NAROZENÝCH](https://aron.vychodoceskearchivy.cz/apu/1a6d0b5c-5f05-41fe-8bc6-27540ddbae5c) | matrika | 1725–1785 | 121 | 31359 | 2 (N 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 182-3 (poř.č. 12831), 1752-1839](https://aron.vychodoceskearchivy.cz/apu/1b3c14da-5282-43d7-a48e-7268450f1224) | matrika |  |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 26-14 (poř.č. 1760), 1806-1839](https://aron.vychodoceskearchivy.cz/apu/1eadef0d-1be1-45e5-a766-feeec3022aa6) | matrika |  |  |  | 1 (J 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 162-6 (poř.č. 11266), 1812-1872](https://aron.vychodoceskearchivy.cz/apu/1f963157-380d-42fc-b317-d72e439bdd16) | matrika |  |  |  | 2 (N 1 Z 1) |
@@ -164,6 +164,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 162-20 (poř.č. 11275), 1749-1784](https://aron.vychodoceskearchivy.cz/apu/9126d628-7c44-4435-8c4d-92e75a4c77ee) | matrika |  |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 47-3327 (poř.č. 3323), 1867-1875](https://aron.vychodoceskearchivy.cz/apu/92582e21-498b-46b4-bbf1-35620ff826ea) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 162-4 (poř.č. 11265), 1785-1812](https://aron.vychodoceskearchivy.cz/apu/961ea9a8-6f8a-4244-8fd9-217c890a85ec) | matrika |  |  |  | 2 (N 1 O 1) |
+| [Sbírka matrik Východočeského kraje, sign.: 24-5 (poř.č. 1630), 5.1784-6.1837 – Deštné v Orlických horách N (Deštné, Dříš, Kout, Paseka, Pastviny, Víska, Zákoutí)](https://aron.vychodoceskearchivy.cz/apu/9634f2ed-f27b-4902-b935-cc261da19e92) | matrika | 1784–1837 | 145 | 60560 |  |
 | [Sbírka matrik Východočeského kraje, sign.: 1243 (poř.č. 1528), 1720-1835 – Čistá, index O (farnost Čistá: Brlenka, Čistá, Gajer, Chmelík, Janov, Mendryka, Nová Ves + filiální obvod Trstěnice)](https://aron.vychodoceskearchivy.cz/apu/96b5c1a1-c154-45d3-8773-cc5effe0894b) | matrika |  |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 101-12 (poř.č. 7071), 1773-1853](https://aron.vychodoceskearchivy.cz/apu/98b58686-e1aa-4f49-9512-41ced39e2036) | matrika |  |  |  | 4 (O 4) |
 | [Sbírka matrik Východočeského kraje, sign.: 56-4 (poř.č. 3940), 1792-1804](https://aron.vychodoceskearchivy.cz/apu/9ce8ec27-b6ab-4eb2-8ab7-8d3aed2a2ade) | matrika |  |  |  | 1 (O 1) |
@@ -174,7 +175,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 1327 (poř.č. 6509), 5.1784-1795](https://aron.vychodoceskearchivy.cz/apu/a4632f95-0a25-47f7-8bc6-d104daea55c3) | matrika |  |  |  | 1 (Z 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 26-3860 (poř.č. 1762), 1806-1886](https://aron.vychodoceskearchivy.cz/apu/a6aabf16-8ebd-479c-9e30-d743b2408eb4) | matrika |  |  |  | 3 (J 3) |
 | [Sbírka matrik Východočeského kraje, sign.: 47-3342 (poř.č. 3351), 1866-1893](https://aron.vychodoceskearchivy.cz/apu/ab305e21-80c6-4ec3-9c5a-31931c697696) | matrika |  |  |  | 1 (N 1) |
-| [Sbírka matrik Východočeského kraje, sign.: 120-11 (poř.č. 8246), 1784-1834](https://aron.vychodoceskearchivy.cz/apu/ab67b4df-8c81-4421-97bc-508551f5366d) | matrika |  |  |  | 2 (O 2) |
+| [Sbírka matrik Východočeského kraje, sign.: 120-11 (poř.č. 8246), 1784-1834](https://aron.vychodoceskearchivy.cz/apu/ab67b4df-8c81-4421-97bc-508551f5366d) | matrika | 1784–1834 | 110 | 19165 | 5 (O 5) |
 | [Sbírka matrik Východočeského kraje, sign.: 1302 (poř.č. 6458), 5.1784-2.1791](https://aron.vychodoceskearchivy.cz/apu/b259a4de-8881-4932-b4d8-4bc3ac30afd6) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 317 (poř.č. 10267), 1829-1842](https://aron.vychodoceskearchivy.cz/apu/b708d579-d1e6-4331-9ce5-4024163637a2) | matrika | 1829–1842 |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 8-2 (poř.č. 308), 1784-1841](https://aron.vychodoceskearchivy.cz/apu/b8f9233b-e223-43dd-bac4-47d1d6449dd4) | matrika |  |  |  | 2 (N 2) |
@@ -617,16 +618,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
 | [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
 
-## ndk (5)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
-
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -669,3 +660,13 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Lužná, N+Z+O s indexy 1811–1845, sign. VK VII 5, inv. č. 2535](https://digi.archives.cz/da/permalink/be88248c-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 2 (N 1 O 1) |
 | [Lužná N+Z+O s indexy 1846–1871 (VK VII 6, inv. č. 2536)](https://digi.archives.cz/da/entityDetail/be882504-f13c-102f-8255-0050568c0263?actualDetailTab=attachmentsImg) | matrika |  |  |  | 1 (N 1) |
 | [Halenkov, Hovězí, Zděchov, O 1784–1823, sign. Vs IV 5, inv. č. 2416](https://digi.archives.cz/da/permalink/be87e9ea-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 1 (O 1) |
+
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |

@@ -232,6 +232,28 @@ BOOKS = {
                            "folio); OCR jen písmeno S (snímky 86–104: S 1700–1842 = sn. 89–93, 1842–1899 = 94–96; Š/Sch dál); "
                            "soubor = snímek; šedotónové JPEG 2400 px",
                      url="https://aron.vychodoceskearchivy.cz/apu/060e88a7-18e2-419a-8e49-b958f7b76396", prefix="nmnm1147333", delitel=1),
+    "9634f2ed": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 24-5 (poř.č. 1630), 5.1784-6.1837 – Deštné "
+                                         "v Orlických horách N (Deštné, Dříš, Kout, Paseka, Pastviny, Víska, Zákoutí)",
+                     farnost="Deštné v Orlických horách", roky="1784–1837",
+                     obsah="N 5/1784–6/1837 německy, tabulkově, chronologicky pro celou farnost (obec ve sloupci data); snímek 84 = "
+                           "pag. 158–159 (1810); rejstřík N/Z/O 1784–1835 = sign. 24-9; snímky 1–145; soubor = snímek; OCR ze "
+                           "šedotónových JPEG 2400 px – úzké sloupce tabulky čte PERO špatně",
+                     url="https://aron.vychodoceskearchivy.cz/apu/9634f2ed-f27b-4902-b935-cc261da19e92", prefix="destne245", delitel=1),
+    "ab67b4df": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 120-11 (poř.č. 8246), 1784-1834",
+                     farnost="Opočno", roky="1784–1834",
+                     obsah="O a index O, Pohoří, Puličky, Semechnice, Trnov …, tabulkově česky, po obcích (záložky Pohoří, Puličky, "
+                           "Semechnice); rejstřík ženichů na konci (sn. 90 L = M); snímky 1–110; soubor = snímek; snímek = pořadí "
+                           "snímku v ARON",
+                     url="https://aron.vychodoceskearchivy.cz/apu/ab67b4df-8c81-4421-97bc-508551f5366d", prefix="opocno12011", delitel=1,
+                     poznamka="OCR celé knihy ze šedotónových JPEG 2400 px; zápisy přečtené očima v precteno.tsv"),
+    "1a6d0b5c": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 2095, 1725-1785 – Choceň NAROZENÝCH",
+                     farnost="Choceň", roky="1725–1785",
+                     obsah="N farnosti Choceň a filiálek chronologicky (sloupce Locus, Dies, Nomen prolis, Nomina et conditio parentum, "
+                           "Levans, Testes, Baptisans), stránkováno (snímek 321 = s. 620–621, 330 = s. 638–639); snímek = pořadí "
+                           "snímku v ARON",
+                     url="https://aron.vychodoceskearchivy.cz/apu/1a6d0b5c-5f05-41fe-8bc6-27540ddbae5c", prefix="chocen2095", delitel=1,
+                     poznamka="OCR jen snímky 270–390 (asi 1752–1766) ze šedotónových JPEG 2400 px; tabulkové sloupce čte PERO špatně; "
+                              "jinak jen jednotlivé stránky očima"),
     "o-2741": dict(archiv="zayt", nazev="Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)",
                    farnost="Karlín (krajský rabín Kouřimska; snoubenci z celého kraje)", roky="1848–1856",
                    obsah="„Trauungs-Matrik“, tištěný formulář přes dvojstranu, 4 posty na stranu (sn. 20 = pag. 18, 1854); "
@@ -390,6 +412,9 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "vca-smola-o-destne-rokytnice-uhrinov-nmnm": (["c3113199", "0484f35a", "f7a85f10", "060e88a7"],
                                                   "22584668-c138-4a53-a0e9-b6d76bc57563", "Kurrent (German, Czech)",
                                                   "2026-11-09"),
+    "vca-destne-24-5": (["9634f2ed"], "85d892fd-9037-43a3-8887-d2bc20b3bfc5", "Kurrent (German, Czech)", "2026-11-09"),
+    "vca-opocno-120-11": (["ab67b4df"], "f1f63e66-3c2f-45c8-8781-74a33a4528b1", "Kurrent (German, Czech)", "2026-11-09"),
+    "vca-chocen-2095-sn270-390": (["1a6d0b5c"], "2db0d5e1-2ee0-4150-98e4-83f9b1fd1dba", "Kurrent (German, Czech)", "2026-11-09"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
                             "Czech Fraktur Printed", "2026-11-02"),
     "ruda-su-xiv-19": (["su-xiv-19"], "1a7cf0e9-622f-4314-8b7a-2a4027591f52", "Czech Handwritten", "2026-11-02"),
