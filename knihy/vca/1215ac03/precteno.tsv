@@ -14,7 +14,7 @@ snimek	datum	typ	obec	osoby	ostatni	jistota	cetl	odkaz
 463	1773-02-14	O	Trnov	ženich: Georgius Merwarth, vdovec [?], sedlák z Pohoří; nevěsta: Dorothea, dcera Georgia Prola z Trnova	oddával P. Emanuel, kapucín; svědci Joannes Baschek, sedlák z Pohoří, a Josephus Matuschka [?], sedlák z Trnova; katolíci; dům Trnov 27	střední	claude-opus-5-5/xhigh 2026-11-09	
 17	1726-09-11	N	Pohoří	dítě: Girzík; otec: Wácl. Bašek; matka: Kateřina	pag. 23, 4. zápis září 1726 („Item eodem“ = 11.); kmotr Girzík Karel z Opařistie [?], svědci Jan Vrzal [?] a Kateřina manž. Lukáše Maršíka [?], oba z Pohoří	střední	claude-opus-5-5/xhigh 2026-11-09	
 414	1748-02-11	O	Pohoří	ženich: Georgius Baschek, vdovec; nevěsta: Dorothea, dcera Nicolaa Melichara	fol. 85; svědci Mathias Kansky, Catharina filia Nicolai Melichar a Anna uxor Wenceslai Baschek; de non impedimento Joannes Dvořák a Nicolaus (otec); vše z Pohoří; oddával curatus loci	vysoká	claude-opus-5-5/xhigh 2026-11-09	
-105	1746	N		dítě: Magdalena; otec: Girzí Bašek [?]; matka: Anna	„Pokřtěna gest Magdalena dcera Girzího Bašky [?] … Matky Anny“, 28. [?]; kmotra Magdalena manž. Antonína Bílého, svědci Dorota … a Ignatius Hawranek, všichni z Opočna; příjmení otce nejisté	nízká	claude-opus-5-5/xhigh 2026-11-09	
+105	1745-11-28	N	Pohoří	dítě: Magdalena; otec: Girzí Bašek; matka: Anna	„Pokřtěna gest Magdalena dcera Girzího Bašky [?] … Matky Anny“, 28. [?]; kmotra Magdalena manž. Antonína Bílého, svědci Dorota … a Ignatius Hawranek, všichni z Opočna; příjmení otce nejisté	nízká	claude-opus-5-5/xhigh 2026-11-09	
 15	1726-03-19	N	Pohoří	dítě: Dorota; otec: Mikuláš Melychar; matka: Kateřina	pag. 19, 4. zápis března 1726; kmotra Kateřina manž. Matěje Kanského, svědci Dorota manž. Jana Holance [?] a Václav Vaněček, všichni z Pohoří	vysoká	claude-opus-5-5/xhigh 2026-11-09	
 420	1752-05-14	O	Semechnice	ženich: Georgius Karnik, vdovec z Pohoří; nevěsta: Dorothea, dcera † Khol-Schitera [?] z Pulic	svědci Joannes Jezek [?] z Puliček, Anna filia Wenceslai Frnowsky [?] ze Semechnic, Anna uxor Georgii Schestak z Opočna; de carentia impedimenti Wenceslaus Baschek z Pohoří; příjmení otce nevěsty bez křestního jména, „Khol=“ / „Schiter“ na dvou řádcích	střední	claude-opus-5-5/xhigh 2026-11-09	
 423	1754	O	Pohoří	ženich: Georgius Merwarth, vdovec; nevěsta: Anna, dcera † Andrease [?]	dne 21. (měsíc na skenu nad zápisem není), oba z Pohoří; rok mezi „Februarius 1754“ (sn. 422) a „1755“ (sn. 423 R dole)	střední	claude-opus-5-5/xhigh 2026-11-09	
@@ -24,3 +24,23 @@ snimek	datum	typ	obec	osoby	ostatni	jistota	cetl	odkaz
 78	1739-06-01	N	Pohoří	dítě: Jan; otec: Wáclaw Bašek; matka: Anna	„In Mense Junio, Dne 1 dito“; jméno dítěte na začátku řádku částečně; rok 1739 (leden na sn. 75 R, 1740 na sn. 81 L)	střední	claude-opus-5-5/xhigh 2026-11-09	
 86	1741	N	Pohoří	dítě: Jiřík; otec: Wáclaw Bašek; matka: Anna	„Dne 11 dito“, rok 1741 (sn. 85 L „Anno Domini 1741“); kmotr Antonín syn Jana … z Opočna	střední	claude-opus-5-5/xhigh 2026-11-09	
 270	1740	Z	Pohoří	zemřelá: Magdalena, manželka Václava Baška, 52 let	„Dne 14 dito Pohoří, Pohřbena gest Magdalena manž. Wáclawa Baška stáří 52 let“; rok asi 1740 (sn. 269 = 1740)	střední	claude-opus-5-5/xhigh 2026-11-09	
+410	1745-02-08	O	Pohoří	ženich: Jiřík [?], syn Jana Baška; nevěsta: Anna, dcera Jana Hollaneyho [?]	oba z Pohoří; svědci Mikuláš Zatř [?] z Pohoří a Magdalena manž. Antonína Bílého z Opočna; oddával P. Nicolaus Gindra	vysoká	claude-opus-5-5/xhigh 2026-11-09	
+403	1741-02-05	O	Pohoří	ženich: Jiřík, syn † Václava Charouse [?]; nevěsta: Salomena, dcera Jana Baška z Pohoří	příjmení a ves ženicha nejisté; oddával P. Josephus Gelinek	střední	claude-opus-5-5/xhigh 2026-11-09	
+407	1743-11-10	O	Pohoří	ženich: Mikuláš, syn † Petra Hanuše [?]; nevěsta: Dorota, dcera Jana Baška	neděle 23. po sv. Duchu; svědkyně mj. Anna vdova po † Václavu Baškovi	vysoká	claude-opus-5-5/xhigh 2026-11-09	
+399	1739-01	O	Trnov	ženich: Jan, syn † Jana T/Baška [?]; nevěsta: Anna Kundrtová [?] z Trnova	první písmeno příjmení otce ženicha T nebo B, ves nečitelná	nízká	claude-opus-5-5/xhigh 2026-11-09	
+245	1724-12-09	Z	Pohoří	zemřelý: Matěj, syn Jana Baška, 1 rok		vysoká	claude-opus-5-5/xhigh 2026-11-09	
+246	1725	Z	Opočno	zemřelý: Jan Bašek [?], asi 76 let	příjmení může být i Baštek; den nejistý	střední	claude-opus-5-5/xhigh 2026-11-09	
+248	1727-09-01	Z	Opočno	zemřelá: Veronika, vdova po † Janu Baškovi, asi 40 let		vysoká	claude-opus-5-5/xhigh 2026-11-09	
+249	1728	Z	Opočno	zemřelá: Anna, dcera Jana Baška, 4½ roku	slovo za jménem otce nejasné („z Klikorſtwí“?)	střední	claude-opus-5-5/xhigh 2026-11-09	
+250	1728-04-17	Z		zemřelý: Josef, syn Jana Baška, 2 týdny	ves v marginále nejistá	střední	claude-opus-5-5/xhigh 2026-11-09	
+254	1730-11	Z	Pohoří	zemřelá: Dorota, dcera Václava Baška, 5 let	den nejistý	vysoká	claude-opus-5-5/xhigh 2026-11-09	
+259	1733-09-30	Z	Opočno	zemřelá: Františka, dcera Jana Baška, 2 měsíce		vysoká	claude-opus-5-5/xhigh 2026-11-09	
+263	1736	Z	Pohoří	zemřelá: Kateřina, dcera Jana Baška, 4 týdny	měsíc a den neověřeny	vysoká	claude-opus-5-5/xhigh 2026-11-09	
+270	1740-03-14	Z	Pohoří	zemřelá: Magdalena, manželka Václava Baška, 52 let		vysoká	claude-opus-5-5/xhigh 2026-11-09	
+272	1742-01-10	Z	Pohoří	zemřelý: Václav Bašek, [6?]0 let	„rite provisus“; první číslice věku pod kaňkou	vysoká	claude-opus-5-5/xhigh 2026-11-09	
+274	1742-12-28	Z	Pohoří	zemřelá: Dorota, dcera Václava Baška, 11 dní	otec nemůže být Václav † 10. 1. 1742 – v Pohoří dva Václavové	vysoká	claude-opus-5-5/xhigh 2026-11-09	
+280	1745-11-29	Z	Pohoří	zemřelá: Anna, manželka Jiříka Baška, 20 let	„in puerperio ex improviso mortua post partum“	vysoká	claude-opus-5-5/xhigh 2026-11-09	
+281	1745-12-19	Z	Pohoří	zemřelá: Magdalena, dcera Jiřího Baška, 3 týdny		vysoká	claude-opus-5-5/xhigh 2026-11-09	
+281	1746-02-16	Z	Pohoří	zemřelý: Jakub, syn Václava Baška, 2 roky		vysoká	claude-opus-5-5/xhigh 2026-11-09	
+282	1746-06-19	Z	Pohoří	zemřelý: Lukáš, syn Václava Baška, 2 roky	„Obiit Lucas filius Wenceslai Baschek aetatis 2 annorum“	vysoká	claude-opus-5-5/xhigh 2026-11-09	
+282	1746-08-13	Z	Pohoří	zemřelý: Jan Bašek, 72 let	„Obiit Joannes Baſchek provisus aetatis 72 annorum“; patrně Jan „starý“ (manž. Salomena)	vysoká	claude-opus-5-5/xhigh 2026-11-09	
