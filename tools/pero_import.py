@@ -193,6 +193,21 @@ BOOKS = {
                             "OCR ze šedotónových JPEG 2400 px",
                       url="https://aron.vychodoceskearchivy.cz/apu/06a51ee1-4891-4871-b054-cd9370536c0b", prefix="lit7492",
                       delitel=1),
+    "1215ac03": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 120-1 (poř.č. 8227), 1723-1797 – Opočno NOZ "
+                                         "(Opočno, Podchlumí, Pohoří, Puličky, Semechnice, Trnov)",
+                     farnost="Opočno", roky="1723–1797",
+                     obsah="N 10.1723–3.1776 chronologicky pro všechny obce (bez oddílů, obec v levém sloupci „dies et locus "
+                           "originis“; bez rejstříku): snímek 100 = pag. 188–189, 114 = pag. 216–217 (leden 1749), 117 = začátek "
+                           "1750, 123 = začátek 1752, 126 = začátek 1753, 144 = září–říjen 1755, 145 = listopad 1755 – leden 1756, "
+                           "149 = podzim 1756 – leden 1757, 150 = 1757 (leden–březen), 151 = duben–červenec 1757, "
+                           "152 = srpen–listopad 1757, 153 = listopad 1757 – leden 1758, 154 = leden–březen 1758, "
+                           "155 = březen–červen 1758, 156 = červenec–listopad 1758, 157 = listopad 1758 – únor 1759, "
+                           "158 = únor–březen 1759, 160 = červenec–srpen 1759, 170 = srpen–září 1761; Z od asi sn. 240 "
+                           "(1760–1761), O od asi sn. 400 (1773 = sn. 463); snímek = pořadí snímku v ARON",
+                     url="https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45", prefix="opocno1201",
+                     delitel=1,
+                     poznamka="OCR jen snímky 113–158 (N 11/1748 – 3/1759) ze šedotónových JPEG 2400 px; soubor = snímek; "
+                              "ostatní snímky jen jednotlivě očima (precteno.tsv)"),
     "o-2741": dict(archiv="zayt", nazev="Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)",
                    farnost="Karlín (krajský rabín Kouřimska; snoubenci z celého kraje)", roky="1848–1856",
                    obsah="„Trauungs-Matrik“, tištěný formulář přes dvojstranu, 4 posty na stranu (sn. 20 = pag. 18, 1854); "
@@ -346,6 +361,8 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "z10-821": (["n-821"], "66a2140f-552f-4972-b395-4d1101451016 (sn. 68–77) + e23ff42b-1cfd-46b9-84f1-3e5a41cb58a7 (sn. 78–101)",
                 "Kurrent (German, Czech)", "2026-11-06"),
     "zinkovy-02-czh": (["zinkovy-02"], "ee840a16-1ae5-4bb0-ac76-5a9217a1edbd", "Czech Handwritten", "2026-11-06"),
+    "vca-opocno-120-1-n1748-1759": (["1215ac03"], "cf09cad5-c2b4-4079-96a4-e723b41ab5de", "Kurrent (German, Czech)",
+                                    "2026-11-09"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
                             "Czech Fraktur Printed", "2026-11-02"),
     "ruda-su-xiv-19": (["su-xiv-19"], "1a7cf0e9-622f-4314-8b7a-2a4027591f52", "Czech Handwritten", "2026-11-02"),
