@@ -202,12 +202,36 @@ BOOKS = {
                            "149 = podzim 1756 – leden 1757, 150 = 1757 (leden–březen), 151 = duben–červenec 1757, "
                            "152 = srpen–listopad 1757, 153 = listopad 1757 – leden 1758, 154 = leden–březen 1758, "
                            "155 = březen–červen 1758, 156 = červenec–listopad 1758, 157 = listopad 1758 – únor 1759, "
-                           "158 = únor–březen 1759, 160 = červenec–srpen 1759, 170 = srpen–září 1761; Z od asi sn. 240 "
-                           "(1760–1761), O od asi sn. 400 (1773 = sn. 463); snímek = pořadí snímku v ARON",
+                           "158 = únor–březen 1759, 160 = červenec–srpen 1759, 170 = srpen–září 1761, 206 = květen–červen 1769; Z od asi sn. 240 "
+                           "(1760–1761; 306 = asi 1765), O od asi sn. 400 (1759 = sn. 431, 1773 = sn. 463, 1792 = sn. 485); snímek = pořadí snímku v ARON",
                      url="https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45", prefix="opocno1201",
                      delitel=1,
-                     poznamka="OCR jen snímky 113–158 (N 11/1748 – 3/1759) ze šedotónových JPEG 2400 px; soubor = snímek; "
-                              "ostatní snímky jen jednotlivě očima (precteno.tsv)"),
+                     poznamka="OCR celé knihy (sn. 1–490) ze šedotónových JPEG 2400 px; soubor = snímek; zip v ARON má 490 "
+                              "snímků (ARON počítá 3 soubory na snímek); N 1723–1747 česky, od 1748 latinsky, od asi 1770 tabulky"),
+    "c3113199": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 24-7 (poř.č. 1637), 6.1784-1849 – Deštné v "
+                                         "Orlických horách O (Deštné, Dříš, Kout, Paseka, Pastviny, Víska, Zákoutí)",
+                     farnost="Deštné v Orlických horách", roky="1784–1849",
+                     obsah="O 6/1784–1849, německy; snímky 1–71; soubor = snímek; OCR ze šedotónových JPEG 2400 px",
+                     url="https://aron.vychodoceskearchivy.cz/apu/c3113199-3a1e-42e1-9ea0-742a7f22d89e", prefix="destne247", delitel=1),
+    "0484f35a": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 138-11 (poř.č. 9465), 5.1812-1857 – Rokytnice "
+                                         "v Orlických horách O",
+                     farnost="Rokytnice v Orlických horách", roky="1812–1857",
+                     obsah="O 5/1812–1857 (Rokytnice, Hanička, Panské Pole, Julinčino Údolí, Údolíčko, Rýnek, Václavova Seč), "
+                           "německy; snímky 1–171; soubor = snímek; OCR ze šedotónových JPEG 2400 px",
+                     url="https://aron.vychodoceskearchivy.cz/apu/0484f35a-faa1-428b-b53c-b3fbe9171eba", prefix="rokytnice13811", delitel=1),
+    "f7a85f10": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 171-2797 (poř.č. 12181), 1784-1837 – Velký "
+                                         "Uhřínov O",
+                     farnost="Velký Uhřínov", roky="1784–1837",
+                     obsah="O 1784–1837; snímky 1–39 (sn. 2–24 chronologicky 1784–1837, sn. 25–39 podle letopočtů v OCR znovu 1784–1795 – jiná řada?); soubor = "
+                           "snímek; OCR ze šedotónových JPEG 2400 px",
+                     url="https://aron.vychodoceskearchivy.cz/apu/f7a85f10-ccc5-41dc-9d4c-b19a8cf97643", prefix="uhrinov1712797", delitel=1),
+    "060e88a7": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 114-7333 (poř.č. 7990), 1642-1905 – Nové Město "
+                                         "nad Metují, index O",
+                     farnost="Nové Město nad Metují", roky="1642–1905",
+                     obsah="rejstřík oddaných celé farnosti po písmenech, v písmeni chronologicky (rok, ženich, obec, nevěsta, "
+                           "folio); OCR jen písmeno S (snímky 86–104: S 1700–1842 = sn. 89–93, 1842–1899 = 94–96; Š/Sch dál); "
+                           "soubor = snímek; šedotónové JPEG 2400 px",
+                     url="https://aron.vychodoceskearchivy.cz/apu/060e88a7-18e2-419a-8e49-b958f7b76396", prefix="nmnm1147333", delitel=1),
     "o-2741": dict(archiv="zayt", nazev="Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)",
                    farnost="Karlín (krajský rabín Kouřimska; snoubenci z celého kraje)", roky="1848–1856",
                    obsah="„Trauungs-Matrik“, tištěný formulář přes dvojstranu, 4 posty na stranu (sn. 20 = pag. 18, 1854); "
@@ -361,8 +385,11 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "z10-821": (["n-821"], "66a2140f-552f-4972-b395-4d1101451016 (sn. 68–77) + e23ff42b-1cfd-46b9-84f1-3e5a41cb58a7 (sn. 78–101)",
                 "Kurrent (German, Czech)", "2026-11-06"),
     "zinkovy-02-czh": (["zinkovy-02"], "ee840a16-1ae5-4bb0-ac76-5a9217a1edbd", "Czech Handwritten", "2026-11-06"),
-    "vca-opocno-120-1-n1748-1759": (["1215ac03"], "cf09cad5-c2b4-4079-96a4-e723b41ab5de", "Kurrent (German, Czech)",
-                                    "2026-11-09"),
+    "vca-opocno-120-1": (["1215ac03"], "cf09cad5-c2b4-4079-96a4-e723b41ab5de (sn. 113–158) + "
+                         "bdb01a58-b7ab-4b04-8115-9c2acf8ff49a (sn. 1–112, 159–490)", "Kurrent (German, Czech)", "2026-11-09"),
+    "vca-smola-o-destne-rokytnice-uhrinov-nmnm": (["c3113199", "0484f35a", "f7a85f10", "060e88a7"],
+                                                  "22584668-c138-4a53-a0e9-b6d76bc57563", "Kurrent (German, Czech)",
+                                                  "2026-11-09"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
                             "Czech Fraktur Printed", "2026-11-02"),
     "ruda-su-xiv-19": (["su-xiv-19"], "1a7cf0e9-622f-4314-8b7a-2a4027591f52", "Czech Handwritten", "2026-11-02"),

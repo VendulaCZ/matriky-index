@@ -4,15 +4,15 @@ nazev: "Sbírka matrik Východočeského kraje, sign.: 120-1 (poř.č. 8227), 17
 druh: "matrika"
 farnost: "Opočno"
 roky: "1723–1797"
-obsah: "N 10.1723–3.1776 chronologicky pro všechny obce (bez oddílů, obec v levém sloupci „dies et locus originis“; bez rejstříku): snímek 100 = pag. 188–189, 114 = pag. 216–217 (leden 1749), 117 = začátek 1750, 123 = začátek 1752, 126 = začátek 1753, 144 = září–říjen 1755, 145 = listopad 1755 – leden 1756, 149 = podzim 1756 – leden 1757, 150 = 1757 (leden–březen), 151 = duben–červenec 1757, 152 = srpen–listopad 1757, 153 = listopad 1757 – leden 1758, 154 = leden–březen 1758, 155 = březen–červen 1758, 156 = červenec–listopad 1758, 157 = listopad 1758 – únor 1759, 158 = únor–březen 1759, 160 = červenec–srpen 1759, 170 = srpen–září 1761; Z od asi sn. 240 (1760–1761), O od asi sn. 400 (1773 = sn. 463); snímek = pořadí snímku v ARON"
+obsah: "N 10.1723–3.1776 chronologicky pro všechny obce (bez oddílů, obec v levém sloupci „dies et locus originis“; bez rejstříku): snímek 100 = pag. 188–189, 114 = pag. 216–217 (leden 1749), 117 = začátek 1750, 123 = začátek 1752, 126 = začátek 1753, 144 = září–říjen 1755, 145 = listopad 1755 – leden 1756, 149 = podzim 1756 – leden 1757, 150 = 1757 (leden–březen), 151 = duben–červenec 1757, 152 = srpen–listopad 1757, 153 = listopad 1757 – leden 1758, 154 = leden–březen 1758, 155 = březen–červen 1758, 156 = červenec–listopad 1758, 157 = listopad 1758 – únor 1759, 158 = únor–březen 1759, 160 = červenec–srpen 1759, 170 = srpen–září 1761, 206 = květen–červen 1769; Z od asi sn. 240 (1760–1761; 306 = asi 1765), O od asi sn. 400 (1759 = sn. 431, 1773 = sn. 463, 1792 = sn. 485); snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45"
-poznamka: "OCR jen snímky 113–158 (N 11/1748 – 3/1759) ze šedotónových JPEG 2400 px; soubor = snímek; ostatní snímky jen jednotlivě očima (precteno.tsv)"
+poznamka: "OCR celé knihy (sn. 1–490) ze šedotónových JPEG 2400 px; soubor = snímek; zip v ARON má 490 snímků (ARON počítá 3 soubory na snímek); N 1723–1747 česky, od 1748 latinsky, od asi 1770 tabulky"
 ocr:
 - nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
-  dokument: "cf09cad5-c2b4-4079-96a4-e723b41ab5de"
+  dokument: "cf09cad5-c2b4-4079-96a4-e723b41ab5de (sn. 113–158) + bdb01a58-b7ab-4b04-8115-9c2acf8ff49a (sn. 1–112, 159–490)"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-09"
-  export: "vca-opocno-120-1-n1748-1759.pagexml.zip"
-  stranek: 46
-  radku: 5194
+  export: "vca-opocno-120-1.pagexml.zip"
+  stranek: 490
+  radku: 85553
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
