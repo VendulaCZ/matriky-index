@@ -254,6 +254,32 @@ BOOKS = {
                      url="https://aron.vychodoceskearchivy.cz/apu/1a6d0b5c-5f05-41fe-8bc6-27540ddbae5c", prefix="chocen2095", delitel=1,
                      poznamka="OCR jen snímky 270–390 (asi 1752–1766) ze šedotónových JPEG 2400 px; tabulkové sloupce čte PERO špatně; "
                               "jinak jen jednotlivé stránky očima"),
+    "8964843b": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 117-2 (poř.č. 8087), 1771-1787 – Nový Hrádek "
+                                         "NZO (farnost Nový Hrádek a filiální obvod Slavoňov)",
+                     farnost="Nový Hrádek, Slavoňov", roky="1771–1787",
+                     obsah="latinsky; N 1771–1783 asi sn. 5–95 (1778 ≈ sn. 47–52, 1780 ≈ 63–70), N 1784–1787 tabulkově asi sn. 99–140; "
+                           "O asi sn. 145–200 (1778 = sn. 165–166); Z asi sn. 201–275; obce filiálky Slavoňov mj. Janov, Ohnišov, "
+                           "Bohdašín, Sendraž, Mezilesí; snímky 1–276; soubor = snímek; snímek = pořadí snímku v ARON",
+                     url="https://aron.vychodoceskearchivy.cz/apu/8964843b-907d-4651-a5c7-9f15b886fc49", prefix="nh1172", delitel=1,
+                     poznamka="OCR celé knihy ze šedotónových JPEG 2400 px; tabulkové sloupce čte PERO špatně; zápisy přečtené "
+                              "očima v precteno.tsv"),
+    "8df4dc98": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 1721-1771 – Nový Hrádek "
+                                         "NZO (farnost Nový Hrádek a filiální obvod Slavoňov)",
+                     farnost="Nový Hrádek, Slavoňov", roky="1721–1771",
+                     obsah="latinsky, souvislý text; N 1751–1771 sn. 100–197 (1755 ≈ sn. 117–121, 1760 ≈ 140–145, 1765 ≈ "
+                           "163–166, 1770 ≈ 186–190); O asi sn. 199–260 (1744–1769 ≈ sn. 220–258); Z asi sn. 283–318 (1743–1769); "
+                           "319 snímků; soubor = snímek; snímek = pořadí snímku v ARON",
+                     url="https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a", prefix="nh1171", delitel=1,
+                     poznamka="OCR jen snímky 100–319 ze šedotónových JPEG 2400 px; zápisy přečtené očima v precteno.tsv"),
+    "f9ac826b": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 14-4 (poř.č. 714), 1785-1826 – Bystré O "
+                                         "(Bystré, Bačetín, Janov, Kounov, Sudín, Ohnišov)",
+                     farnost="Bystré", roky="1785–1826",
+                     obsah="O česky, tabulkově, po obcích (každý oddíl chronologicky 1785–1826: asi sn. 3–23, 24–47, 49–73, 74–89, "
+                           "92–126; Ohnišov 1824 = sn. 124, Janov 1797 = sn. 51); snímky 1–126; soubor = snímek; snímek = pořadí "
+                           "snímku v ARON",
+                     url="https://aron.vychodoceskearchivy.cz/apu/f9ac826b-d61c-4270-b416-f20a88bb1417", prefix="by144", delitel=1,
+                     poznamka="OCR celé knihy ze šedotónových JPEG 2400 px; úzké sloupce tabulky čte PERO špatně; zápisy přečtené "
+                              "očima v precteno.tsv"),
     "o-2741": dict(archiv="zayt", nazev="Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)",
                    farnost="Karlín (krajský rabín Kouřimska; snoubenci z celého kraje)", roky="1848–1856",
                    obsah="„Trauungs-Matrik“, tištěný formulář přes dvojstranu, 4 posty na stranu (sn. 20 = pag. 18, 1854); "
@@ -415,6 +441,9 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "vca-destne-24-5": (["9634f2ed"], "85d892fd-9037-43a3-8887-d2bc20b3bfc5", "Kurrent (German, Czech)", "2026-11-09"),
     "vca-opocno-120-11": (["ab67b4df"], "f1f63e66-3c2f-45c8-8781-74a33a4528b1", "Kurrent (German, Czech)", "2026-11-09"),
     "vca-chocen-2095-sn270-390": (["1a6d0b5c"], "2db0d5e1-2ee0-4150-98e4-83f9b1fd1dba", "Kurrent (German, Czech)", "2026-11-09"),
+    "vca-novy-hradek-117-2": (["8964843b"], "8a8b2b23-2fa8-4dab-91d8-53d33ff2378d", "Kurrent (German, Czech)", "2026-11-10"),
+    "vca-novy-hradek-117-1-sn100": (["8df4dc98"], "b225448f-56c8-422e-8589-f2e2b2c30dfe", "Kurrent (German, Czech)", "2026-11-10"),
+    "vca-bystre-14-4": (["f9ac826b"], "3052565f-a1ce-4d4d-a463-5f9420ae7fa2", "Kurrent (German, Czech)", "2026-11-10"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
                             "Czech Fraktur Printed", "2026-11-02"),
     "ruda-su-xiv-19": (["su-xiv-19"], "1a7cf0e9-622f-4314-8b7a-2a4027591f52", "Czech Handwritten", "2026-11-02"),

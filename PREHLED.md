@@ -3,7 +3,7 @@
 Stav k 10. 11. 2026 (generuje `python tools/prehled.py`).
 
 - **613 knih** (matrika 557, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
-- **7 884 stran** převedených strojově (PERO OCR), **1 401 952 řádků** strojového textu – nekontrolovaný, slouží k hledání
+- **8 506 stran** převedených strojově (PERO OCR), **1 549 918 řádků** strojového textu – nekontrolovaný, slouží k hledání
 - **14 122 zápisů přečtených očima**: narození 8719, sňatky 1929, úmrtí 2901, převody gruntů 49, soupisy 173, jiné 322
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
@@ -168,8 +168,8 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | 8149b827 | matrika |  |  |  | 1 (J 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 56-1 (poř.č. 3935), 1787-1793](https://aron.vychodoceskearchivy.cz/apu/8344294f-7ac2-4562-847c-cf5c7e3aca24) | matrika |  |  |  | 1 (O 1) |
 | [8692ebc2](https://aron.vychodoceskearchivy.cz/apu/8692ebc2-0690-4dff-a3ef-8f033b27a838/dao/8692ebc2-0690-4dff-a3ef-8f033b27a838/file/8996e797-c7f4-4027-96c1-3c1140157fc8) | sčítání lidu |  |  |  | 1 (S 1) |
-| [Sbírka matrik Východočeského kraje, sign.: 117-2 (poř.č. 8087), 1771-1787](https://aron.vychodoceskearchivy.cz/apu/8964843b-907d-4651-a5c7-9f15b886fc49) | matrika |  |  |  | 7 (N 3 O 4) |
-| [Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 1721-1771](https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a) | matrika |  |  |  | 118 (J 2 N 28 O 31 Z 57) |
+| [Sbírka matrik Východočeského kraje, sign.: 117-2 (poř.č. 8087), 1771-1787 – Nový Hrádek NZO (farnost Nový Hrádek a filiální obvod Slavoňov)](https://aron.vychodoceskearchivy.cz/apu/8964843b-907d-4651-a5c7-9f15b886fc49) | matrika | 1771–1787 | 276 | 99396 | 7 (N 3 O 4) |
+| [Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 1721-1771 – Nový Hrádek NZO (farnost Nový Hrádek a filiální obvod Slavoňov)](https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a) | matrika | 1721–1771 | 220 | 28832 | 118 (J 2 N 28 O 31 Z 57) |
 | [Sbírka matrik Východočeského kraje, sign.: 162-20 (poř.č. 11275), 1749-1784](https://aron.vychodoceskearchivy.cz/apu/9126d628-7c44-4435-8c4d-92e75a4c77ee) | matrika |  |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 47-3327 (poř.č. 3323), 1867-1875](https://aron.vychodoceskearchivy.cz/apu/92582e21-498b-46b4-bbf1-35620ff826ea) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 162-4 (poř.č. 11265), 1785-1812](https://aron.vychodoceskearchivy.cz/apu/961ea9a8-6f8a-4244-8fd9-217c890a85ec) | matrika |  |  |  | 2 (N 1 O 1) |
@@ -224,7 +224,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 162-5 (poř.č. 11267), 1812-1872](https://aron.vychodoceskearchivy.cz/apu/f816fc1e-f00f-4609-819e-02e11e8765a7) | matrika |  |  |  | 6 (N 2 O 2 Z 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 1301 (poř.č. 6457), 9.1763-4.1784](https://aron.vychodoceskearchivy.cz/apu/f83d2c6d-bf83-4193-bf20-d8ddc9c9e774) | matrika |  |  |  | 9 (N 9) |
 | [Sbírka matrik Východočeského kraje, sign.: 1335 (poř.č. 6525), 1622-1784 – index NAROZENÝCH fary Litomyšl, příjmení H–P](https://aron.vychodoceskearchivy.cz/apu/f8794015-cb81-4aa1-abb5-e55b8d76dc7b) | matrika |  |  |  | 2 (J 2) |
-| [Sbírka matrik Východočeského kraje, sign.: 14-4 (poř.č. 714), 1785-1826](https://aron.vychodoceskearchivy.cz/apu/f9ac826b-d61c-4270-b416-f20a88bb1417) | matrika |  |  |  | 4 (O 4) |
+| [Sbírka matrik Východočeského kraje, sign.: 14-4 (poř.č. 714), 1785-1826 – Bystré O (Bystré, Bačetín, Janov, Kounov, Sudín, Ohnišov)](https://aron.vychodoceskearchivy.cz/apu/f9ac826b-d61c-4270-b416-f20a88bb1417) | matrika | 1785–1826 | 126 | 19738 | 4 (O 4) |
 | [Sbírka matrik Východočeského kraje, sign.: M-11 1671 (poř.č. 7382), 1843-1854](https://aron.vychodoceskearchivy.cz/apu/fa7c9344-e737-49c3-942b-19a3d7897155) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 14-1 (poř.č. 708), 1784-1799](https://aron.vychodoceskearchivy.cz/apu/ff03e2c0-8943-480b-af44-4661b9256755) | matrika |  |  |  | 3 (J 1 N 2) |
 | ffcc1f51 | matrika |  |  |  | 3 (J 3) |
@@ -621,31 +621,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## cuzk (8)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Pulice (Gross Pulitz a Klein Pulitz), indikační skica 1840, Hradecký kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=HRA372018400) | indikační skica stabilního katastru | 1840 |  |  | 4 (K 4) |
-| [Libákovice (Libaken), indikační skica 1838, Klatovský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KLA222018380) | indikační skica stabilního katastru | 1838 |  |  | 5 (K 5) |
-| [Svojšice (Swoischitz) s Novou Vsí (Neudorf), indikační skica 1841, Kouřimský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KRM398018410) | indikační skica stabilního katastru | 1841 |  |  | 5 (K 5) |
-| [Malý Bor (Klein Bor), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA043018370) | indikační skica stabilního katastru | 1837 |  |  | 1 (K 1) |
-| [Malé Hydčice, indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA188018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
-| [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
-| [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-| [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-
-## nacr (7)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
-| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
-| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
-
 ## ndk (5)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -685,3 +660,28 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Lužná, N+Z+O s indexy 1811–1845, sign. VK VII 5, inv. č. 2535](https://digi.archives.cz/da/permalink/be88248c-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 2 (N 1 O 1) |
 | [Lužná N+Z+O s indexy 1846–1871 (VK VII 6, inv. č. 2536)](https://digi.archives.cz/da/entityDetail/be882504-f13c-102f-8255-0050568c0263?actualDetailTab=attachmentsImg) | matrika |  |  |  | 1 (N 1) |
 | [Halenkov, Hovězí, Zděchov, O 1784–1823, sign. Vs IV 5, inv. č. 2416](https://digi.archives.cz/da/permalink/be87e9ea-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 1 (O 1) |
+
+## cuzk (8)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Pulice (Gross Pulitz a Klein Pulitz), indikační skica 1840, Hradecký kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=HRA372018400) | indikační skica stabilního katastru | 1840 |  |  | 4 (K 4) |
+| [Libákovice (Libaken), indikační skica 1838, Klatovský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KLA222018380) | indikační skica stabilního katastru | 1838 |  |  | 5 (K 5) |
+| [Svojšice (Swoischitz) s Novou Vsí (Neudorf), indikační skica 1841, Kouřimský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KRM398018410) | indikační skica stabilního katastru | 1841 |  |  | 5 (K 5) |
+| [Malý Bor (Klein Bor), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA043018370) | indikační skica stabilního katastru | 1837 |  |  | 1 (K 1) |
+| [Malé Hydčice, indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA188018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
+| [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
+| [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+| [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## nacr (7)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
+| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
+| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |

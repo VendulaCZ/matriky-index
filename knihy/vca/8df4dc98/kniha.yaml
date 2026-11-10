@@ -1,6 +1,18 @@
 archiv: "vca"
 kniha: "8df4dc98"
-nazev: "Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 1721-1771"
-obsah: "N, Z, O, farnost Nový Hrádek a filiální obvod Slavoňov; snímek = pořadí snímku v ARON"
+nazev: "Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 1721-1771 – Nový Hrádek NZO (farnost Nový Hrádek a filiální obvod Slavoňov)"
+druh: "matrika"
+farnost: "Nový Hrádek, Slavoňov"
+roky: "1721–1771"
+obsah: "latinsky, souvislý text; N 1751–1771 sn. 100–197 (1755 ≈ sn. 117–121, 1760 ≈ 140–145, 1765 ≈ 163–166, 1770 ≈ 186–190); O asi sn. 199–260 (1744–1769 ≈ sn. 220–258); Z asi sn. 283–318 (1743–1769); 319 snímků; soubor = snímek; snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a"
-poznamka: "zápisy přečtené při práci na rodokmenu; jen vybrané zápisy, ne celá kniha"
+poznamka: "OCR jen snímky 100–319 ze šedotónových JPEG 2400 px; zápisy přečtené očima v precteno.tsv"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "b225448f-56c8-422e-8589-f2e2b2c30dfe"
+  model: "Kurrent (German, Czech)"
+  datum: "2026-11-10"
+  export: "vca-novy-hradek-117-1-sn100.pagexml.zip"
+  stranek: 220
+  radku: 28832
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
