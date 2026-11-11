@@ -2,9 +2,9 @@
 
 Stav k 11. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **653 knih** (matrika 597, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **654 knih** (matrika 598, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
 - **8 506 stran** převedených strojově (PERO OCR), **1 549 918 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **15 812 zápisů přečtených očima**: narození 9362, sňatky 2678, úmrtí 3134, převody gruntů 49, soupisy 173, jiné 387
+- **20 023 zápisů přečtených očima**: narození 9362, sňatky 6888, úmrtí 3134, převody gruntů 49, soupisy 173, jiné 388
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -569,7 +569,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Bavorov 33C 1784-1948](https://digi.ceskearchivy.cz/9116) | matrika |  |  |  | 1 (Z 1) |
 | [Matrika zemřelých České Budějovice – sv. Mikuláš, kniha 111B (1939–1949)](https://digi.ceskearchivy.cz/9512) | matrika |  |  |  | 1 (Z 1) |
 
-## Archiv hlavního města Prahy (31)
+## Archiv hlavního města Prahy (32)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -585,6 +585,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Kunratice (KUN) N13 O13 Z13, 1789–1835 (fara Kunratice; obec Libuš)](https://katalog.ahmp.cz/pragapublica/permalink?xid=480A53EAC686496790BAD3E7B0E2E271) | matrika |  |  |  | 1 (N 1) |
 | [Michle (MCH) N44, kniha narozených 1880–1884 (fara Michle; Dolní a Horní Krč)](https://katalog.ahmp.cz/pragapublica/permalink?xid=74DC0E100404435C96DFD76708B44895) | matrika |  |  |  | 1 (N 1) |
 | [Žižkov – kostel sv. Rocha (Olšany), ŽKR O21 (1906–1908)](https://katalog.ahmp.cz/pragapublica/permalink?xid=7782C8E3E4E645D78ED0A85103C3AAAE) | matrika |  |  |  | 1 (O 1) |
+| [Praha Nové Město – sv. Štěpán, ŠT O2, sňatky 1664–1735](https://katalog.ahmp.cz/pragapublica/permalink?xid=780E5E2A4D29449C839696CB0F11F7CD) | matrika | 1664–1735 |  |  | 4211 (J 1 O 4210) |
 | [UH N9, Uhříněves – Všech svatých, N 1784–1807](https://katalog.ahmp.cz/pragapublica/permalink?xid=7BBCCBA922D044C995F1D0D3204C57A9) | matrika |  |  |  | 1 (N 1) |
 | [UH N12, Uhříněves – Všech svatých, N 1842–1854](https://katalog.ahmp.cz/pragapublica/permalink?xid=7C6E3C229D7A439887FE07CDD72F6E59) | matrika |  |  |  | 2 (N 2) |
 | [UH Z12, Uhříněves – Všech svatých, Z 1846–1861](https://katalog.ahmp.cz/pragapublica/permalink?xid=828095889826470CA5163C6CDA2A2FF9) | matrika |  |  |  | 1 (Z 1) |
