@@ -11,6 +11,9 @@ skončilo i v původním repozitáři, ne jen v tomto klonu. Postupuj takto.
   skripty volají `slusne.urlopen()` / `slusne.get()`. Archiv, který nestíhá nebo blokuje, nech být
   (`python tools/scan/slusne.py zablokuj <server> <hodin>`); blokaci neobcházej.
 - Velké knihy čti nejdřív strojově přes PERO OCR ([PERO.md](PERO.md)) a očima jen zásahy.
+- Kde v knize leží který rok, ves nebo rejstřík, může napovědět [Mapa matrik](https://github.com/ondrnovy/mapa-matrik):
+  mapa knihy je v poli `mapa` v `kniha.yaml`, rozcestník podle obce na `https://ondrnovy.github.io/mapa-matrik/v1/`.
+  Je to pomůcka, ne povinný krok; přečtený zápis patří sem do indexu.
 
 ## Zápis
 
@@ -20,7 +23,8 @@ skončilo i v původním repozitáři, ne jen v tomto klonu. Postupuj takto.
   názvem, `jistota` vysoká/střední/nízká, `cetl` = jméno uživatele (zeptej se ho, jak chce být
   uveden) + id modelu a effort + datum, např. `Jan Novák + claude-opus-5-5/xhigh 2026-11-05`. Effort je v záznamu
   sezení Claude Code (`~/.claude/projects/<projekt>/<sezení>.jsonl`, pole `effort`); samotné „Claude“ kontrola odmítne.
-- Nová kniha: `kniha.yaml` s poli `archiv`, `kniha`, `nazev`, `url`, `roky`, `farnost`, `obsah`.
+- Nová kniha: `kniha.yaml` s poli `archiv`, `kniha`, `nazev`, `url`, `roky`, `farnost`, `obsah`; `mapa`, pokud knihu má
+  Mapa matrik.
 - Strojový text z PERO importuj nástrojem `tools/pero_import.py` (doplň `BOOKS` a `EXPORTS`).
 - Cizí řádky nikdy neměň ani nemaž. Jiné čtení = nový řádek nebo oprava přes `tools/opravy.py`.
 - Nezapisuj nic mladšího než 100 let (narození, sčítání) nebo 75 let (sňatky, úmrtí) – může jít o žijící lidi.

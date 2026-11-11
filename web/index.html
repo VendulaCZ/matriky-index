@@ -297,6 +297,7 @@ async function book(id, tab, param) {
       ${k.obsah ? `<p class="small">${esc(k.obsah)}</p>` : ""}${k.poznamka ? `<p class="small muted">${esc(k.poznamka)}</p>` : ""}
       <div class="row small">
         ${k.url ? `<a href="${esc(k.url)}" target="_blank" rel="noopener">Kniha v archivu ↗</a>` : ""}
+        ${k.mapa ? `<a href="${esc(k.mapa)}" target="_blank" rel="noopener" title="Mapa matrik: který snímek je který rok, ves a strana">Mapa knihy ↗</a>` : ""}
         <a href="${REPO}/tree/main/knihy/${esc(k.id)}" target="_blank" rel="noopener">Data na GitHubu ↗</a>
         ${k.ocr_model ? `<span class="muted">OCR: ${esc(k.ocr_model)}</span>` : ""}
         ${k.precteno_od ? `<span class="muted">přečteno ${k.precteno_od}–${k.precteno_do}</span>` : ""}

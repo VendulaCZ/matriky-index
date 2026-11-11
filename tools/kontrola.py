@@ -99,6 +99,11 @@ def kontrola_knihy(d, h, prisne, pridane=None):
         for pole in ("nazev", "url"):
             if not meta.get(pole):
                 (h.chyba if prisne else h.varuj)(rel(ky), f"chybí pole {pole}")
+        # Web vkládá url a mapa do odkazů; jiné schéma (javascript:) by spustilo kód v prohlížeči čtenáře.
+        for pole in ("url", "mapa"):
+            hodnota = meta.get(pole)
+            if hodnota and not str(hodnota).startswith(("https://", "http://")):
+                h.chyba(rel(ky), f"{pole} „{str(hodnota)[:60]}“ musí začínat https:// nebo http://")
     for jmeno, hlavicka in HLAVICKY.items():
         p = d / jmeno
         if p.exists():

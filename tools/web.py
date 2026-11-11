@@ -90,7 +90,7 @@ def main():
             "nazev": str(meta.get("nazev") or kniha), "farnost": str(meta.get("farnost") or ""),
             "druh": str(meta.get("druh") or "matrika"), "roky": str(meta.get("roky") or ""),
             "obsah": str(meta.get("obsah") or ""), "poznamka": str(meta.get("poznamka") or ""), "url": url,
-            "url_snimku": url_snimku(archiv, kniha, url),
+            "mapa": str(meta.get("mapa") or ""), "url_snimku": url_snimku(archiv, kniha, url),
             "precteno": len(rows), "vyklad": sum(1 for v in vyklad if v[0] == i),
             "ocr_stran": len(stranky), "ocr_radku": sum(int(s[4]) for s in stranky if len(s) > 4 and s[4].isdigit()),
             "opravy": len(read_tsv(d / "opravy.tsv")),

@@ -52,7 +52,8 @@ nikdo další. Stačí pull request s novými řádky v `knihy/<archiv>/<kniha>/
 ```
 knihy/<archiv>/<kniha>/
   kniha.yaml      popis knihy: archiv, název, farnost, roky, obsah (které snímky jsou N/O/Z), odkaz na portál,
-                  jak se z čísla souboru dostat na snímek, a pro každé OCR: nástroj, dokument v PERO, model, datum
+                  volitelně mapa (odkaz na mapu knihy v Mapě matrik, github.com/ondrnovy/mapa-matrik), jak se
+                  z čísla souboru dostat na snímek, a pro každé OCR: nástroj, dokument v PERO, model, datum
   stranky.tsv     zpracované stránky: snímek, soubor, rozměry obrázku, počet řádků
   ocr-pero.tsv    strojový text: snímek, soubor, strana (L/R), řádek, obdélník x/y/šířka/výška v pixelech obrázku,
                   jistota (0–1), text – nekontrolovaný, s chybami
