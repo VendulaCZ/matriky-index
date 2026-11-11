@@ -146,12 +146,12 @@ první řádek hlavička:
 | sloupec | obsah |
 |---|---|
 | snimek | číslo snímku na portálu a strana, např. `124R` |
-| datum | datum události, jak je čitelné (`1756-01-14`, `1757-04`, `~1723`) |
+| datum | datum události v jednom z tvarů `1756-01-14`, `1757-04`, `~1723` nebo rozsah `1756–1758` (`1786/1787`); neznámý den nebo měsíc se vynechá, nejistě přečtené datum se zapíše bez otazníku a nejistota do `ostatni` (např. `datum nejisté`), aby šlo řadit a hledat; u `J` smí být prázdné |
 | typ | `N` narození/křest, `O` sňatek, `Z` úmrtí/pohřeb, `P` převod gruntu v pozemkové knize (koupě, dědictví, přiženění, odhad), `S` řádek soupisu poddaných nebo sčítání lidu, `K` katastrální mapa (indikační skica: číslo domu, majitel), `J` jiné (ohlášky, atestát, rejstřík, familiant, prázdná strana) |
-| obec | obec a číslo domu (`Lhota 7`); u pozemkové knihy i jméno gruntu (`Nová Ves 3, grunt Horákovský`) |
+| obec | obec dnešním názvem a číslo domu (`Lhota 7`, `Praha – Nové Město 512`), aby šlo hledat podle místa; dobový tvar patří do `osoby` nebo `ostatni`, nejasnou obec nechte prázdnou; u pozemkové knihy i jméno gruntu (`Nová Ves 3, grunt Horákovský`) |
 | osoby | hlavní osoby s rolí: `dítě: Jan; otec: Václav Novák; matka: Ludmila` (u O ženich, nevěsta a jejich rodiče; u P `prodávající: …; kupující: …; výměnkář: …`; u S `hospodář: …; manželka: …; děti: …`) |
 | ostatni | kmotři, svědci, povolání, věk, příčina smrti – stručně; u P cena, splátky, výminek, svědci |
-| jistota | `vysoká`, `střední`, `nízká`; nejisté čtení v textu značit `[?]` |
+| jistota | `vysoká`, `střední`, `nízká` (smí následovat vysvětlení v závorce); nejisté čtení v textu značit `[?]` |
 | cetl | kdo a kdy: jazykový model jako `model/effort datum` (`claude-sonnet-5-5/xhigh 2026-11-03`, ověření `…, ověřil claude-opus-5-5/xhigh 2026-11-04`), člověk jménem a datem (viz [Kdo četl](#kdo-četl)) |
 | odkaz | volitelně odkaz na zpracovaný záznam jinde (např. v rodokmenu) |
 

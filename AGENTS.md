@@ -16,7 +16,8 @@ skončilo i v původním repozitáři, ne jen v tomto klonu. Postupuj takto.
 
 - Každý zápis, který přečteš, přidej jako řádek do `knihy/<archiv>/<kniha>/precteno.tsv` – i když se netýká hledané
   rodiny. Formát a typy (`N`, `O`, `Z`, `P`, `S`, `K`, `J`) jsou v [README](README.md#precteno-tsv--zápisy-přečtené-očima):
-  doslovně, nejistá místa `[?]`, `jistota` vysoká/střední/nízká, `cetl` = jméno uživatele (zeptej se ho, jak chce být
+  doslovně, nejistá místa `[?]` (v datu ne: `1757-04` bez neznámého dne, nejistotu napiš do `ostatni`), `obec` dnešním
+  názvem, `jistota` vysoká/střední/nízká, `cetl` = jméno uživatele (zeptej se ho, jak chce být
   uveden) + id modelu a effort + datum, např. `Jan Novák + claude-opus-5-5/xhigh 2026-11-05`. Effort je v záznamu
   sezení Claude Code (`~/.claude/projects/<projekt>/<sezení>.jsonl`, pole `effort`); samotné „Claude“ kontrola odmítne.
 - Nová kniha: `kniha.yaml` s poli `archiv`, `kniha`, `nazev`, `url`, `roky`, `farnost`, `obsah`.

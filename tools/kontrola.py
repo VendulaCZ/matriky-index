@@ -1,11 +1,14 @@
 """Kontrola dat v knihy/: formát souborů, povinná pole a ochrana žijících lidí.
 
     python tools/kontrola.py                 # celý index
-    python tools/kontrola.py --zmeny main    # jen knihy změněné proti větvi main a navíc zákaz mazání řádků
+    python tools/kontrola.py --zmeny main    # jen knihy změněné proti větvi main, zákaz mazání řádků a přísná
+                                             # pravidla pro přidané řádky precteno.tsv (datum, jistota, sloupce)
 
 Chyby (ukončí s kódem 1) zastaví pull request, varování jen upozorňují. Spouští ji GitHub Action u každého pull requestu.
+Přísná pravidla platí jen pro přidané řádky: starší řádky indexu je nesplňují a měnit se nesmějí.
 """
 import argparse
+import collections
 import csv
 import datetime
 import re
@@ -47,6 +50,14 @@ DOKLAD = re.compile(r"^([^/\s]+)/([^/\s]+)/([^/\s]+) (\S+)(?: \((.+)\))?$")
 JISTOTA_VYKLADU = ("vysoká", "střední")
 # Nejistě přečtená hodnota může být chyba čtení, ne písaře; výklad potřebuje čitelný údaj.
 NEJISTE = re.compile(r"\[(\?|…|\.\.\.)\]")
+# Datum přidaného řádku musí jít řadit a hledat: 1756-01-14, 1757-04, ~1723 nebo rozsah 1756–1758 (1786/1787).
+# Neznámý den se vynechá, nejistota patří do ostatni.
+_DEN = r"~?\d{4}(?:-(?:0[1-9]|1[0-2])(?:-(?:0[1-9]|[12]\d|3[01]))?)?"
+DATUM = re.compile(rf"{_DEN}(?:[–/]{_DEN})?")
+# Text osob ve sloupci obec znamená posunuté sloupce (chybějící nebo přebývající tabulátor).
+OBEC_S_OSOBAMI = re.compile(r"^\s*(ženich|nevěsta|dítě|zemřel[áý]?|otec|matka|kmot[rř]\w*|svěd\w*)\s*:", re.I)
+# Hlavička hunku diffu: +<první řádek>[,<počet>]; počet chybí, když je řádek jeden.
+HUNK = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 
 
 class Hlaseni:
@@ -64,8 +75,13 @@ def rel(p):
     return p.relative_to(ROOT).as_posix()
 
 
-def kontrola_knihy(d, h, prisne):
-    """d = knihy/<archiv>/<kniha>; prisne = kniha je v pull requestu, chybějící popis je chyba."""
+def kontrola_knihy(d, h, prisne, pridane=None):
+    """d = knihy/<archiv>/<kniha>; prisne = kniha je v pull requestu, chybějící popis je chyba;
+    pridane = {cesta souboru: čísla přidaných řádků}."""
+    # Odkaz by kontrolu nechal číst soubory mimo repozitář a vypsat je do veřejného logu.
+    if d.parent.is_symlink() or d.is_symlink() or any(p.is_symlink() for p in d.iterdir()):
+        h.chyba(rel(d), "symbolický odkaz – kniha smí obsahovat jen obyčejné soubory")
+        return
     archiv, kniha = d.parent.name, d.name
     ky = d / "kniha.yaml"
     if not ky.exists():
@@ -86,7 +102,7 @@ def kontrola_knihy(d, h, prisne):
     for jmeno, hlavicka in HLAVICKY.items():
         p = d / jmeno
         if p.exists():
-            kontrola_tsv(p, hlavicka, h)
+            kontrola_tsv(p, hlavicka, h, (pridane or {}).get(rel(p), set()))
 
 
 def rok_udalosti(datum):
@@ -166,7 +182,17 @@ def kontrola_vykladu(p, r, kde, h):
         h.chyba(kde, f"jistota „{jistota}“: výklad jen s jistotou {' nebo '.join(JISTOTA_VYKLADU)}")
 
 
-def kontrola_tsv(p, hlavicka, h):
+def kontrola_pridaneho(kde, typ, datum, obec, jistota, h):
+    if not (DATUM.fullmatch(datum) or (typ == "J" and not datum)):
+        h.chyba(kde, f"datum „{datum}“: použijte 1756-01-14, 1757-04, ~1723 nebo rozsah 1756–1758; neznámý den "
+                     f"vynechte (1757-04), nejisté čtení napište do ostatni")
+    if OBEC_S_OSOBAMI.match(obec):
+        h.chyba(kde, f"obec „{obec[:40]}…“ obsahuje text osob – posunuté sloupce (chybí nebo přebývá tabulátor)?")
+    if not jistota.startswith(JISTOTA):
+        h.chyba(kde, f"jistota „{jistota}“ musí začínat {'/'.join(JISTOTA)}")
+
+
+def kontrola_tsv(p, hlavicka, h, pridane=frozenset()):
     with open(p, encoding="utf-8", newline="") as f:
         radky = list(csv.reader(f, delimiter="\t"))
     if not radky:
@@ -192,7 +218,7 @@ def kontrola_tsv(p, hlavicka, h):
             continue
         if p.name != "precteno.tsv":
             continue
-        snimek, datum, typ, _, osoby, _, jistota, cetl = r[:8]
+        snimek, datum, typ, obec, osoby, _, jistota, cetl = r[:8]
         if not snimek.strip():
             h.chyba(kde, "chybí snímek")
         if typ not in TYPY:
@@ -200,7 +226,9 @@ def kontrola_tsv(p, hlavicka, h):
         kontrola_kdo(kde, cetl, h, "cetl")
         if not osoby.strip():
             h.varuj(kde, "prázdné osoby")
-        if jistota and not jistota.startswith(JISTOTA):
+        if i in pridane:
+            kontrola_pridaneho(kde, typ, datum, obec, jistota, h)
+        elif jistota and not jistota.startswith(JISTOTA):
             h.varuj(kde, f"jistota „{jistota}“ nezačíná vysoká/střední/nízká")
         rok = rok_udalosti(datum)
         if rok is None:
@@ -221,10 +249,12 @@ def zmenene_knihy(zaklad):
     return knihy
 
 
-def smazane_radky(zaklad, h):
-    """Odebrané nebo přepsané řádky v NEPREPISOVAT (změna se v diffu ukáže jako - a +)."""
+def projdi_diff(zaklad, h):
+    """Nahlásí odebrané nebo přepsané řádky v NEPREPISOVAT (změna se v diffu ukáže jako - a +) a vrátí čísla
+    přidaných řádků těchto souborů {cesta: set}."""
     diff = subprocess.run(["git", "diff", "--unified=0", f"{zaklad}...HEAD", "--", "knihy"], cwd=ROOT,
                           capture_output=True, text=True, encoding="utf-8", check=True).stdout
+    pridane = collections.defaultdict(set)
     soubor = None
     for radek in diff.splitlines():
         if radek.startswith("--- "):
@@ -232,9 +262,15 @@ def smazane_radky(zaklad, h):
         if radek.startswith("+++ "):
             soubor = radek[6:] if radek.startswith("+++ b/") else None
             continue
-        if soubor and Path(soubor).name in NEPREPISOVAT and radek.startswith("-"):
+        if not soubor or Path(soubor).name not in NEPREPISOVAT:
+            continue
+        if m := HUNK.match(radek):
+            zacatek, pocet = int(m[1]), int(m[2]) if m[2] is not None else 1
+            pridane[soubor].update(range(zacatek, zacatek + pocet))
+        elif radek.startswith("-"):
             h.chyba(soubor, f"odebraný nebo změněný řádek: {radek[1:80]}… – cizí řádky se nemění, oprava patří do "
                             f"opravy.tsv nebo jako nový řádek")
+    return pridane
 
 
 def main():
@@ -244,10 +280,10 @@ def main():
     a = ap.parse_args()
     h = Hlaseni()
     if a.zmeny:
+        pridane = projdi_diff(a.zmeny, h)
         for d in sorted(zmenene_knihy(a.zmeny)):
             if d.exists():
-                kontrola_knihy(d, h, prisne=True)
-        smazane_radky(a.zmeny, h)
+                kontrola_knihy(d, h, prisne=True, pridane=pridane)
     else:
         for d in sorted(p for p in KNIHY.glob("*/*") if p.is_dir() and p.parent.name != "testy"):
             kontrola_knihy(d, h, prisne=False)
