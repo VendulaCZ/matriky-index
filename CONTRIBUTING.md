@@ -28,7 +28,8 @@ není, a založte Issue „Čtu: <archiv>/<kniha>“ (formulář „Čtu knihu�
 - `vyklad.tsv` – chyby písaře (špatné jméno, věk, vztah), které dokazují jiné zápisy v indexu, nástrojem
   `tools/vyklad.py`; formát a pravidla v [README](README.md#vykladtsv--chyby-písaře).
 - Nová kniha potřebuje `kniha.yaml` aspoň s poli `archiv`, `kniha`, `nazev`, `url` (odkaz na knihu na portálu archivu),
-  ideálně i `roky`, `farnost`, `obsah`.
+  ideálně i `roky`, `farnost`, `obsah`, a pokud knihu má [Mapa matrik](https://github.com/ondrnovy/mapa-matrik), i `mapa`
+  (odkaz na mapu knihy, např. `https://ondrnovy.github.io/mapa-matrik/v1/svazky/soa-plzen/kozlany-22.json`).
 
 Nepatří sem: skeny a celé exporty z PERO (dají se kdykoli stáhnout znovu), jiný výklad než doložená chyba písaře (kdo
 osoba ve skutečnosti je, čí je sourozenec – to patří do vašeho rodokmenu, ve sloupci `odkaz` se na něj dá odkázat), a to
@@ -47,7 +48,8 @@ ani do sloupců `osoby` a `ostatni`, a nic o žijících lidech.
 ## Kontrola a schválení
 
 1. U každého pull requestu běží automaticky `python tools/kontrola.py --zmeny main` (formát, povinná pole, lhůty,
-   zákaz mazání; u přidaných řádků i tvar data, jistota a posunuté sloupce). Totéž si spusťte předem.
+   zákaz mazání; u přidaných řádků i tvar data, jistota a posunuté sloupce). Výsledek uvidíte u pull requestu: štítek
+   `kontrola-ok` nebo `kontrola-chyby` a při chybách komentář s výpisem. Totéž si spusťte předem.
 2. Správce projde změny a namátkou porovná několik řádků se skeny, i u přispěvatelů, kteří už přispěli. Chybné čtení
    není problém, pokud je označené nižší jistotou; vymyšlená data bez snímku se nepřijímají.
 3. Po sloučení se kniha objeví v [PREHLED.md](PREHLED.md).

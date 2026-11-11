@@ -1,7 +1,6 @@
+# Kontrola celého indexu po každé změně v main. Pull requesty kontroluje kontrola-pr.yml.
 name: Kontrola dat
 on:
-  pull_request:
-    paths: ["knihy/**", "tools/kontrola.py"]
   push:
     branches: [main]
     paths: ["knihy/**", "tools/kontrola.py"]
@@ -10,15 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install pyyaml
-      - name: Změny v pull requestu
-        if: github.event_name == 'pull_request'
-        run: python tools/kontrola.py --zmeny origin/${{ github.base_ref }}
       - name: Celý index
-        if: github.event_name == 'push'
         run: python tools/kontrola.py

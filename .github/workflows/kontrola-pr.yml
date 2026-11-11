@@ -1,0 +1,81 @@
+# Kontrola dat pull requestu. Běží s kódem a právy z main a z pull requestu bere jen data; nic z PR se nespouští,
+# proto nepotřebuje ruční povolení ani u cizích forků. Token pro komentář a štítek dostane až poslední krok.
+# Výrazy ${{ }} se v příkazech používají jen pro čísla a hashe; text z PR (název, větev) do příkazů nepatří.
+name: Kontrola pull requestu
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+concurrency:
+  group: kontrola-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  kontrola:
+    runs-on: ubuntu-latest
+    env:
+      PR: ${{ github.event.pull_request.number }}
+      BASE: ${{ github.event.pull_request.base.sha }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Kontrola dat z PR
+        id: kontrola
+        run: |
+          git fetch --no-tags origin "pull/$PR/head"
+          git cat-file -e "$HEAD_SHA^{commit}"
+          # Symbolický odkaz nebo submodul by kontrolu nechal číst soubory mimo repozitář.
+          if git diff --raw "$BASE...$HEAD_SHA" | awk '{print $2}' | grep -qE '^(120000|160000)$'; then
+            printf 'CHYBA: pull request přidává symbolický odkaz nebo submodul\nchyb: 1, varování: 0\n' > vysledek.txt
+            echo "kod=1" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if git diff --name-only "$BASE...$HEAD_SHA" | grep -qv '^knihy/'; then jen_data=0; else jen_data=1; fi
+          echo "jen_data=$jen_data" >> "$GITHUB_OUTPUT"
+          git worktree add --detach ../pr "$HEAD_SHA"
+          # Nástroje vždy z main; -I nenechá Python importovat moduly ze složky skriptu.
+          rm -rf ../pr/tools && cp -r tools ../pr/tools
+          set +e
+          (cd ../pr && python -I tools/kontrola.py --zmeny "$BASE") > vysledek.txt 2>&1
+          echo "kod=$?" >> "$GITHUB_OUTPUT"
+          cat vysledek.txt
+      - name: Komentář a štítek
+        if: always() && steps.kontrola.outputs.kod != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KOD: ${{ steps.kontrola.outputs.kod }}
+          JEN_DATA: ${{ steps.kontrola.outputs.jen_data }}
+        run: |
+          python -I tools/kontrola_komentar.py vysledek.txt "$KOD" "$HEAD_SHA" > komentar.md
+          cat komentar.md >> "$GITHUB_STEP_SUMMARY"
+          repo="repos/$GITHUB_REPOSITORY"
+          gh label create kontrola-ok --repo "$GITHUB_REPOSITORY" --color 0E8A16 --force \
+            --description "Mění jen data a kontrola je bez chyb"
+          gh label create kontrola-chyby --repo "$GITHUB_REPOSITORY" --color D93F0B --force \
+            --description "Kontrola dat hlásí chyby"
+          stitek=""
+          if [ "$KOD" != 0 ]; then stitek=kontrola-chyby; elif [ "$JEN_DATA" = 1 ]; then stitek=kontrola-ok; fi
+          for s in kontrola-ok kontrola-chyby; do
+            if [ "$s" != "$stitek" ]; then gh api -X DELETE "$repo/issues/$PR/labels/$s" --silent 2>/dev/null || true; fi
+          done
+          if [ -n "$stitek" ]; then gh api "$repo/issues/$PR/labels" -f "labels[]=$stitek" --silent; fi
+          # Jeden komentář na PR: založí se při první chybě a dál se jen přepisuje.
+          id=$(gh api "$repo/issues/$PR/comments" --paginate --jq \
+            '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- kontrola-pr -->"))) | .id' \
+            | tail -n 1)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "$repo/issues/comments/$id" -F body=@komentar.md --silent
+          elif [ "$KOD" != 0 ]; then
+            gh api "$repo/issues/$PR/comments" -F body=@komentar.md --silent
+          fi
+          [ "$KOD" = 0 ]
