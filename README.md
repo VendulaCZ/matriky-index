@@ -69,8 +69,7 @@ tools/
   prehled.py      vygeneruje PREHLED.md
   web.py          vyrobí webovou stránku indexu do _site/ (GitHub Pages)
   pero/           balik.py (skeny do balíků ≤ 9,4 MB), pero.js (nahrávání a export ve stránce PERO) – viz PERO.md
-  scan/           stahování skenů: pfl.py, pf64.py (Porta fontium), ebget.py (eBadatelna SOA Praha), da2.py,
-                  dasearch.py (DigiArchiv SOA Třeboň), zget.py + rzip.py (VČA Zámrsk; vcakniha.py = celá kniha pro PERO),
+  scan/           stahování skenů: pfl.py, pf64.py (Porta fontium), ebget.py (eBadatelna SOA Praha), zget.py + rzip.py (VČA Zámrsk; vcakniha.py = celá kniha pro PERO),
                   zayt.py, books.py, bfilter.py (zayt.org), mza.py (Acta Publica, MZA Brno), zaopava.py (ZA Opava, cesty
                   ke snímkům zjistí tools/pero/zaopava.js v prohlížeči), cr.py (výřez skenu);
                   slusne.py = společný limit dotazů
