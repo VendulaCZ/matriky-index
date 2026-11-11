@@ -44,4 +44,6 @@ uživateli, že výsledek pošleš do původního repozitáře** jako pull reque
     gh pr create --repo pe-pan/matriky-index --base main --title "<archiv>/<kniha>: <co bylo přečteno>" --body "<shrnutí>"
 
 Do popisu pull requestu napiš: které knihy a snímky, kolik zápisů, čím se četlo (očima, PERO, model), jistotu a
-výsledek `tools/kontrola.py`. Bez souhlasu uživatele nic neodesílej. Podrobnosti v [CONTRIBUTING.md](CONTRIBUTING.md).
+výsledek `tools/kontrola.py`. Má-li kniha issue „Čtu: <archiv>/<kniha>“ a pull request ji dočítá, přidej
+`Closes #<číslo issue>`; GitHub issue po sloučení zavře sám. Bez souhlasu uživatele nic neodesílej. Podrobnosti
+v [CONTRIBUTING.md](CONTRIBUTING.md).

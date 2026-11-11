@@ -15,7 +15,8 @@ klonu. Přečtené zápisy se hodí, i když se netýkají vaší rodiny – pr�
    zvolte „Propose changes“ – GitHub sám vytvoří fork a pull request.
 
 Než začnete číst celou knihu, podívejte se do [PREHLED.md](PREHLED.md) a `python tools/hledej.py`, jestli už přečtená
-není, a založte Issue „Čtu: <archiv>/<kniha>“ (formulář „Čtu knihu“), ať ji nečte někdo další souběžně.
+není, a založte Issue „Čtu: <archiv>/<kniha>“ (formulář „Čtu knihu“), ať ji nečte někdo další souběžně. Do popisu
+pull requestu, který knihu dočte, napište `Closes #<číslo issue>`; GitHub issue po sloučení zavře sám.
 
 ## Co se přidává
 
