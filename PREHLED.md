@@ -4,7 +4,7 @@ Stav k 11. 11. 2026 (generuje `python tools/prehled.py`).
 
 - **654 knih** (matrika 598, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
 - **8 506 stran** převedených strojově (PERO OCR), **1 549 918 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **20 309 zápisů přečtených očima**: narození 9628, sňatky 6889, úmrtí 3134, převody gruntů 49, soupisy 173, jiné 407
+- **20 312 zápisů přečtených očima**: narození 9628, sňatky 6891, úmrtí 3134, převody gruntů 49, soupisy 173, jiné 408
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -174,7 +174,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 14-6 (poř.č. 718), 1785-1812 – římskokatolická matrika ZEMŘELÝCH, Bystré (do 9.1812), Bačetín (do 10.1812), Janov (do 10.1812), Kounov (1787-9.1812), Sudín (do 1811), Ohnišov (do 5.1811)](https://aron.vychodoceskearchivy.cz/apu/665704bb-460e-400b-bf4d-5528d61377a6) | matrika | 1785–1812 |  |  | 12 (J 1 Z 11) |
 | [Sbírka matrik Východočeského kraje, sign.: 84-7142 (poř.č. 5836), 1839-1910](https://aron.vychodoceskearchivy.cz/apu/69ccb8ca-d584-4a81-b0f3-1984748b69e9) | matrika | 1839–1910 |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 47-4 (poř.č. 3316), 1748-4.1784](https://aron.vychodoceskearchivy.cz/apu/706c273b-47af-46c7-ac56-87dd20690518) | matrika |  |  |  | 4 (N 4) |
-| [Sbírka matrik Východočeského kraje, sign.: 117-13 (poř.č. 8108), 1721-1771 – římskokatolický index NAROZENÝCH, ZEMŘELÝCH, ODDANÝCH, farnost Nový Hrádek (Borová, Bydlo, Dlouhé, Frymburk, Krahulčí, Nový Hrádek, Rzy, Sněžné, Tis) + filiální obvod Slavoňov](https://aron.vychodoceskearchivy.cz/apu/71a9158c-c5d0-4288-956b-12e2dbfc4ad9) | matrika | 1721–1771 |  |  | 38 (J 38) |
+| [Sbírka matrik Východočeského kraje, sign.: 117-13 (poř.č. 8108), 1721-1771 – římskokatolický index NAROZENÝCH, ZEMŘELÝCH, ODDANÝCH, farnost Nový Hrádek (Borová, Bydlo, Dlouhé, Frymburk, Krahulčí, Nový Hrádek, Rzy, Sněžné, Tis) + filiální obvod Slavoňov](https://aron.vychodoceskearchivy.cz/apu/71a9158c-c5d0-4288-956b-12e2dbfc4ad9) | matrika | 1721–1771 |  |  | 39 (J 39) |
 | [Sbírka matrik Východočeského kraje, sign.: 3815 (poř.č. 9516), 5.1841-3.1897](https://aron.vychodoceskearchivy.cz/apu/7222708d-9e19-4c41-a22d-b1e04af4f04a) | matrika |  |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 1304 (poř.č. 6460), 6.1802-1816](https://aron.vychodoceskearchivy.cz/apu/73276359-181b-4c04-849d-5afbe5f038bd) | matrika |  |  |  | 2 (N 2) |
 | [Sbírka matrik Východočeského kraje, sign.: M-28 2376 (poř.č. 8165), 1844-1864](https://aron.vychodoceskearchivy.cz/apu/75110f80-c8b4-4470-9fa0-c176f8b66021) | matrika |  |  |  | 1 (N 1) |
@@ -188,7 +188,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 56-1 (poř.č. 3935), 1787-1793](https://aron.vychodoceskearchivy.cz/apu/8344294f-7ac2-4562-847c-cf5c7e3aca24) | matrika |  |  |  | 1 (O 1) |
 | [8692ebc2](https://aron.vychodoceskearchivy.cz/apu/8692ebc2-0690-4dff-a3ef-8f033b27a838/dao/8692ebc2-0690-4dff-a3ef-8f033b27a838/file/8996e797-c7f4-4027-96c1-3c1140157fc8) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 117-2 (poř.č. 8087), 1771-1787 – Nový Hrádek NZO (farnost Nový Hrádek a filiální obvod Slavoňov)](https://aron.vychodoceskearchivy.cz/apu/8964843b-907d-4651-a5c7-9f15b886fc49) | matrika | 1771–1787 | 276 | 99396 | 500 (J 2 N 100 O 395 Z 3) |
-| [Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 1721-1771 – Nový Hrádek NZO (farnost Nový Hrádek a filiální obvod Slavoňov)](https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a) | matrika | 1721–1771 | 220 | 28832 | 131 (J 2 N 40 O 32 Z 57) |
+| [Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 1721-1771 – Nový Hrádek NZO (farnost Nový Hrádek a filiální obvod Slavoňov)](https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a) | matrika | 1721–1771 | 220 | 28832 | 133 (J 2 N 40 O 34 Z 57) |
 | [Sbírka matrik Východočeského kraje, sign.: 162-20 (poř.č. 11275), 1749-1784](https://aron.vychodoceskearchivy.cz/apu/9126d628-7c44-4435-8c4d-92e75a4c77ee) | matrika |  |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 47-3327 (poř.č. 3323), 1867-1875](https://aron.vychodoceskearchivy.cz/apu/92582e21-498b-46b4-bbf1-35620ff826ea) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 162-4 (poř.č. 11265), 1785-1812](https://aron.vychodoceskearchivy.cz/apu/961ea9a8-6f8a-4244-8fd9-217c890a85ec) | matrika |  |  |  | 2 (N 1 O 1) |
@@ -662,28 +662,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## nacr (7)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
-| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
-| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
-
-## ndk (5)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
-
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -726,3 +704,25 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Lužná, N+Z+O s indexy 1811–1845, sign. VK VII 5, inv. č. 2535](https://digi.archives.cz/da/permalink/be88248c-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 2 (N 1 O 1) |
 | [Lužná N+Z+O s indexy 1846–1871 (VK VII 6, inv. č. 2536)](https://digi.archives.cz/da/entityDetail/be882504-f13c-102f-8255-0050568c0263?actualDetailTab=attachmentsImg) | matrika |  |  |  | 1 (N 1) |
 | [Halenkov, Hovězí, Zděchov, O 1784–1823, sign. Vs IV 5, inv. č. 2416](https://digi.archives.cz/da/permalink/be87e9ea-f13c-102f-8255-0050568c0263) | matrika |  |  |  | 1 (O 1) |
+
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
+
+## nacr (7)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
+| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
+| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
