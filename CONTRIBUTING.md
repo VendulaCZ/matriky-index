@@ -48,9 +48,8 @@ ani do sloupců `osoby` a `ostatni`, a nic o žijících lidech.
 
 1. U každého pull requestu běží automaticky `python tools/kontrola.py --zmeny main` (formát, povinná pole, lhůty,
    zákaz mazání; u přidaných řádků i tvar data, jistota a posunuté sloupce). Totéž si spusťte předem.
-2. U prvních dvou pull requestů každého přispěvatele správce namátkou porovná několik řádků se skeny. Další jeho
-   pull requesty, které jen přidávají řádky a projdou kontrolou, už se se skeny neporovnávají. Chybné čtení není
-   problém, pokud je označené nižší jistotou; vymyšlená data bez snímku se nepřijímají.
+2. Správce projde změny a namátkou porovná několik řádků se skeny, i u přispěvatelů, kteří už přispěli. Chybné čtení
+   není problém, pokud je označené nižší jistotou; vymyšlená data bez snímku se nepřijímají.
 3. Po sloučení se kniha objeví v [PREHLED.md](PREHLED.md).
 
 ## Licence
