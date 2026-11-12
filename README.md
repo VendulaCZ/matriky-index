@@ -17,7 +17,8 @@ vyrábí `python tools/web.py` (GitHub Action `pages.yml` po každém pushi do `
 `python -m http.server -d _site`). U zápisu přečteného víckrát (stejný snímek, datum, typ a obec) ukazuje nejnovější čtení
 a starší na rozkliknutí.
 
-Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), generuje `python tools/prehled.py`.
+Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), po každé změně dat v `main` ho
+přegeneruje GitHub Action (`tools/prehled.py`).
 
 Licence: nástroje MIT ([LICENSE](LICENSE)), data v `knihy/` CC BY 4.0 ([LICENSE-DATA.md](LICENSE-DATA.md)).
 

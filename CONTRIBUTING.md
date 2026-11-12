@@ -38,8 +38,10 @@ ani do sloupců `osoby` a `ostatni`, a nic o žijících lidech.
 
 ## Pravidla
 
-- **Jen přidávat.** Cizí řádky se nemažou ani nepřepisují. Nesouhlasíte se čtením? Přidejte vlastní řádek k témuž zápisu
-  nebo opravu do `opravy.tsv`; obě čtení zůstanou vedle sebe a rozhodne sken.
+- **Jen přidávat.** Řádky se nemažou ani nepřepisují – cizí ani vlastní, které už jsou v `main`. Nesouhlasíte se čtením
+  nebo jste ho zpřesnili? Přidejte nový řádek k témuž zápisu nebo opravu do `opravy.tsv`; čtení zůstanou vedle sebe a
+  rozhodne sken.
+- **`PREHLED.md` neměňte.** Po sloučení ho z dat v `main` přegeneruje GitHub Action; v pull requestech by se hádal.
 - **Žijící lidé.** Matriky narozených jsou veřejné po 100 letech, oddaných a zemřelých po 75 letech (zákon o matrikách
   301/2000 Sb.); stejnou lhůtu držíme u sčítání lidu. Mladší zápisy kontrola odmítne.
 - **Ohleduplnost k archivům.** Stahujte jen, co potřebujete, a přes `tools/scan/slusne.py` (viz
@@ -53,7 +55,7 @@ ani do sloupců `osoby` a `ostatni`, a nic o žijících lidech.
    `kontrola-ok` nebo `kontrola-chyby` a při chybách komentář s výpisem. Totéž si spusťte předem.
 2. Správce projde změny a namátkou porovná několik řádků se skeny, i u přispěvatelů, kteří už přispěli. Chybné čtení
    není problém, pokud je označené nižší jistotou; vymyšlená data bez snímku se nepřijímají.
-3. Po sloučení se kniha objeví v [PREHLED.md](PREHLED.md).
+3. Po sloučení se kniha sama objeví v [PREHLED.md](PREHLED.md).
 
 ## Licence
 
