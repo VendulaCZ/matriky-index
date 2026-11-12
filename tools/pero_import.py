@@ -1,11 +1,13 @@
 """Converts a PERO OCR export into the index layout: knihy/<archiv>/<kniha>/ocr-pero.tsv, stranky.tsv and kniha.yaml.
 
-    python tools/pero_import.py <export.zip> [--only BOOK]
+    python tools/pero_import.py <export.zip> [<export.zip> ...]
 
 The export is either PERO's own ZIP (`/document/download_document_pages/<id>`: PAGE XML + TXT per page) or a
 `*.pagexml.zip` bundle assembled in the browser ("### PAGE <id>" followed by the page's PAGE XML). Only the text of
 each line, its bounding box and confidence are kept; polygons, baselines and PERO's internal ids are dropped.
 Book metadata comes from BOOKS below; a book is written only when its pages are found in the export.
+A book OCRed in parts (several PERO documents) is imported by passing all its exports in one call; each file is
+rewritten as a whole, so an export left out drops its pages.
 """
 import argparse
 import csv
@@ -266,11 +268,14 @@ BOOKS = {
     "8df4dc98": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 1721-1771 – Nový Hrádek "
                                          "NZO (farnost Nový Hrádek a filiální obvod Slavoňov)",
                      farnost="Nový Hrádek, Slavoňov", roky="1721–1771",
-                     obsah="latinsky, souvislý text; N 1751–1771 sn. 100–197 (1755 ≈ sn. 117–121, 1760 ≈ 140–145, 1765 ≈ "
-                           "163–166, 1770 ≈ 186–190); O asi sn. 199–260 (1744–1769 ≈ sn. 220–258); Z asi sn. 283–318 (1743–1769); "
-                           "319 snímků; soubor = snímek; snímek = pořadí snímku v ARON",
+                     obsah="latinsky, souvislý text; N 1721–1750 asi sn. 1–99 (1738 ≈ sn. 56, 1747 ≈ 87–89; fol. f ≈ sn. f+5 "
+                           "až f+6 P), N 1751–1771 asi sn. 100–193 (1755 ≈ sn. 117–121, 1760 ≈ 140–145, 1765 ≈ 163–166, 1770 ≈ "
+                           "186–190); O sn. 199–258 L (1722–1769, 1744–1769 ≈ sn. 220–258), sňatky 1769–1771 vloženy na sn. "
+                           "193 R–197 L (fol. 61–64); Z asi sn. 283–318 (1743–1769); 319 snímků; soubor = snímek; snímek = "
+                           "pořadí snímku v ARON",
                      url="https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a", prefix="nh1171", delitel=1,
-                     poznamka="OCR jen snímky 100–319 ze šedotónových JPEG 2400 px; zápisy přečtené očima v precteno.tsv"),
+                     poznamka="OCR snímků 1–319 ze šedotónových JPEG 2400 px ve dvou dokumentech PERO; zápisy přečtené "
+                              "očima v precteno.tsv"),
     "f9ac826b": dict(archiv="vca", nazev="Sbírka matrik Východočeského kraje, sign.: 14-4 (poř.č. 714), 1785-1826 – Bystré O "
                                          "(Bystré, Bačetín, Janov, Kounov, Sudín, Ohnišov)",
                      farnost="Bystré", roky="1785–1826",
@@ -443,6 +448,7 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "vca-chocen-2095-sn270-390": (["1a6d0b5c"], "2db0d5e1-2ee0-4150-98e4-83f9b1fd1dba", "Kurrent (German, Czech)", "2026-11-09"),
     "vca-novy-hradek-117-2": (["8964843b"], "8a8b2b23-2fa8-4dab-91d8-53d33ff2378d", "Kurrent (German, Czech)", "2026-11-10"),
     "vca-novy-hradek-117-1-sn100": (["8df4dc98"], "b225448f-56c8-422e-8589-f2e2b2c30dfe", "Kurrent (German, Czech)", "2026-11-10"),
+    "vca-novy-hradek-117-1-sn1": (["8df4dc98"], "aadba446-b0a7-4df8-9cc6-3796925b8243", "Kurrent (German, Czech)", "2026-11-12"),
     "vca-bystre-14-4": (["f9ac826b"], "3052565f-a1ce-4d4d-a463-5f9420ae7fa2", "Kurrent (German, Czech)", "2026-11-10"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
                             "Czech Fraktur Printed", "2026-11-02"),
@@ -515,7 +521,7 @@ def snimek(key, image):
     return str(n // BOOKS[key].get("delitel", 10))
 
 
-def write_book(key, export_stem, rows, page_rows, pero_doc, model, date):
+def write_book(key, rows, page_rows, ocr):
     meta = BOOKS[key]
     out = REPO / "knihy" / meta["archiv"] / key
     out.mkdir(parents=True, exist_ok=True)
@@ -538,11 +544,13 @@ def write_book(key, export_stem, rows, page_rows, pero_doc, model, date):
             f"roky: {q(meta['roky'])}", f"obsah: {q(meta['obsah'])}", f"url: {q(meta['url'])}"]
     if meta.get("poznamka"):
         yaml.append(f"poznamka: {q(meta['poznamka'])}")
-    yaml += ["ocr:", f"- nastroj: {q('PERO OCR (pero-ocr.fit.vutbr.cz)')}", f"  dokument: {q(pero_doc)}", f"  model: {q(model)}",
-            f"  datum: {q(date)}",
-            f"  export: {q(export_stem)}",
-            f"  stranek: {len(page_rows)}", f"  radku: {len(rows)}",
-            f"  poznamka: {q('souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný')}"]
+    yaml.append("ocr:")
+    for export_name, pero_doc, model, date, pages_n, rows_n in ocr:
+        yaml += [f"- nastroj: {q('PERO OCR (pero-ocr.fit.vutbr.cz)')}", f"  dokument: {q(pero_doc)}", f"  model: {q(model)}",
+                 f"  datum: {q(date)}",
+                 f"  export: {q(export_name)}",
+                 f"  stranek: {pages_n}", f"  radku: {rows_n}",
+                 f"  poznamka: {q('souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný')}"]
     (out / "kniha.yaml").write_text("\n".join(yaml) + "\n", encoding="utf-8")
     print(f"{meta['archiv']}/{key}: {len(page_rows)} stran, {len(rows)} řádků")
 
@@ -550,29 +558,34 @@ def write_book(key, export_stem, rows, page_rows, pero_doc, model, date):
 def main():
     sys.stdout.reconfigure(encoding="utf-8")  # the Windows console defaults to cp1252
     parser = argparse.ArgumentParser()
-    parser.add_argument("export", type=Path)
+    parser.add_argument("export", type=Path, nargs="+")
     args = parser.parse_args()
-    stem = args.export.name.removesuffix(".zip").removesuffix(".pagexml")
-    if stem not in EXPORTS:
-        sys.exit(f"unknown export {stem}; add it to EXPORTS")
-    keys, pero_doc, model, date = EXPORTS[stem]
-    rows = {k: [] for k in keys}
-    page_rows = {k: [] for k in keys}
-    for xml in pages(args.export):
-        parsed = parse_page(xml)
-        if parsed is None:
-            continue
-        image, width, height, lines = parsed
-        key = book_of(image, keys)
-        if key is None:
-            print(f"skipping page {image}", file=sys.stderr)
-            continue
-        snim = snimek(key, image)
-        page_rows[key].append([snim, image, width, height, len(lines)])
-        for x, y, wd, ht, conf, text in lines:
-            rows[key].append((snim, image, "L" if x < width / 2 else "R", x, y, wd, ht, conf, text))
-    for key in keys:
-        write_book(key, args.export.name, rows[key], page_rows[key], pero_doc, model, date)
+    rows, page_rows, ocr = {}, {}, {}
+    for export in args.export:
+        stem = export.name.removesuffix(".zip").removesuffix(".pagexml")
+        if stem not in EXPORTS:
+            sys.exit(f"unknown export {stem}; add it to EXPORTS")
+        keys, pero_doc, model, date = EXPORTS[stem]
+        counts = {k: [0, 0] for k in keys}
+        for xml in pages(export):
+            parsed = parse_page(xml)
+            if parsed is None:
+                continue
+            image, width, height, lines = parsed
+            key = book_of(image, keys)
+            if key is None:
+                print(f"skipping page {image}", file=sys.stderr)
+                continue
+            snim = snimek(key, image)
+            page_rows.setdefault(key, []).append([snim, image, width, height, len(lines)])
+            counts[key][0] += 1
+            counts[key][1] += len(lines)
+            for x, y, wd, ht, conf, text in lines:
+                rows.setdefault(key, []).append((snim, image, "L" if x < width / 2 else "R", x, y, wd, ht, conf, text))
+        for key in keys:
+            ocr.setdefault(key, []).append((export.name, pero_doc, model, date, *counts[key]))
+    for key in ocr:
+        write_book(key, rows.get(key, []), page_rows.get(key, []), ocr[key])
 
 
 if __name__ == "__main__":
