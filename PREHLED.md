@@ -2,9 +2,9 @@
 
 Stav k 25. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **1347 knih** (matrika 1260, sčítání lidu 36, pozemková kniha 23, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1, náhrobky 1)
+- **1356 knih** (matrika 1269, sčítání lidu 36, pozemková kniha 23, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1, náhrobky 1)
 - **10 315 stran** převedených strojově (PERO OCR), **2 027 629 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **54 859 zápisů přečtených očima**: narození 21199, sňatky 9223, úmrtí 23086, převody gruntů 63, soupisy 203, jiné 1056
+- **54 894 zápisů přečtených očima**: narození 21216, sňatky 9229, úmrtí 23098, převody gruntů 63, soupisy 203, jiné 1056
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -1170,10 +1170,19 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [564](http://digi.nacr.cz/prihlasky2/index.php?action=link&ref=czarch:CZ-100000010:874&karton=564&folium=676) | policejní přihlášky |  |  |  | 2 (S 2) |
 | [596](http://digi.nacr.cz/prihlasky2/index.php?action=link&ref=czarch:CZ-100000010:874&karton=596&folium=258) | policejní přihlášky |  |  |  | 4 (S 4) |
 
-## FamilySearch – digitalizované fondy českých archivů (19)
+## FamilySearch – digitalizované fondy českých archivů (28)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
+| [Čeladná (fara), O Čeladná 1784–1842, vol. 1665 – snímky ZA Opava na FamilySearch, film DGS 005388212](https://www.familysearch.org/search/film/005388212) | matrika | 1784–1842 |  |  | 1 (O 1) |
+| [Frýdlant nad Ostravicí (fara), N Frýdlant 1740–1784 – snímky ZA Opava na FamilySearch, film DGS 005388234](https://www.familysearch.org/search/film/005388234) | matrika | 1740–1784 |  |  | 4 (N 4) |
+| [Frýdlant nad Ostravicí (fara), O Frýdlant 1741–1784 – snímky ZA Opava na FamilySearch, film DGS 005388235](https://www.familysearch.org/search/film/005388235) | matrika | 1741–1784 |  |  | 1 (O 1) |
+| [Frýdlant nad Ostravicí (fara), N Frýdlant nad Ostravicí 1784–1815, vol. 1689 – snímky ZA Opava na FamilySearch, film DGS 005388237](https://www.familysearch.org/search/film/005388237) | matrika | 1784–1815 |  |  | 12 (N 12) |
+| [Frýdlant nad Ostravicí (fara), N Frýdlant nad Ostravicí 1815–1841, vol. 1691 – snímky ZA Opava na FamilySearch, film DGS 005388239](https://www.familysearch.org/search/film/005388239) | matrika | 1815–1841 |  |  | 1 (N 1) |
+| [Frýdlant nad Ostravicí (fara), O Frýdlant nad Ostravicí 1784–1836, vol. 1696 – snímky ZA Opava na FamilySearch, film DGS 005388244](https://www.familysearch.org/search/film/005388244) | matrika | 1784–1836 |  |  | 4 (O 4) |
+| [Frýdlant nad Ostravicí (fara), Z Frýdlant nad Ostravicí 1784–1825, vol. 1698 – snímky ZA Opava na FamilySearch, film DGS 005388246](https://www.familysearch.org/search/film/005388246) | matrika | 1784–1825 |  |  | 4 (Z 4) |
+| [Frýdlant nad Ostravicí (fara), Z Frýdlant nad Ostravicí 1825–1849, vol. 1700 – snímky ZA Opava na FamilySearch, film DGS 005388248](https://www.familysearch.org/search/film/005388248) | matrika | 1825–1849 |  |  | 3 (Z 3) |
+| [Frýdlant nad Ostravicí (fara), Z, I-Z Frýdlant nad Ostravicí 1850–1881, sign. M VI 19, inv. č. 1701 – snímky ZA Opava na FamilySearch, film DGS 005388249](https://www.familysearch.org/search/film/005388249) | matrika | 1850–1881 |  |  | 4 (Z 4) |
 | [Valašské Meziříčí (fara), N, I-N Bynina, Hrachovec, Jarcová, Jasenice, Juřinka, Krásno nad Bečvou, Krhová, Křivé, Mštěnovice, Oznice, Poličná, Valašské Meziříčí 1770–1799, sign. VM I 5, inv. č. 2168, 1. část (N 1770–1783) – snímky ZA Opava na FamilySearch, film DGS 005390407](https://www.familysearch.org/search/film/005390407) | matrika | 1770–1783 |  |  | 9 (N 9) |
 | [Valašské Meziříčí (fara), N, I-N Bynina, Hrachovec, Jarcová, Jasenice, Juřinka, Krásno nad Bečvou, Krhová, Křivé, Mštěnovice, Oznice, Poličná, Valašské Meziříčí 1770–1799, sign. VM I 5, inv. č. 2168, 2. část (N 1784–1799, po obcích; rejstřík I-N 1784–1799 je VM I 9) – snímky ZA Opava na FamilySearch, film DGS 005390408](https://www.familysearch.org/search/film/005390408) | matrika | 1784–1799 |  |  | 6 (N 6) |
 | [Valašské Meziříčí (fara), O, I-O Bynina, Hrachovec, Jarcová, Jasenice, Juřinka, Krásno nad Bečvou, Krhová, Mštěnovice, Oznice, Poličná, Valašské Meziříčí 1770–1799, sign. VM I 6, inv. č. 2169; rejstřík I-O 1784–1799 VM I 10 (po obcích) – snímky ZA Opava na FamilySearch, film DGS 005390409](https://www.familysearch.org/search/film/005390409) | matrika | 1770–1799 |  |  | 2 (O 2) |
@@ -1194,27 +1203,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [MZA, Batelov, pozemková kniha dominikálních domků (židovské domy) B04900, 1791–1850 (FamilySearch DGS 104715711)](https://www.familysearch.org/search/film/104715711) | pozemková kniha | 1791–1850 |  |  | 4 (J 1 P 3) |
 | [MZA, Batelov, pozemková kniha domů městečka B04888 („Hauptbuch der Gemeinde Battelau“), 1779–1882 (FamilySearch DGS 104818118)](https://www.familysearch.org/search/film/104818118) | pozemková kniha | 1779–1882 |  |  | 4 (P 4) |
 
-## nacr (10)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
-| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
-| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1340, N 1866–1873 (s indexem; duplikát, Tom VIII–XI)](https://vademecum.nacr.cz/vademecum/permalink?xid=e0c4568a-a325-4d10-b8d8-64c1dfb403df) | matrika | 1866–1873 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1341, N 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=26db411b-4bc5-467e-b248-3b48c7ba5f05) | matrika | 1874–1901 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
-
-## zob (1)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Židovský hřbitov Batelov – fotodokumentace náhrobků „Batelov Steinová 2012“ (Židovská obec Brno)](https://cemeteries.zob.cz/batelov) | náhrobky | 1748?–1935 |  |  | 442 (Z 442) |
-
 ## zaopava (182)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -1233,7 +1221,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Frýdlant nad Ostravicí (fara), N, I-N Frýdlant nad Ostravicí 1842–1857, sign. M VI 10, inv. č. 1692](https://digi.archives.cz/da/permalink/be867b1e-f13c-102f-8255-0050568c0263) | matrika | 1842–1857 |  |  | 2 (N 2) |
 | [Frýdlant nad Ostravicí (fara), N, I-N Frýdlant nad Ostravicí 1857–1870, sign. M VI 11, inv. č. 1693](https://digi.archives.cz/da/permalink/be867ba0-f13c-102f-8255-0050568c0263) | matrika | 1857–1870 |  |  | 2 (N 2) |
 | [Frýdlant nad Ostravicí (fara), N, I-N Frýdlant nad Ostravicí 1871–1895, sign. M VI 12, inv. č. 1694](https://digi.archives.cz/da/permalink/be867c0e-f13c-102f-8255-0050568c0263) | matrika | 1871–1895 |  |  | 1 (N 1) |
-| [Frýdlant nad Ostravicí (fara), Z, I-Z Frýdlant nad Ostravicí 1882–1905, sign. M VI 20, inv. č. 1702](https://digi.archives.cz/da/permalink/be867f42-f13c-102f-8255-0050568c0263) | matrika | 1882–1905 |  |  | 3 (Z 3) |
+| [Frýdlant nad Ostravicí (fara), Z, I-Z Frýdlant nad Ostravicí 1882–1905, sign. M VI 20, inv. č. 1702](https://digi.archives.cz/da/permalink/be867f42-f13c-102f-8255-0050568c0263) | matrika | 1882–1905 |  |  | 4 (Z 4) |
 | [Frýdlant nad Ostravicí (fara), O, I-O Frýdlant nad Ostravicí 1871–1923, sign. M VI 28, inv. č. 8723](https://digi.archives.cz/da/permalink/be8ee3a8-f13c-102f-8255-0050568c0263) | matrika | 1871–1923 |  |  | 1 (O 1) |
 | [Frýdlant nad Ostravicí (fara), Z, I-Z Frýdlant nad Ostravicí 1906–1934, sign. M VI 29, inv. č. 11720](https://digi.archives.cz/da/permalink/29e3f91ac933f2f4:-5b43579b:1373c07ee3d:-7fff) | matrika | 1906–1934 |  |  | 2 (Z 2) |
 | [Palkovice (fara), Z Palkovice 1866–1931, sign. M X 18, inv. č. 18003](https://digi.archives.cz/da/permalink/29e3f91ac933f2f4:-2c94d749:13c623dbd74:-7feb) | matrika | 1866–1931 |  |  | 1 (Z 1) |
@@ -1424,3 +1412,24 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## zob (1)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Židovský hřbitov Batelov – fotodokumentace náhrobků „Batelov Steinová 2012“ (Židovská obec Brno)](https://cemeteries.zob.cz/batelov) | náhrobky | 1748?–1935 |  |  | 442 (Z 442) |
+
+## nacr (10)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
+| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
+| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1340, N 1866–1873 (s indexem; duplikát, Tom VIII–XI)](https://vademecum.nacr.cz/vademecum/permalink?xid=e0c4568a-a325-4d10-b8d8-64c1dfb403df) | matrika | 1866–1873 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1341, N 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=26db411b-4bc5-467e-b248-3b48c7ba5f05) | matrika | 1874–1901 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
